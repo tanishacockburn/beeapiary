@@ -4,6 +4,7 @@
 To do
 
 - Take out / fix the landscape views, all they are doing is making it look sloppy
+- You're reusing lblPest and txtQeenRearing as resource ids about 17 times 
 
 Git things to learn
 
