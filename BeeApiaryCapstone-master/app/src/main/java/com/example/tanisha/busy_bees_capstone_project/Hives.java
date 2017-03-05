@@ -31,9 +31,9 @@ public class Hives extends AppCompatActivity {
 
     public void ListOfHives() {
         listView=(ListView)findViewById(R.id.hivesListView) ;
-        adapter= new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,hives);
+        adapter= new ArrayAdapter(this, R.layout.hive_list, hives);
         listView.setAdapter(adapter);
-        sv=(SearchView)findViewById(R.id.searchView);
+        //sv=(SearchView)findViewById(R.id.searchView);
 
 
         /*sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

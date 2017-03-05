@@ -10,12 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.tanisha.busy_bees_capstone_project.Hives">
 
-    <TextView
-        android:text="Hives"
-        android:layout_height="wrap_content"
-        android:id="@+id/Hives"
-        android:layout_width="wrap_content" />
-
     <Button
         android:text="Add Hive"
         android:id="@+id/btnAddHive"
