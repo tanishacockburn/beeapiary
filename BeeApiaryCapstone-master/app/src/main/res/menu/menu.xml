@@ -1,0 +1,14 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/activityHome"
+        android:title="Home" />
+    <item android:id="@+id/activity_hives"
+        android:title="Hives" />
+    <item android:id="@+id/activity_new_record"
+        android:title="New Records" />
+    <item android:id="@+id/activity_records"
+        android:title="Records" />
+    <item android:id="@+id/activity_about"
+        android:title="About" />
+
+</menu>

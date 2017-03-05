@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_hive"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tanisha.busy_bees_capstone_project.AddHive">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:layout_above="@+id/txtHiveName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/txtHiveName" />
+
+    <TextView
+        android:text="Hive Type"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblHiveType"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/txtHiveType"
+        android:layout_alignBottom="@+id/txtHiveType"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+
+    <TextView
+        android:text="Add Hive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/txtHiveName"
+        android:layout_toEndOf="@+id/txtHiveName"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtSupplier"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_below="@+id/txtDOB"
+        android:layout_alignLeft="@+id/txtDOB"
+        android:layout_alignStart="@+id/txtDOB"
+        android:layout_marginTop="27dp" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtBreed"
+        style="@style/Widget.AppCompat.EditText"
+        android:text="breed"
+        android:layout_below="@+id/txtYardListing4"
+        android:layout_alignLeft="@+id/txtSupplier"
+        android:layout_alignStart="@+id/txtSupplier" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:id="@+id/txt1"
+        android:layout_below="@+id/lblSrcOfBees1"
+        android:layout_alignRight="@+id/lblQueenInformation"
+        android:layout_alignEnd="@+id/lblQueenInformation" />
+
+    <TextView
+        android:text="Add Hive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView5"
+        android:textSize="30sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtYardListing4"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/txtSupplier"
+        android:layout_alignLeft="@+id/txtYardListing2"
+        android:layout_alignStart="@+id/txtYardListing2" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtLandDescription"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/txtPostalCodeZipCode"
+        android:layout_alignRight="@+id/txtYardListing1"
+        android:layout_alignEnd="@+id/txtYardListing1" />
+
+    <TextView
+        android:text="Postal Code/ZipCode"
+        android:layout_width="100dp"
+        android:id="@+id/lblPostalZipCode"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_height="60dp"
+        android:layout_alignBaseline="@+id/txtPostalCodeZipCode"
+        android:layout_alignBottom="@+id/txtPostalCodeZipCode"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Land Description"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblLandDescription"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/lblPostalZipCode"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtYardListing1"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/lblNumberOfFrames"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_toEndOf="@+id/textView5" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtYardListing2"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/lblQueenInformation"
+        android:layout_alignLeft="@+id/txtYardListing1"
+        android:layout_alignStart="@+id/txtYardListing1" />
+
+    <TextView
+        android:text="Apiary/Yard Listing"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblYardListing"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/txtLandDescription"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Source Of Bees"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:id="@+id/lblSrcOfBees1"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtHiveType"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:text="Hive Name"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblName"
+        android:layout_width="100dp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/lblSrcOfBees1"
+        android:layout_above="@+id/txtlocation" />
+
+    <TextView
+        android:text="Split Type"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblSplitType"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/lblSrcOfBees1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner2"
+        style="@style/AlertDialog.AppCompat.Light"
+        android:spinnerMode="dialog"
+        android:minWidth="@dimen/activity_vertical_margin"
+        android:layout_alignTop="@+id/lblSplitType"
+        android:layout_alignLeft="@+id/txtHiveName"
+        android:layout_alignStart="@+id/txtHiveName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtPostalCodeZipCode"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_below="@+id/lblLocation"
+        android:layout_alignLeft="@+id/txtLandDescription"
+        android:layout_alignStart="@+id/txtLandDescription" />
+
+    <TextView
+        android:text="Location"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblLocation"
+        android:layout_width="100dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignBottom="@+id/txtlocation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtlocation"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_height="40dp"
+        android:layout_below="@+id/lblSplitType"
+        android:layout_alignLeft="@+id/txtPostalCodeZipCode"
+        android:layout_alignStart="@+id/txtPostalCodeZipCode" />
+
+    <TextView
+        android:text="Bee Configuration"
+        android:layout_height="40dp"
+        android:id="@+id/lblBeeConfiguration"
+        android:textSize="18sp"
+        android:layout_width="130dp"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/spinner2"
+        android:layout_alignLeft="@+id/lblSrcOfBees1"
+        android:layout_alignStart="@+id/lblSrcOfBees1" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtInstallationDate"
+        style="@style/Widget.AppCompat.EditText"
+        android:text="installation date"
+        android:layout_above="@+id/txtNumberOfFrames"
+        android:layout_alignLeft="@+id/txtBeeConfiguration"
+        android:layout_alignStart="@+id/txtBeeConfiguration" />
+
+    <EditText
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtBeeConfiguration"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="200dp"
+        android:text="bee configuration"
+        android:layout_alignBaseline="@+id/lblLocation"
+        android:layout_alignBottom="@+id/lblLocation"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="29dp"
+        android:layout_marginEnd="29dp" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBack"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/txtYardListing3"
+        android:layout_alignEnd="@+id/txtYardListing3" />
+
+    <Button
+        android:text="Add Hive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAddHive"
+
+        android:layout_alignBaseline="@+id/btnCancel"
+        android:layout_alignBottom="@+id/btnCancel"
+        android:layout_toRightOf="@+id/lblBeeConfiguration"
+        android:layout_toEndOf="@+id/lblBeeConfiguration" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancel"
+        android:layout_alignBaseline="@+id/btnBack"
+        android:layout_alignBottom="@+id/btnBack"
+        android:layout_alignLeft="@+id/lblFrameMaterial"
+        android:layout_alignStart="@+id/lblFrameMaterial" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtDOB"
+        style="@style/Widget.AppCompat.EditText"
+        android:text="DOB"
+        android:layout_alignTop="@+id/lblYearOfBirth"
+        android:layout_toRightOf="@+id/btnAddHive"
+        android:layout_toEndOf="@+id/btnAddHive" />
+
+    <TextView
+        android:text="Box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblBox"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_dark"
+        android:layout_above="@+id/txtLandDescription"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtFrameMaterial"
+        style="@style/Widget.AppCompat.EditText"
+        android:text="Frame material"
+        android:layout_alignBottom="@+id/lblFrameMaterial"
+        android:layout_alignLeft="@+id/txtNumberOfFrames"
+        android:layout_alignStart="@+id/txtNumberOfFrames" />
+
+    <TextView
+        android:text="Hive Information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblHiveInformation"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_toRightOf="@+id/txtHiveName"
+        android:layout_toEndOf="@+id/txtHiveName" />
+
+    <EditText
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtHiveName"
+        android:layout_width="200dp"
+        style="@style/Widget.AppCompat.EditText"
+        android:singleLine="true"
+        android:layout_alignBaseline="@+id/lblName"
+        android:layout_alignBottom="@+id/lblName"
+        android:layout_alignRight="@+id/txtPostalCodeZipCode"
+        android:layout_alignEnd="@+id/txtPostalCodeZipCode" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtHiveType"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_below="@+id/lblHiveInformation"
+        android:layout_alignLeft="@+id/txtSourceOfBees"
+        android:layout_alignStart="@+id/txtSourceOfBees"
+        android:text="hive type" />
+
+    <TextView
+        android:text="Number of Frames"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblNumberOfFrames"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignBaseline="@+id/txtNumberOfFrames"
+        android:layout_alignBottom="@+id/txtNumberOfFrames"
+        android:layout_alignLeft="@+id/lblInstallationDate"
+        android:layout_alignStart="@+id/lblInstallationDate" />
+
+    <TextView
+        android:text="Frame Material"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblFrameMaterial"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignBottom="@+id/txtYardListing1"
+        android:layout_alignLeft="@+id/lblInstallationDate"
+        android:layout_alignStart="@+id/lblInstallationDate" />
+
+    <TextView
+        android:text="Installation Date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblInstallationDate"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_above="@+id/txtNumberOfFrames"
+        android:layout_alignLeft="@+id/lblBeeConfiguration"
+        android:layout_alignStart="@+id/lblBeeConfiguration" />
+
+    <TextView
+        android:text="Supplier"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblSupplier"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignBaseline="@+id/txtSupplier"
+        android:layout_alignBottom="@+id/txtSupplier"
+        android:layout_alignLeft="@+id/lblYearOfBirth"
+        android:layout_alignStart="@+id/lblYearOfBirth" />
+
+    <TextView
+        android:text="Breed"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblBreed"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/txtYardListing4"
+        android:layout_alignLeft="@+id/lblSupplier"
+        android:layout_alignStart="@+id/lblSupplier" />
+
+    <EditText
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtSourceOfBees"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="200dp"
+        android:text="srcofbees"
+        android:layout_below="@+id/txtHiveType"
+        android:layout_alignLeft="@+id/txtBeeConfiguration"
+        android:layout_alignStart="@+id/txtBeeConfiguration" />
+
+    <TextView
+        android:text="Year of Birth"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblYearOfBirth"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignBottom="@+id/txtYardListing2"
+        android:layout_alignLeft="@+id/btnCancel"
+        android:layout_alignStart="@+id/btnCancel" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtNumberOfFrames"
+        style="@style/Widget.AppCompat.EditText"
+        android:text="Number of frames"
+        android:layout_alignBottom="@+id/txtLandDescription"
+        android:layout_alignLeft="@+id/txtInstallationDate"
+        android:layout_alignStart="@+id/txtInstallationDate" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtYardListing3"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_above="@+id/txtYardListing4"
+        android:layout_alignLeft="@+id/txtYardListing4"
+        android:layout_alignStart="@+id/txtYardListing4" />
+
+    <TextView
+        android:text="Queen Information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblQueenInformation"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/txtYardListing1"
+        android:layout_alignLeft="@+id/lblYearOfBirth"
+        android:layout_alignStart="@+id/lblYearOfBirth"
+        android:layout_marginTop="12dp" />
+
+</RelativeLayout>
