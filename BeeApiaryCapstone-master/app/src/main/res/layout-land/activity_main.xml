@@ -33,7 +33,7 @@
     <Button
         android:text="New Record"
         android:layout_marginTop="78dp"
-        android:id="@+id/btnNewRecord"
+        android:id="@+id/btnQueens"
         android:layout_width="500dp"
         android:layout_height="100dp"
         android:textSize="24sp"
@@ -49,8 +49,8 @@
         android:textSize="24sp"
         android:layout_marginBottom="55dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/btnNewRecord"
-        android:layout_alignStart="@+id/btnNewRecord" />
+        android:layout_alignLeft="@+id/btnQueens"
+        android:layout_alignStart="@+id/btnQueens" />
 
     <Button
         android:text="Hive"

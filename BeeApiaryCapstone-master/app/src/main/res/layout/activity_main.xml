@@ -11,19 +11,19 @@
     tools:context="com.example.tanisha.busy_bees_capstone_project.MainActivity">
 
     <Button
-        android:text="Hive"
+        android:text="Yards"
         android:layout_height="100dp"
-        android:id="@+id/btnHive"
+        android:id="@+id/btnYards"
         android:layout_width="500dp"
         android:textSize="30sp"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="253dp"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/btnRecords"
-        android:layout_alignEnd="@+id/btnRecords" />
+        android:layout_alignLeft="@+id/btnQueens"
+        android:layout_alignStart="@+id/btnQueens" />
 
     <Button
-        android:text="New Record"
-        android:id="@+id/btnNewRecord"
+        android:text="Queens"
+        android:id="@+id/btnQueens"
         android:layout_width="500dp"
         android:layout_height="100dp"
         android:textSize="24sp"
@@ -32,13 +32,24 @@
         android:layout_marginTop="48dp" />
 
     <Button
-        android:text="Record"
+        android:text="Media"
         android:layout_width="500dp"
         android:layout_height="100dp"
-        android:id="@+id/btnRecords"
+        android:id="@+id/btnMedia"
         android:textSize="24sp"
-        android:layout_below="@+id/btnNewRecord"
+        android:layout_below="@+id/btnQueens"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="48dp" />
+
+    <Button
+        android:text="Hives"
+        android:layout_height="100dp"
+        android:id="@+id/btnHive"
+        android:layout_width="500dp"
+        android:textSize="30sp"
+        android:layout_marginTop="69dp"
+        android:layout_below="@+id/btnYards"
+        android:layout_alignLeft="@+id/btnYards"
+        android:layout_alignStart="@+id/btnYards" />
 
 </RelativeLayout>

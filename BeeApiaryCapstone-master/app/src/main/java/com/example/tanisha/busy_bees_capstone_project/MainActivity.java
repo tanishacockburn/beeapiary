@@ -10,18 +10,30 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    public Button btn_hives;
-    public Button btn_records;
-    public  Button btn_new_record;
+    private Button btn_hives, btn_records, btn_new_record, btn_media;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         HiveesPage();
-        RecordsPage();
-        NewRecordsPage();
+        YardsPage();
+        QueensPage();
+        MediaPage();
 
+    }
+
+    public  void MediaPage()
+    {
+        btn_media=(Button)findViewById(R.id.btnMedia);
+        btn_media.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent hives = new Intent(MainActivity.this, MediaActivity.class);
+                startActivity(hives);
+
+            }
+        });
     }
 
     public  void HiveesPage()
@@ -38,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public  void RecordsPage()
+    public  void YardsPage()
     {
-        btn_records=(Button)findViewById(R.id.btnRecords);
+        btn_records=(Button)findViewById(R.id.btnYards);
         btn_records.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public  void NewRecordsPage()
+    public  void QueensPage()
     {
-        btn_new_record=(Button)findViewById(R.id.btnNewRecord);
+        btn_new_record=(Button)findViewById(R.id.btnQueens);
         btn_new_record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
