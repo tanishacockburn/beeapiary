@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit_yard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tanisha.busy_bees_capstone_project.EditYard">
+    <TextView
+        android:text="Land Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblAddYardYardLocation"
+        android:layout_alignLeft="@+id/lblAddYardYardLocation"
+        android:layout_alignStart="@+id/lblAddYardYardLocation"
+        android:layout_marginTop="102dp"
+        android:id="@+id/lblAddYardLandDescription"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="Yard Location"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="111dp"
+        android:id="@+id/lblAddYardYardLocation"
+        android:textSize="24sp"
+        android:layout_below="@+id/lblAddYard"
+        android:layout_toLeftOf="@+id/txtAddYardYardLocation"
+        android:layout_toStartOf="@+id/txtAddYardYardLocation"
+        android:layout_width="200dp" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAddYardBack"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/txtAddYardLandDescription"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtAddYardYardLocation"
+        android:layout_height="50dp"
+        android:textSize="24sp"
+        android:layout_width="400dp"
+        android:layout_alignBottom="@+id/lblAddYardYardLocation"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtAddYardLandDescription"
+        android:layout_height="150dp"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="400dp"
+        android:layout_alignTop="@+id/lblAddYardLandDescription"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAddYardConfirm"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_alignBaseline="@+id/btnAddYardCancel"
+        android:layout_alignBottom="@+id/btnAddYardCancel"
+        android:layout_alignLeft="@+id/txtAddYardLandDescription"
+        android:layout_alignStart="@+id/txtAddYardLandDescription" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAddYardCancel"
+        android:layout_marginRight="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_alignBaseline="@+id/btnAddYardBack"
+        android:layout_alignBottom="@+id/btnAddYardBack"
+        android:layout_toLeftOf="@+id/btnAddYardBack"
+        android:layout_toStartOf="@+id/btnAddYardBack" />
+
+    <TextView
+        android:text="Edit Yard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="101dp"
+        android:id="@+id/lblAddYard"
+        android:textSize="36sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/lblAddYardYardLocation"
+        android:layout_alignStart="@+id/lblAddYardYardLocation" />
+
+</RelativeLayout>

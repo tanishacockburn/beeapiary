@@ -11,20 +11,19 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     public Button btn_hives;
-    public Button btn_records;
-    public  Button btn_new_record;
+    public Button btn_yard;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        HiveesPage();
-        RecordsPage();
-        NewRecordsPage();
+        HivesPage();
+        YardPage();
 
     }
 
-    public  void HiveesPage()
+    public  void HivesPage()
     {
         btn_hives=(Button)findViewById(R.id.btnHive);
         btn_hives.setOnClickListener(new View.OnClickListener() {
@@ -37,32 +36,20 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-    public  void RecordsPage()
+    public  void YardPage()
     {
-        btn_records=(Button)findViewById(R.id.btnRecords);
-        btn_records.setOnClickListener(new View.OnClickListener() {
+        btn_yard=(Button)findViewById(R.id.btnYard);
+        btn_yard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent records = new Intent(MainActivity.this, Records.class);
-                startActivity(records);
+                Intent yard = new Intent(MainActivity.this, Yard.class);
+                startActivity(yard);
 
             }
         });
     }
 
-    public  void NewRecordsPage()
-    {
-        btn_new_record=(Button)findViewById(R.id.btnNewRecord);
-        btn_new_record.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent newRecords = new Intent(MainActivity.this, NewRecord.class);
-                startActivity(newRecords);
 
-            }
-        });
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);

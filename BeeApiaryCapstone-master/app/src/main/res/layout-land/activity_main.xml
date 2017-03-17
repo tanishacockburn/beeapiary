@@ -13,55 +13,78 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView2"
+        android:text="Bee Apiary Application"
+        android:id="@+id/lblBeeApiaryApplication"
 
 
-        />
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnHive"
-        android:layout_alignLeft="@+id/btnHive"
-        android:layout_alignStart="@+id/btnHive"
-        android:layout_marginLeft="100dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginBottom="116dp"
-        android:id="@+id/button2" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:textSize="36sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="normal|bold" />
 
     <Button
-        android:text="New Record"
-        android:layout_marginTop="78dp"
-        android:id="@+id/btnNewRecord"
+        android:text="View Hive"
+        android:id="@+id/btnHive"
         android:layout_width="500dp"
-        android:layout_height="100dp"
-        android:textSize="24sp"
+        android:textSize="30sp"
+        android:layout_height="75dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@+id/btnYard"
+        android:layout_alignLeft="@+id/btnYard"
+        android:layout_alignStart="@+id/btnYard"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:text="View Yard"
+        android:layout_width="500dp"
+        android:id="@+id/btnYard"
+        android:layout_height="75dp"
+        android:textSize="30sp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/lblBeeApiaryApplication"
+        android:layout_centerHorizontal="true"
+        android:textColor="?android:attr/fastScrollTextColor" />
+
+    <Button
+        android:text="View Media"
+        android:layout_width="500dp"
+        android:id="@+id/btnMedia"
+        android:layout_height="75dp"
+        android:textSize="30sp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginBottom="36dp"
+        android:textColor="@android:color/background_light"
+        android:layout_above="@+id/btnInspection"
+        android:layout_alignLeft="@+id/btnQueen"
+        android:layout_alignStart="@+id/btnQueen" />
+
+    <Button
+        android:text="Inspections"
+        android:layout_width="500dp"
+        android:id="@+id/btnInspection"
+        android:layout_height="75dp"
+        android:textSize="36sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btnMedia"
+        android:layout_alignStart="@+id/btnMedia" />
+
+    <Button
+        android:text="View Queen"
+        android:layout_width="500dp"
+        android:id="@+id/btnQueen"
+        android:layout_height="75dp"
+        android:textSize="30sp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="32dp"
+        android:textColor="@android:color/background_light"
         android:layout_below="@+id/btnHive"
         android:layout_alignLeft="@+id/btnHive"
         android:layout_alignStart="@+id/btnHive" />
 
-    <Button
-        android:text="Record"
-        android:layout_width="500dp"
-        android:layout_height="100dp"
-        android:id="@+id/btnRecords"
-        android:textSize="24sp"
-        android:layout_marginBottom="55dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/btnNewRecord"
-        android:layout_alignStart="@+id/btnNewRecord" />
-
-    <Button
-        android:text="Hive"
-        android:layout_height="100dp"
-        android:layout_marginLeft="268dp"
-        android:layout_marginStart="268dp"
-        android:id="@+id/btnHive"
-        android:layout_width="500dp"
-        android:textSize="30sp"
-        android:layout_marginTop="113dp"
-        android:layout_below="@+id/textView2"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
 </RelativeLayout>

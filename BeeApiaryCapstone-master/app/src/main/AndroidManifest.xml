@@ -18,7 +18,11 @@
         <activity android:name=".Hives" />
         <activity android:name=".Records" />
         <activity android:name=".NewRecord" />
-        <activity android:name=".AddHive"></activity>
+        <activity android:name=".AddHive" />
+        <activity android:name=".Yard" />
+        <activity android:name=".AddYard" />
+        <activity android:name=".EditYard" />
+        <activity android:name=".AddBox"></activity>
     </application>
 
 </manifest>

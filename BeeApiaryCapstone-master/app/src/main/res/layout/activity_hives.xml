@@ -14,38 +14,329 @@
         android:text="Add Hive"
         android:id="@+id/btnAddHive"
         android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_width="2100dp" />
+        android:layout_width="300dp"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/hivesListView"
+        android:layout_alignLeft="@+id/hivesListView"
+        android:layout_alignStart="@+id/hivesListView"
+        android:textSize="18sp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
 
-    <SearchView
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+
+    <TextView
+        android:text="List of Boxes"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="33dp"
+        android:id="@+id/lblHiveListOfBoxes"
+        android:textSize="24sp"
         android:layout_below="@+id/btnAddHive"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp"
-        android:id="@+id/searchView"
-        android:orientation="horizontal" >
-
-        <Button
-            android:text="Add Hive"
-            android:id="@+id/button"
-            android:layout_height="50dp"
-            android:layout_alignParentTop="true"
-            android:layout_width="2100dp"
-            android:layout_weight="1" />
-    </SearchView>
+        android:layout_alignLeft="@+id/btnAddHive"
+        android:layout_alignStart="@+id/btnAddHive" />
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/searchView"
+        android:layout_width="300dp"
+        android:layout_marginTop="31dp"
+        android:layout_height="200dp"
+        style="@style/Widget.AppCompat.ListView"
+        android:id="@+id/lvHiveListOfBoxes"
+        android:layout_below="@+id/lblHiveListOfBoxes"
+        android:layout_alignLeft="@+id/lblHiveListOfBoxes"
+        android:layout_alignStart="@+id/lblHiveListOfBoxes" />
+
+    <TextView
+        android:text="Hive Name"
+        android:layout_width="100dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/lblHiveName"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/hivesListView"
+        android:layout_toRightOf="@+id/hivesListView"
+        android:layout_toEndOf="@+id/hivesListView"
+        android:layout_marginLeft="73dp"
+        android:layout_marginStart="73dp" />
+
+    <TextView
+        android:text="Hive Type"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="35dp"
+        android:id="@+id/lblHiveType"
+        android:textSize="18sp"
+        android:layout_below="@+id/lblHiveName"
+        android:layout_alignLeft="@+id/lblHiveName"
+        android:layout_alignStart="@+id/lblHiveName" />
+
+    <TextView
+        android:text="Split Type"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/hivesListView"
+        android:layout_alignLeft="@+id/lblHiveType"
+        android:layout_alignStart="@+id/lblHiveType"
+        android:id="@+id/lblSplitType"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_height="50dp"
+        android:id="@+id/txtSplitType"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/lblSplitType"
+        android:layout_alignBottom="@+id/lblSplitType"
+        android:layout_alignLeft="@+id/txtHiveName"
+        android:layout_alignStart="@+id/txtHiveName"
+        android:layout_width="160dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_height="50dp"
+        android:id="@+id/txtHiveName"
+        android:layout_marginRight="43dp"
+        android:layout_marginEnd="43dp"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/lblHiveName"
+        android:layout_alignBottom="@+id/lblHiveName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="160dp" />
+
+    <TextView
+    android:text="Year Bees Were Sourced"
+    android:layout_width="100dp"
+    android:layout_height="70dp"
+    android:layout_below="@+id/btnAddHive"
+    android:layout_alignLeft="@+id/lblSplitType"
+    android:layout_alignStart="@+id/lblSplitType"
+    android:id="@+id/lblYearBeesWereSourced"
+    android:textSize="18sp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/lblHiveListOfBoxes"
+        android:layout_alignLeft="@+id/txtSplitType"
+        android:layout_alignStart="@+id/txtSplitType"
+        android:id="@+id/txtYearBeesWereSourced" />
+
+    <TextView
+        android:text="Hive Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:id="@+id/lblHiveDetails"
+        android:textSize="36sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/lblHiveName"
+        android:layout_alignEnd="@+id/lblHiveName"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <ListView
+        android:id="@+id/hivesListView"
+        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/lblHiveDetails"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="17dp"
-        android:id="@+id/hivesListView" />
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Hive Configuration"
+        android:layout_width="100dp"
+        android:id="@+id/lblHiveConfiguration"
+        android:textSize="18sp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/lblYearBeesWereSourced"
+        android:layout_alignStart="@+id/lblYearBeesWereSourced" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/lblHiveConfiguration"
+        android:layout_alignLeft="@+id/txtYearBeesWereSourced"
+        android:layout_alignStart="@+id/txtYearBeesWereSourced"
+        android:id="@+id/txtHiveConfiguration"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_height="50dp"
+        android:id="@+id/txtHiveType"
+        android:textSize="18sp"
+        android:layout_width="160dp"
+        android:layout_alignBaseline="@+id/lblHiveType"
+        android:layout_alignBottom="@+id/lblHiveType"
+        android:layout_alignLeft="@+id/txtHiveName"
+        android:layout_alignStart="@+id/txtHiveName" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/txtHiveBoxType"
+        android:layout_alignTop="@+id/lblBoxType"
+        android:layout_alignRight="@+id/btnAddListBox"
+        android:layout_alignEnd="@+id/btnAddListBox"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Frame Material"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lblFrameMaterial"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtNumberOfFrames"
+        android:layout_alignLeft="@+id/lblHiveNumberOfFrames"
+        android:layout_alignStart="@+id/lblHiveNumberOfFrames" />
+
+    <TextView
+        android:text="Number of Framrd"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblHiveNumberOfFrames"
+        android:textSize="18sp"
+        android:layout_below="@+id/lblBoxType"
+        android:layout_alignLeft="@+id/lblBoxType"
+        android:layout_alignStart="@+id/lblBoxType" />
+
+    <Button
+        android:text="Add Box"
+        android:id="@+id/btnAddListBox"
+        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/lvHiveListOfBoxes"
+        android:layout_alignLeft="@+id/lvHiveListOfBoxes"
+        android:layout_alignStart="@+id/lvHiveListOfBoxes"
+        android:textSize="18sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/txtInstallationDate"
+        android:layout_below="@+id/lblFrameMaterial"
+        android:layout_alignLeft="@+id/txtHiveBoxType"
+        android:layout_alignStart="@+id/txtHiveBoxType"
+        android:layout_marginTop="11dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Installation Date"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="13dp"
+        android:id="@+id/lblInstallationDate"
+        android:layout_alignTop="@+id/txtInstallationDate"
+        android:layout_alignLeft="@+id/lblFrameMaterial"
+        android:layout_alignStart="@+id/lblFrameMaterial"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Box Type"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:id="@+id/lblBoxType"
+        android:textSize="18sp"
+        android:layout_below="@+id/btnAddListBox"
+        android:layout_alignLeft="@+id/btnAddListBox"
+        android:layout_alignStart="@+id/btnAddListBox" />
+
+    <TextView
+        android:text="Honey Weight"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/lblInstallationDate"
+        android:layout_alignLeft="@+id/lblInstallationDate"
+        android:layout_alignStart="@+id/lblInstallationDate"
+        android:layout_marginTop="13dp"
+        android:id="@+id/lblHoneWeight"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/lblHoneWeight"
+        android:layout_alignLeft="@+id/txtInstallationDate"
+        android:layout_alignStart="@+id/txtInstallationDate"
+        android:id="@+id/txtHoneyWeight"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtHiveFrameMaterial"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/lblFrameMaterial"
+        android:layout_alignLeft="@+id/txtInstallationDate"
+        android:layout_alignStart="@+id/txtInstallationDate" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/txtNumberOfFrames"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/txtHiveBoxType"
+        android:layout_alignLeft="@+id/txtHiveFrameMaterial"
+        android:layout_alignStart="@+id/txtHiveFrameMaterial"
+        android:textSize="18sp" />
+
+    <Button
+        android:text="Delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDelete"
+        android:layout_alignBottom="@+id/txtHoneyWeight"
+        android:layout_toLeftOf="@+id/txtHiveType"
+        android:layout_toStartOf="@+id/txtHiveType"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp" />
+
+    <Button
+        android:text="Edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEdit"
+        android:layout_alignTop="@+id/txtHoneyWeight"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/btnBack"
+        android:layout_alignBaseline="@+id/btnCancel"
+        android:layout_alignBottom="@+id/btnCancel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancel"
+        android:layout_alignBaseline="@+id/btnDelete"
+        android:layout_alignBottom="@+id/btnDelete"
+        android:layout_alignLeft="@+id/txtHiveConfiguration"
+        android:layout_alignStart="@+id/txtHiveConfiguration" />
 
 
 </RelativeLayout>
