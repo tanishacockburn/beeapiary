@@ -267,7 +267,7 @@
         android:layout_height="40dp"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/txtInstallationDate"
+        android:id="@+id/text"
         style="@style/Widget.AppCompat.EditText"
         android:text="installation date"
         android:layout_above="@+id/txtNumberOfFrames"
@@ -484,8 +484,8 @@
         style="@style/Widget.AppCompat.EditText"
         android:text="Number of frames"
         android:layout_alignBottom="@+id/txtLandDescription"
-        android:layout_alignLeft="@+id/txtInstallationDate"
-        android:layout_alignStart="@+id/txtInstallationDate" />
+        android:layout_alignLeft="@+id/text"
+        android:layout_alignStart="@+id/text" />
 
     <EditText
         android:layout_width="wrap_content"

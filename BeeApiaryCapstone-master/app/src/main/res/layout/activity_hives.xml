@@ -182,8 +182,8 @@
         android:layout_height="50dp"
         android:id="@+id/txtHiveBoxType"
         android:layout_alignTop="@+id/lblBoxType"
-        android:layout_alignRight="@+id/btnAddListBox"
-        android:layout_alignEnd="@+id/btnAddListBox"
+        android:layout_alignRight="@+id/btnAddBox"
+        android:layout_alignEnd="@+id/btnAddBox"
         android:textSize="18sp" />
 
     <TextView
@@ -224,7 +224,7 @@
         android:text="TextView"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:id="@+id/txtInstallationDate"
+        android:id="@+id/text"
         android:layout_below="@+id/lblFrameMaterial"
         android:layout_alignLeft="@+id/txtHiveBoxType"
         android:layout_alignStart="@+id/txtHiveBoxType"
@@ -237,7 +237,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="13dp"
         android:id="@+id/lblInstallationDate"
-        android:layout_alignTop="@+id/txtInstallationDate"
+        android:layout_alignTop="@+id/text"
         android:layout_alignLeft="@+id/lblFrameMaterial"
         android:layout_alignStart="@+id/lblFrameMaterial"
         android:textSize="18sp" />
@@ -251,9 +251,9 @@
         android:layout_marginTop="32dp"
         android:id="@+id/lblBoxType"
         android:textSize="18sp"
-        android:layout_below="@+id/btnAddListBox"
-        android:layout_alignLeft="@+id/btnAddListBox"
-        android:layout_alignStart="@+id/btnAddListBox" />
+        android:layout_below="@+id/btnAddBox"
+        android:layout_alignLeft="@+id/btnAddBox"
+        android:layout_alignStart="@+id/btnAddBox" />
 
     <TextView
         android:text="Honey Weight"
@@ -271,8 +271,8 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_alignTop="@+id/lblHoneWeight"
-        android:layout_alignLeft="@+id/txtInstallationDate"
-        android:layout_alignStart="@+id/txtInstallationDate"
+        android:layout_alignLeft="@+id/text"
+        android:layout_alignStart="@+id/text"
         android:id="@+id/txtHoneyWeight"
         android:textSize="18sp" />
 
@@ -283,8 +283,8 @@
         android:id="@+id/txtHiveFrameMaterial"
         android:textSize="18sp"
         android:layout_alignTop="@+id/lblFrameMaterial"
-        android:layout_alignLeft="@+id/txtInstallationDate"
-        android:layout_alignStart="@+id/txtInstallationDate" />
+        android:layout_alignLeft="@+id/text"
+        android:layout_alignStart="@+id/text" />
 
     <TextView
         android:text="TextView"

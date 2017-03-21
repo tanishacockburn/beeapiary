@@ -23,441 +23,324 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Hive 1"
+        android:text="Concern"
+        android:layout_height="50dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:id="@+id/lblConcern"
         android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:id="@+id/txtHiveName"
-        android:textSize="36sp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/background_dark"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/lblInspection"
-        android:layout_toEndOf="@+id/lblInspection" />
-
-    <Spinner
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:id="@+id/spinnerHiveConfig"
-        android:layout_below="@+id/txtTemperature"
-        android:layout_alignLeft="@+id/txtTemperature"
-        android:layout_alignStart="@+id/txtTemperature"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/spinnerboarder"
-        />
-
-    <EditText
-        android:layout_width="200dp"
-        android:inputType="textPersonName"
-        android:text="Temperature"
-        android:ems="10"
-        android:id="@+id/txtTemperature"
-        android:layout_height="40dp"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_alignBottom="@+id/lblTemperature"
-        android:layout_alignLeft="@+id/txtQeenRearing"
-        android:layout_alignStart="@+id/txtQeenRearing" />
-
-    <TextView
-        android:text="Temperature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:id="@+id/lblTemperature"
-        android:textSize="18sp"
-        android:layout_below="@+id/lblDate"
-        android:layout_alignLeft="@+id/lblDate"
-        android:layout_alignStart="@+id/lblDate" />
-
-    <TextView
-        android:text="Date of Inspecttion"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="25dp"
-        android:id="@+id/lblDate"
-        android:textColor="@android:color/background_dark"
-        android:textSize="18sp"
-        android:layout_below="@+id/textView8"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Spinner
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:id="@+id/spinnerQueenRearing"
-        android:layout_marginRight="21dp"
-        android:layout_marginEnd="21dp"
-        android:layout_below="@+id/lblHiveBehaviour"
-        android:layout_alignRight="@+id/txtHiveBehaviour"
-        android:layout_alignEnd="@+id/txtHiveBehaviour"
-        android:background="@drawable/edittextstyle" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/txtConcerns"
-        android:layout_below="@+id/lblObservation"
-        android:layout_alignLeft="@+id/txtHiveBehaviour"
-        android:layout_alignStart="@+id/txtHiveBehaviour"
-        android:text="concerns"
-        style="@style/Widget.AppCompat.EditText" />
-
-    <TextView
-        android:text="Queen Rearing"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="19dp"
-        android:id="@+id/lblQueenRearing"
-        android:layout_below="@+id/lblHiveBehaviour"
-        android:layout_alignLeft="@+id/textView8"
-        android:layout_alignStart="@+id/textView8"
-        android:textSize="18sp" />
-
-    <TextView
-        android:text="Hive Behaviour"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="13dp"
-        android:id="@+id/lblHiveBehaviour"
-        android:textSize="18sp"
-        android:layout_below="@+id/lblHiveConfiguration"
-        android:layout_alignRight="@+id/lblDate"
-        android:layout_alignEnd="@+id/lblDate" />
-
-    <TextView
-        android:text="Hive Treatment"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:id="@+id/lblHiveTreatment"
-        android:textSize="24sp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/background_dark"
-        android:layout_below="@+id/txtConcerns"
-        android:layout_alignRight="@+id/lblFlowerInformation"
-        android:layout_alignEnd="@+id/lblFlowerInformation"
-        android:layout_marginTop="15dp" />
-
-    <TextView
-        android:text="Treatment"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:id="@+id/lblTreatment"
-        android:textSize="18sp"
-        android:layout_below="@+id/lblHiveTreatment"
-        android:layout_alignLeft="@+id/lblHiveTreatment"
-        android:layout_alignStart="@+id/lblHiveTreatment" />
-
-    <TextView
-        android:text="Concerns"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblConcerns"
-        android:textSize="18sp"
-        android:layout_alignBaseline="@+id/txtConcerns1"
-        android:layout_alignBottom="@+id/txtConcerns1"
-        android:layout_alignLeft="@+id/lblTreatment"
-        android:layout_alignStart="@+id/lblTreatment" />
-
-    <TextView
-        android:text="Pest Control"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblPestCpntrol"
-        android:textSize="24sp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/background_dark"
-        android:layout_alignBottom="@+id/lblDate"
-        android:layout_alignRight="@+id/lblHiveConfiguration"
-        android:layout_alignEnd="@+id/lblHiveConfiguration"
-        android:layout_marginRight="29dp"
-        android:layout_marginEnd="29dp" />
-
-    <TextView
-        android:text="Pest"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:id="@+id/lblPest"
-        android:textSize="18sp"
-        android:layout_above="@+id/txtQeenRearing"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="31dp" />
-
-    <TextView
-        android:text="Pest Maagement"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblPestManagement"
-        android:textSize="18sp"
-        android:layout_above="@+id/lblFlowerInformation"
-        android:layout_alignRight="@+id/textView8"
-        android:layout_alignEnd="@+id/textView8"
-        android:layout_marginRight="39dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="66dp" />
-
-    <TextView
-        android:text="Flower Information"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblFlowerInformation"
-        android:textSize="24sp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/background_dark"
-        android:layout_above="@+id/lblFlowerName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="31dp" />
-
-    <TextView
-        android:text="Flower Name"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:id="@+id/lblFlowerName"
-        android:textSize="18sp"
-        android:layout_marginBottom="24dp"
-        android:layout_above="@+id/txtSeason"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="Season"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:id="@+id/lblSeason"
-        android:textSize="18sp"
-        android:layout_alignBaseline="@+id/txtSeason"
-        android:layout_alignBottom="@+id/txtSeason"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtHiveBehaviour"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_above="@+id/spinnerQueenRearing"
-        android:layout_alignLeft="@+id/spinnerHiveConfig"
-        android:layout_alignStart="@+id/spinnerHiveConfig" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/txtObservation"
-        android:text="observation"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_alignBaseline="@+id/lblObservation"
-        android:layout_alignBottom="@+id/lblObservation"
-        android:layout_alignLeft="@+id/txtConcerns"
-        android:layout_alignStart="@+id/txtConcerns" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:text="DOB"
-        android:ems="10"
-        android:id="@+id/txtDate"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_alignBaseline="@+id/lblDate"
-        android:layout_alignBottom="@+id/lblDate"
-        android:layout_alignLeft="@+id/txtTemperature"
-        android:layout_alignStart="@+id/txtTemperature" />
-
-    <TextView
-        android:text="Hive Information"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:id="@+id/textView8"
-        android:textSize="24sp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/background_dark"
-        android:layout_below="@+id/lblInspection"
-        android:layout_alignRight="@+id/lblDate"
-        android:layout_alignEnd="@+id/lblDate"
-        android:layout_marginRight="35dp"
-        android:layout_marginEnd="35dp" />
-
-    <TextView
-        android:text="concerns"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView16"
-        android:textSize="18sp"
-        android:layout_alignBaseline="@+id/txtConcerns"
-        android:layout_alignBottom="@+id/txtConcerns"
+        android:layout_alignBaseline="@+id/txtConcern"
+        android:layout_alignBottom="@+id/txtConcern"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <TextView
         android:text="Observation"
+        android:layout_height="50dp"
+        android:id="@+id/lblObservation"
+        android:layout_marginTop="56dp"
+        android:textSize="18sp"
+        android:layout_width="200dp"
+        android:layout_below="@+id/lblHiveBehaviour"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Date of Inspecttion"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_marginTop="17dp"
-        android:id="@+id/lblObservation"
+        android:id="@+id/lblDate"
+        android:textColor="@android:color/background_dark"
         android:textSize="18sp"
-        android:layout_below="@+id/lblQueenRearing"
+        android:layout_marginTop="76dp"
+        android:layout_below="@+id/lblInspection"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Hive Information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView12"
+        android:textSize="30sp"
+        android:layout_above="@+id/txtDOB"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="17dp" />
+
+    <EditText
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtDOB"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_alignBottom="@+id/lblDate"
+        android:layout_toRightOf="@+id/lblDate"
+        android:layout_toEndOf="@+id/lblDate"
+        android:layout_width="200dp" />
+
+    <TextView
+        android:text="Hive Behaviour"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblHiveBehaviour"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/txtHiveBehaviour"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/txtQeenRearing"
-        android:textSize="18sp"
-        android:text="queenrearing"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_alignTop="@+id/lblQueenRearing"
-        android:layout_alignLeft="@+id/txtQeenRearing"
-        android:layout_alignStart="@+id/txtQeenRearing" />
-
-    <EditText
-        android:id="@+id/editText14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/txtTemperature"
-        android:layout_alignRight="@+id/txtTemperature"
-        android:layout_below="@+id/lblDate"
-        android:ems="10"
-        android:inputType="none|textMultiLine" />
-
-    <Button
-        android:text="Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnBack"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/txtSeason"
-        android:layout_alignStart="@+id/txtSeason" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:inputType="textPersonName"
-        android:text="Season"
+        android:text="Name"
         android:ems="10"
-        android:id="@+id/txtSeason"
-        android:textSize="18sp"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_marginBottom="18dp"
-        android:layout_above="@+id/btnBack"
-        android:layout_alignLeft="@+id/txtFlowerName"
-        android:layout_alignStart="@+id/txtFlowerName" />
+        android:id="@+id/txtPest"
+        android:layout_alignTop="@+id/lblDate"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="200dp" />
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/txtTreatment"
-        style="@style/Widget.AppCompat.EditText"
-        android:text="treatment"
-        android:layout_alignTop="@+id/lblTreatment"
-        android:layout_alignLeft="@+id/txtConcerns"
-        android:layout_alignStart="@+id/txtConcerns" />
+    <TextView
+        android:text="Pest "
+        android:layout_height="50dp"
+        android:id="@+id/lblPest"
+        android:textSize="18sp"
+        android:layout_width="100dp"
+        android:layout_alignBaseline="@+id/txtDOB"
+        android:layout_alignBottom="@+id/txtDOB"
+        android:layout_alignLeft="@+id/lblPestControl"
+        android:layout_alignStart="@+id/lblPestControl" />
+
+    <TextView
+        android:text="Pest Management"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblPestManagement"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/txtHiveBehaviour"
+        android:layout_alignLeft="@+id/lblPest"
+        android:layout_alignStart="@+id/lblPest" />
+
+    <TextView
+        android:text="Scientific Name"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/txtConcern"
+        android:layout_alignLeft="@+id/lblCommonName"
+        android:layout_alignStart="@+id/lblCommonName"
+        android:layout_marginTop="20dp"
+        android:id="@+id/lblScientificName"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Start Season"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtConcern"
+        android:layout_alignLeft="@+id/lblScientificName"
+        android:layout_alignStart="@+id/lblScientificName"
+        android:layout_marginTop="18dp"
+        android:id="@+id/lblStartSeason"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Common Name"
+        android:layout_height="50dp"
+        android:id="@+id/lblCommonName"
+        android:textSize="18sp"
+        android:layout_width="100dp"
+        android:layout_below="@+id/lblFlowerInformation"
+        android:layout_alignLeft="@+id/lblFlowerInformation"
+        android:layout_alignStart="@+id/lblFlowerInformation"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:text="Treatment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:id="@+id/Treatment"
+        android:textSize="30sp"
+        android:layout_below="@+id/lblStartSeason"
+        android:layout_alignLeft="@+id/lblStartSeason"
+        android:layout_alignStart="@+id/lblStartSeason" />
+
+    <TextView
+        android:text="Concerns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTreatment"
+        android:layout_alignLeft="@+id/lblTreatment"
+        android:layout_alignStart="@+id/lblTreatment"
+        android:layout_marginTop="48dp"
+        android:id="@+id/lblTreatmentConcerns"
+        android:textSize="18sp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
+        android:inputType="textPersonName"
+        android:text="Name"
         android:ems="10"
-        android:id="@+id/txtConcerns1"
-        android:text="Concerns"
+        android:id="@+id/txtHiveBehaviour"
         style="@style/Widget.AppCompat.EditText"
-        android:layout_marginTop="29dp"
-        android:layout_below="@+id/txtTreatment"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/lblPest"
+        android:layout_alignRight="@+id/txtDOB"
+        android:layout_alignEnd="@+id/txtDOB" />
+
+    <TextView
+        android:text="Flower Information"
+        android:layout_height="50dp"
+        android:id="@+id/lblFlowerInformation"
+        android:textSize="18sp"
+        android:layout_width="100dp"
+        android:layout_alignBottom="@+id/lblObservation"
+        android:layout_alignLeft="@+id/lblPestManagement"
+        android:layout_alignStart="@+id/lblPestManagement"
+        android:layout_marginBottom="19dp" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:layout_alignTop="@+id/lblScientificName"
+        android:layout_alignLeft="@+id/txtCommonName"
+        android:layout_alignStart="@+id/txtCommonName"
+        android:id="@+id/txtScientificName" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtTreatmentConcern"
+        android:layout_alignBaseline="@+id/lblTreatmentConcerns"
+        android:layout_alignBottom="@+id/lblTreatmentConcerns"
         android:layout_alignLeft="@+id/txtTreatment"
         android:layout_alignStart="@+id/txtTreatment" />
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/txtPest"
-        android:textSize="18sp"
-        android:text="Pest"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_alignTop="@+id/lblPest"
-        android:layout_alignRight="@+id/txtConcerns1"
-        android:layout_alignEnd="@+id/txtConcerns1" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:text="Flower Name"
-        android:ems="10"
-        android:id="@+id/txtFlowerName"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_alignTop="@+id/lblFlowerName"
-        android:layout_alignLeft="@+id/spinnerQueenRearing"
-        android:layout_alignStart="@+id/spinnerQueenRearing" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/txtQeenRearing"
-        android:text="Pest Management"
-        android:layout_alignBaseline="@+id/lblPestManagement"
-        android:layout_alignBottom="@+id/lblPestManagement"
-        android:layout_alignRight="@+id/txtHiveName"
-        android:layout_alignEnd="@+id/txtHiveName" />
-
     <Button
-        android:text="Save"
+        android:text="Confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSave"
+        android:layout_marginBottom="88dp"
+        android:id="@+id/btnConfirm"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/btnCancel"
-        android:layout_toStartOf="@+id/btnCancel"
-        android:layout_marginRight="17dp"
-        android:layout_marginEnd="17dp" />
+        android:layout_alignRight="@+id/txtHiveBehaviour"
+        android:layout_alignEnd="@+id/txtHiveBehaviour" />
 
     <Button
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnCancel"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/lblConcerns"
-        android:layout_toEndOf="@+id/lblConcerns" />
+        android:layout_alignTop="@+id/btnConfirm"
+        android:layout_alignRight="@+id/lblTreatmentConcerns"
+        android:layout_alignEnd="@+id/lblTreatmentConcerns"
+        android:id="@+id/btnCancel" />
 
-    <TextView
-        android:text="Hive Configuration"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:id="@+id/lblHiveConfiguration"
-        android:textSize="18sp"
-        android:layout_alignBaseline="@+id/editText14"
-        android:layout_alignBottom="@+id/editText14"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp" />
-
-    <TextView
-        android:id="@+id/lblPest"
+    <Button
+        android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/lblPest"
-        android:layout_marginBottom="23dp"
-        android:text="Pest control"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_alignTop="@+id/btnCancel"
+        android:layout_alignLeft="@+id/txtStartSeason"
+        android:layout_alignStart="@+id/txtStartSeason"
+        android:id="@+id/btnBack" />
+
+    <TextView
+        android:text="Pest Control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="49dp"
+        android:layout_marginStart="49dp"
+        android:id="@+id/lblPestControl"
+        android:textSize="30sp"
+        android:layout_alignBaseline="@+id/textView12"
+        android:layout_alignBottom="@+id/textView12"
+        android:layout_toRightOf="@+id/txtDOB"
+        android:layout_toEndOf="@+id/txtDOB" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtPestManagement"
+        android:layout_alignTop="@+id/lblPestManagement"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtStartSeason"
+        android:layout_alignBaseline="@+id/lblStartSeason"
+        android:layout_alignBottom="@+id/lblStartSeason"
+        android:layout_alignLeft="@+id/txtScientificName"
+        android:layout_alignStart="@+id/txtScientificName" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtTreatment"
+        android:layout_alignBaseline="@+id/lblTreatment"
+        android:layout_alignBottom="@+id/lblTreatment"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Treatment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:id="@+id/lblTreatment"
+        android:textSize="18sp"
+        android:layout_below="@+id/Treatment"
+        android:layout_alignLeft="@+id/Treatment"
+        android:layout_alignStart="@+id/Treatment" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtCommonName"
+        android:layout_alignTop="@+id/lblCommonName"
+        android:layout_alignLeft="@+id/txtPestManagement"
+        android:layout_alignStart="@+id/txtPestManagement" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtObservation"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/lblObservation"
+        android:layout_alignLeft="@+id/txtHiveBehaviour"
+        android:layout_alignStart="@+id/txtHiveBehaviour" />
+
+    <EditText
+        android:layout_height="100dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtConcern"
+        android:layout_width="200dp"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/lblCommonName"
+        android:layout_alignLeft="@+id/txtObservation"
+        android:layout_alignStart="@+id/txtObservation" />
 
 </RelativeLayout>

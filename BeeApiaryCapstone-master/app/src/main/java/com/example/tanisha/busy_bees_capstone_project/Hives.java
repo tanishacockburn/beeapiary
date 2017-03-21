@@ -17,7 +17,9 @@ public class Hives extends AppCompatActivity {
     ListView listView;
     ArrayAdapter<String>adapter;
     String hives[]={"Hive 1","Hive 2","Hive 3","Hive 4"};
-    SearchView sv;
+    Button btn_add_box;
+
+
 
 
     @Override
@@ -26,29 +28,28 @@ public class Hives extends AppCompatActivity {
         setContentView(R.layout.activity_hives);
         AddHivesPage();
         ListOfHives();
+        AddBoxPage();
 
+    }
+
+    public void AddBoxPage() {
+
+        btn_add_box=(Button)findViewById(R.id.btnAddListBox);
+        btn_add_box.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent addBox = new Intent(Hives.this, AddBox.class);
+                startActivity(addBox);
+
+            }
+        });
     }
 
     public void ListOfHives() {
         listView=(ListView)findViewById(R.id.hivesListView) ;
         adapter= new ArrayAdapter(this, R.layout.hive_list, hives);
         listView.setAdapter(adapter);
-        //sv=(SearchView)findViewById(R.id.searchView);
 
-
-        /*sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String text) {
-                return false;
-            }*/
-
-//            @Override
-//            public boolean onQueryTextChange(String text) {
-//
-//                adapter.getFilter().filter(text);
-//                return false;
-//            }
-//        });
 
 
     }

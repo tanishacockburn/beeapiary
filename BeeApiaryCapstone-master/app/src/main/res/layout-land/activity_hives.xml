@@ -22,17 +22,6 @@
         android:layout_alignStart="@+id/txtHiveName"
         android:layout_width="160dp" />
 
-    <TextView
-        android:text="Frame Material"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/lblFrameMaterial"
-        android:textSize="18sp"
-        android:layout_below="@+id/txtNumberOfFrames"
-        android:layout_alignLeft="@+id/lblHiveNumberOfFrames"
-        android:layout_alignStart="@+id/lblHiveNumberOfFrames" />
-
     <ListView
         android:id="@+id/hivesListView"
         android:layout_height="200dp"
@@ -58,7 +47,7 @@
         android:layout_height="200dp"
         style="@style/Widget.AppCompat.ListView"
         android:id="@+id/lvHiveListOfBoxes"
-        android:layout_above="@+id/btnAddListBox"
+        android:layout_above="@+id/btnAddBox"
         android:layout_alignLeft="@+id/lblHiveListOfBoxes"
         android:layout_alignStart="@+id/lblHiveListOfBoxes" />
 
@@ -149,17 +138,6 @@
         android:layout_alignLeft="@+id/lblSplitType"
         android:layout_alignStart="@+id/lblSplitType" />
 
-    <Button
-        android:text="Edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnEdit"
-        android:layout_marginRight="45dp"
-        android:layout_marginEnd="45dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/btnDelete"
-        android:layout_toStartOf="@+id/btnDelete" />
-
     <TextView
         android:text="Honey Weight"
         android:layout_width="100dp"
@@ -192,16 +170,6 @@
         android:layout_alignEnd="@+id/btnCancel"
         android:layout_marginRight="11dp"
         android:layout_marginEnd="11dp" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:id="@+id/txtNumberOfFrames"
-        android:textSize="18sp"
-        android:layout_below="@+id/lblBoxType"
-        android:layout_alignLeft="@+id/txtHiveBoxType"
-        android:layout_alignStart="@+id/txtHiveBoxType" />
 
     <TextView
         android:text="Installation Date"
@@ -283,57 +251,14 @@
         android:layout_alignLeft="@+id/txtHiveConfiguration"
         android:layout_alignStart="@+id/txtHiveConfiguration" />
 
-    <TextView
-        android:text="TextView"
-        android:layout_height="50dp"
-        android:id="@+id/txtFrameMaterial"
-        android:textSize="18sp"
-        android:layout_alignBottom="@+id/txtHiveFrameMaterial"
-        android:layout_alignLeft="@+id/txtNumberOfFrames"
-        android:layout_alignStart="@+id/txtNumberOfFrames"
-        android:layout_alignTop="@+id/txtHiveFrameMaterial"
-        android:layout_width="150dp" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:layout_alignTop="@+id/lblInstallationDate"
-        android:layout_alignLeft="@+id/txtFrameMaterial"
-        android:layout_alignStart="@+id/txtFrameMaterial"
-        android:id="@+id/txtDateOfInstallation"
-        android:textSize="18sp" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:id="@+id/txtInstallationDate"
-        android:textSize="18sp"
-        android:layout_marginRight="128dp"
-        android:layout_marginEnd="128dp"
-        android:layout_below="@+id/lblFrameMaterial"
-        android:layout_toLeftOf="@+id/btnBack"
-        android:layout_toStartOf="@+id/btnBack" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_height="50dp"
-        android:id="@+id/txtHoneyWeight"
-        android:textSize="18sp"
-        android:layout_width="160dp"
-        android:layout_below="@+id/txtDateOfInstallation"
-        android:layout_alignLeft="@+id/txtDateOfInstallation"
-        android:layout_alignStart="@+id/txtDateOfInstallation" />
-
     <Button
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnCancel"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/txtInstallationDate"
-        android:layout_alignStart="@+id/txtInstallationDate"
+        android:layout_alignLeft="@+id/text"
+        android:layout_alignStart="@+id/text"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp" />
 
@@ -345,8 +270,8 @@
         android:layout_marginRight="30dp"
         android:layout_marginEnd="30dp"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/txtInstallationDate"
-        android:layout_toStartOf="@+id/txtInstallationDate" />
+        android:layout_toLeftOf="@+id/text"
+        android:layout_toStartOf="@+id/text" />
 
     <TextView
         android:text="TextView"
@@ -356,8 +281,67 @@
         android:textSize="18sp"
         android:layout_alignBaseline="@+id/lblFrameMaterial"
         android:layout_alignBottom="@+id/lblFrameMaterial"
+        android:layout_alignLeft="@+id/txtNumberOfFrames"
+        android:layout_alignStart="@+id/txtNumberOfFrames" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/text"
+        android:textSize="18sp"
+        android:layout_marginLeft="163dp"
+        android:layout_marginStart="163dp"
+        android:layout_below="@+id/lblFrameMaterial"
+        android:layout_toRightOf="@+id/lblFrameMaterial"
+        android:layout_toEndOf="@+id/lblFrameMaterial"
+        android:visibility="invisible" />
+
+    <TextView
+        android:text="Frame Material"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblFrameMaterial"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtNumberOfFrames"
+        android:layout_alignLeft="@+id/lblHiveNumberOfFrames"
+        android:layout_alignStart="@+id/lblHiveNumberOfFrames" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_height="50dp"
+        android:id="@+id/txtInstallationDate"
+        android:layout_alignTop="@+id/lblInstallationDate"
+        android:layout_alignLeft="@+id/txtHiveFrameMaterial"
+        android:layout_alignStart="@+id/txtHiveFrameMaterial"
+        android:layout_width="100dp" />
+
+    <Button
+        android:text="Edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEdit"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/lblHoneWeight"
         android:layout_alignLeft="@+id/txtInstallationDate"
-        android:layout_alignStart="@+id/txtInstallationDate" />
+        android:layout_alignStart="@+id/txtInstallationDate"
+        android:id="@+id/txtHoneyWeight" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/txtNumberOfFrames"
+        android:textSize="18sp"
+        android:layout_below="@+id/lblBoxType"
+        android:layout_alignLeft="@+id/txtHiveBoxType"
+        android:layout_alignStart="@+id/txtHiveBoxType" />
 
 
 </RelativeLayout>

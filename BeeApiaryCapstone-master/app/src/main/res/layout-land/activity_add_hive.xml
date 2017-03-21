@@ -67,8 +67,8 @@
         style="@style/Widget.AppCompat.EditText"
         android:layout_alignBaseline="@+id/lblBreed"
         android:layout_alignBottom="@+id/lblBreed"
-        android:layout_alignLeft="@+id/txtInstallationDate"
-        android:layout_alignStart="@+id/txtInstallationDate"
+        android:layout_alignLeft="@+id/text"
+        android:layout_alignStart="@+id/text"
         android:text="breed" />
 
     <TextView
@@ -265,7 +265,7 @@
         android:layout_height="40dp"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/txtInstallationDate"
+        android:id="@+id/text"
         style="@style/Widget.AppCompat.EditText"
         android:layout_alignBaseline="@+id/lblInstallationDate"
         android:layout_alignBottom="@+id/lblInstallationDate"
@@ -352,8 +352,8 @@
         style="@style/Widget.AppCompat.EditText"
         android:text="Frame material"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/txtInstallationDate"
-        android:layout_alignStart="@+id/txtInstallationDate" />
+        android:layout_alignLeft="@+id/text"
+        android:layout_alignStart="@+id/text" />
 
     <TextView
         android:text="Hive Information"
