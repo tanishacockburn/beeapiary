@@ -22,7 +22,11 @@
         <activity android:name=".Yard" />
         <activity android:name=".AddYard" />
         <activity android:name=".EditYard" />
-        <activity android:name=".AddBox"></activity>
+        <activity android:name=".AddBox" />
+        <activity android:name=".BoxActivity" />
+        <activity android:name=".FlowerActivity" />
+        <activity android:name=".QueenActivity" />
+        <activity android:name=".InspectionActivity"></activity>
     </application>
 
 </manifest>
