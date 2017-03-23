@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     public Button btn_hives;
     public Button btn_yard;
+    public Button btn_queen;
 
 
     @Override
@@ -20,8 +21,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         HivesPage();
         YardPage();
+        QueenPage();
 
     }
+
+
 
     public  void HivesPage()
     {
@@ -48,7 +52,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    public  void QueenPage()
+    {
+        btn_queen=(Button)findViewById(R.id.btnQueen);
+        btn_queen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent queen = new Intent(MainActivity.this, Queen.class);
+                startActivity(queen);
 
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

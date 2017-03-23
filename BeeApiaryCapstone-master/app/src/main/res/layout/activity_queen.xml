@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_queen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tanisha.busy_bees_capstone_project.Queen">
+
+    <TextView
+        android:text="Hives "
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="42dp"
+        android:id="@+id/lblHives"
+        android:textSize="24sp"
+        android:layout_below="@+id/lblQueenInformation"
+        android:layout_alignLeft="@+id/lvHives"
+        android:layout_alignStart="@+id/lvHives"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:text="Queen Information"
+        android:id="@+id/lblQueenInformation"
+        android:textSize="30sp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/lblHives"
+        android:layout_toEndOf="@+id/lblHives"
+        android:layout_width="300dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:text="Replace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReplaceQueen"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/lblQueenReplaced"
+        android:layout_toRightOf="@+id/lvHives"
+        android:layout_toEndOf="@+id/lvHives" />
+
+    <Button
+        android:text="Edit "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEditQueen"
+        android:layout_alignBaseline="@+id/btnReplaceQueen"
+        android:layout_alignBottom="@+id/btnReplaceQueen"
+        android:layout_toRightOf="@+id/lblQueenBirth"
+        android:layout_toEndOf="@+id/lblQueenBirth" />
+
+    <ListView
+        android:layout_height="200dp"
+        android:id="@+id/lvHives"
+        android:layout_width="300dp"
+        android:layout_alignTop="@+id/lblQueenBirth"
+        android:layout_toLeftOf="@+id/lblQueenBirth"
+        android:layout_toStartOf="@+id/lblQueenBirth" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancel"
+        android:layout_alignBaseline="@+id/btnEditQueen"
+        android:layout_alignBottom="@+id/btnEditQueen"
+        android:layout_toRightOf="@+id/lvQueenHistory"
+        android:layout_toEndOf="@+id/lvQueenHistory" />
+
+    <TextView
+        android:text="Queen History"
+        android:id="@+id/lblQeenHistory"
+        android:layout_height="30dp"
+        android:textSize="24sp"
+        android:layout_width="200dp"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/btnReplaceQueen"
+        android:layout_alignLeft="@+id/lblHives"
+        android:layout_alignStart="@+id/lblHives"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:text="Queen Replaced"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblQueenReplaced"
+        android:textSize="18sp"
+        android:layout_below="@+id/lblQueenBirth"
+        android:layout_toRightOf="@+id/lvHives"
+        android:layout_toEndOf="@+id/lvHives" />
+
+    <EditText
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtQueenBirth"
+        android:layout_alignTop="@+id/lblHives"
+        android:layout_toRightOf="@+id/lblQueenReplaced"
+        android:layout_toEndOf="@+id/lblQueenReplaced"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="17dp"
+        android:layout_width="300dp" />
+
+    <TextView
+        android:text="Current Queen Details"
+        android:layout_height="50dp"
+        android:id="@+id/lblQueenDetails"
+        android:textSize="24sp"
+        android:layout_width="250dp"
+        android:layout_below="@+id/lblQueenInformation"
+        android:layout_toRightOf="@+id/lvHives"
+        android:layout_toEndOf="@+id/lvHives"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:text="Queen Birth"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblQueenBirth"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/txtQueenBirth"
+        android:layout_alignBottom="@+id/txtQueenBirth"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtQueenReplaced"
+        android:layout_height="50dp"
+        android:layout_below="@+id/lblQueenBirth"
+        android:layout_alignLeft="@+id/txtQueenBirth"
+        android:layout_alignStart="@+id/txtQueenBirth"
+        android:layout_width="300dp" />
+
+    <ListView
+        android:id="@+id/lvQueenHistory"
+        android:layout_height="200dp"
+        android:layout_width="500dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/lblQeenHistory"
+        android:layout_alignLeft="@+id/lvHives"
+        android:layout_alignStart="@+id/lvHives" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBack"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_alignBaseline="@+id/btnCancel"
+        android:layout_alignBottom="@+id/btnCancel"
+        android:layout_toRightOf="@+id/btnCancel"
+        android:layout_toEndOf="@+id/btnCancel" />
+
+</RelativeLayout>

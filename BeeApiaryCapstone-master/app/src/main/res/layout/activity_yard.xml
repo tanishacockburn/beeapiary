@@ -48,20 +48,6 @@
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark" />
 
-    <EditText
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtYardLocation"
-        style="@style/Widget.AppCompat.EditText"
-        android:textSize="18sp"
-        android:layout_alignBaseline="@+id/lblYardLocation"
-        android:layout_alignBottom="@+id/lblYardLocation"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_width="200dp"
-        android:layout_height="50dp" />
-
     <ListView
         android:layout_marginTop="27dp"
         android:id="@+id/lVHiveList"
@@ -156,6 +142,20 @@
         android:layout_width="500dp"
         android:layout_marginTop="14dp"
         android:layout_below="@+id/lblLandDescription"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtYardLocation"
+        style="@style/Widget.AppCompat.EditText"
+        android:textSize="18sp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/lblYardLocation"
+        android:layout_alignBottom="@+id/lblYardLocation"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
