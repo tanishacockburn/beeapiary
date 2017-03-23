@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
-        android:id="@+id/btnDelete"
+        android:id="@+id/btnConfirm"
         android:layout_below="@+id/lvInspectionList"
         android:layout_toRightOf="@+id/btnEdit"
         android:layout_toEndOf="@+id/btnEdit" />
@@ -70,8 +70,8 @@
         android:id="@+id/btnCancel"
         android:layout_alignBaseline="@+id/btnBack"
         android:layout_alignBottom="@+id/btnBack"
-        android:layout_toRightOf="@+id/btnDelete"
-        android:layout_toEndOf="@+id/btnDelete"
+        android:layout_toRightOf="@+id/btnConfirm"
+        android:layout_toEndOf="@+id/btnConfirm"
         android:layout_marginLeft="15dp"
         android:layout_marginStart="15dp" />
 

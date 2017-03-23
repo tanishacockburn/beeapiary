@@ -16,515 +16,180 @@
 
     <TextView
         android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView7"
-        android:layout_above="@+id/txtHiveName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/txtHiveName" />
-
-    <TextView
-        android:text="Hive Type"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblHiveType"
-        android:textColor="@android:color/background_dark"
-        android:textSize="18sp"
-        android:layout_alignBaseline="@+id/txtHiveType"
-        android:layout_alignBottom="@+id/txtHiveType"
-        android:layout_alignLeft="@+id/lblHiveInformation"
-        android:layout_alignStart="@+id/lblHiveInformation" />
-
-    <TextView
-        android:text="Add Hive"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtSupplier"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_above="@+id/txtDOB"
-        android:layout_alignLeft="@+id/txtBreed"
-        android:layout_alignStart="@+id/txtBreed" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtBreed"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_alignBaseline="@+id/lblBreed"
-        android:layout_alignBottom="@+id/lblBreed"
-        android:layout_alignLeft="@+id/text"
-        android:layout_alignStart="@+id/text"
-        android:text="breed" />
-
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:id="@+id/txt1"
-        android:layout_below="@+id/lblSrcOfBees1"
-        android:layout_alignRight="@+id/lblQueenInformation"
-        android:layout_alignEnd="@+id/lblQueenInformation" />
-
-    <TextView
-        android:text="Add Hive"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView5"
-        android:textSize="30sp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtYardListing4"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_alignTop="@+id/btnBack"
-        android:layout_alignLeft="@+id/txtYardListing2"
-        android:layout_alignStart="@+id/txtYardListing2" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/txtLandDescription"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/textView5"
-        android:layout_toEndOf="@+id/textView5" />
-
-    <TextView
-        android:text="Postal Code/ZipCode"
-        android:layout_width="100dp"
-        android:id="@+id/lblPostalZipCode"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:layout_height="60dp"
-        android:layout_above="@+id/txtLandDescription"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="Land Description"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblLandDescription"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtYardListing1"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_alignTop="@+id/lblSupplier"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtYardListing2"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_below="@+id/lblBreed"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="Apiary/Yard Listing"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:id="@+id/lblYardListing"
+        android:id="@+id/text"
         android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:layout_below="@+id/txtLandDescription"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginLeft="163dp"
+        android:layout_marginStart="163dp"
+        android:layout_below="@+id/lblFrameMaterial"
+        android:layout_toRightOf="@+id/lblFrameMaterial"
+        android:layout_toEndOf="@+id/lblFrameMaterial"
+        android:visibility="invisible" />
 
     <TextView
-        android:text="Source Of Bees"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:id="@+id/lblSrcOfBees1"
-        android:textSize="18sp"
-        android:layout_below="@+id/txtHiveType"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4"
-        android:textColor="@android:color/background_dark" />
-
-    <TextView
-        android:text="Hive Name"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblName"
-        android:layout_width="100dp"
-        android:textColor="@android:color/background_dark"
-        android:textSize="18sp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/lblSrcOfBees1"
-        android:layout_above="@+id/txtlocation" />
-
-    <TextView
-        android:text="Split Type"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblSplitType"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:layout_below="@+id/lblSrcOfBees1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Spinner
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner2"
-        style="@style/AlertDialog.AppCompat.Light"
-        android:spinnerMode="dialog"
-        android:minWidth="@dimen/activity_vertical_margin"
-        android:layout_alignTop="@+id/lblSplitType"
-        android:layout_alignLeft="@+id/txtHiveName"
-        android:layout_alignStart="@+id/txtHiveName" />
-
-    <EditText
+        android:text="Add Hive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtPostalCodeZipCode"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_below="@+id/lblLocation"
-        android:layout_alignLeft="@+id/txtLandDescription"
-        android:layout_alignStart="@+id/txtLandDescription" />
-
-    <TextView
-        android:text="Location"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblLocation"
-        android:layout_width="100dp"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:layout_alignBottom="@+id/txtlocation"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtlocation"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_height="40dp"
-        android:layout_below="@+id/lblSplitType"
-        android:layout_alignLeft="@+id/txtPostalCodeZipCode"
-        android:layout_alignStart="@+id/txtPostalCodeZipCode" />
-
-    <TextView
-        android:text="Bee Configuration"
-        android:layout_height="40dp"
-        android:id="@+id/lblBeeConfiguration"
-        android:textSize="18sp"
-        android:layout_width="130dp"
-        android:textColor="@android:color/background_dark"
-        android:layout_below="@+id/spinner2"
-        android:layout_alignLeft="@+id/lblSrcOfBees1"
-        android:layout_alignStart="@+id/lblSrcOfBees1" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/text"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_alignBaseline="@+id/lblInstallationDate"
-        android:layout_alignBottom="@+id/lblInstallationDate"
-        android:layout_alignLeft="@+id/txtNumberOfFrames"
-        android:layout_alignStart="@+id/txtNumberOfFrames"
-        android:text="installation date" />
-
-    <EditText
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtBeeConfiguration"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_width="200dp"
-        android:text="bee configuration"
-        android:layout_alignBaseline="@+id/lblBeeConfiguration"
-        android:layout_alignBottom="@+id/lblBeeConfiguration"
-        android:layout_alignLeft="@+id/txtNumberOfFrames"
-        android:layout_alignStart="@+id/txtNumberOfFrames" />
+        android:id="@+id/lblAddHive"
+        android:textSize="36sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="98dp"
+        android:layout_marginStart="98dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/txtSplitType"
+        android:layout_toEndOf="@+id/txtSplitType" />
 
     <Button
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnBack"
-        android:layout_marginRight="18dp"
-        android:layout_marginEnd="18dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/btnCancel"
-        android:layout_toStartOf="@+id/btnCancel"
-        android:layout_marginBottom="12dp" />
+        android:layout_alignBaseline="@+id/lblSplitType"
+        android:layout_alignBottom="@+id/lblSplitType"
+        android:layout_alignLeft="@+id/txtHiveConfiguration"
+        android:layout_alignStart="@+id/txtHiveConfiguration"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp" />
 
-    <Button
-        android:text="Add Hive"
+    <TextView
+        android:text="Hive Type"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblHiveType"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/txtHiveType"
+        android:layout_alignLeft="@+id/lblHiveName"
+        android:layout_alignStart="@+id/lblHiveName" />
+
+    <EditText
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtHiveName"
+        android:layout_width="150dp"
+        android:layout_alignBottom="@+id/txtYearBeesWereSourced"
+        android:layout_alignLeft="@+id/txtHiveType"
+        android:layout_alignStart="@+id/txtHiveType"
+        android:layout_marginBottom="28dp" />
+
+    <TextView
+        android:text="Hive Name"
+        android:layout_width="100dp"
+        android:id="@+id/lblHiveName"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/txtHiveName"
+        android:layout_alignBottom="@+id/txtHiveName"
+        android:layout_alignLeft="@+id/lblSplitType"
+        android:layout_alignStart="@+id/lblSplitType" />
+
+    <EditText
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtHiveType"
+        android:layout_width="150dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="25dp"
+        android:layout_above="@+id/btnCancel"
+        android:layout_toRightOf="@+id/text"
+        android:layout_toEndOf="@+id/text" />
+
+    <TextView
+        android:text="Split Type"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblSplitType"
+        android:textSize="18sp"
+        android:layout_marginRight="31dp"
+        android:layout_marginEnd="31dp"
+        android:layout_alignBaseline="@+id/txtSplitType"
+        android:layout_alignBottom="@+id/txtSplitType"
+        android:layout_toLeftOf="@+id/txtHiveType"
+        android:layout_toStartOf="@+id/txtHiveType" />
+
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnAddHive"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtSplitType"
+        android:layout_marginTop="216dp"
+        android:layout_below="@+id/text"
+        android:layout_alignLeft="@+id/txtHiveType"
+        android:layout_alignStart="@+id/txtHiveType" />
 
-        android:layout_alignBottom="@+id/txtYardListing4"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <EditText
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtYearBeesWereSourced"
+        android:layout_width="150dp"
+        android:layout_alignTop="@+id/lblYearBeesWereSourced"
+        android:layout_alignRight="@+id/txtHiveConfiguration"
+        android:layout_alignEnd="@+id/txtHiveConfiguration"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp" />
+
+    <TextView
+        android:text="Hive Configuration"
+        android:id="@+id/lblHiveConfiguration"
+        android:textSize="18sp"
+        android:layout_height="50dp"
+        android:layout_width="110dp"
+        android:layout_alignTop="@+id/txtHiveType"
+        android:layout_alignLeft="@+id/lblYearBeesWereSourced"
+        android:layout_alignStart="@+id/lblYearBeesWereSourced" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtHiveConfiguration"
+        android:layout_marginLeft="43dp"
+        android:layout_marginStart="43dp"
+        android:layout_alignTop="@+id/lblHiveConfiguration"
+        android:layout_toRightOf="@+id/lblHiveConfiguration"
+        android:layout_toEndOf="@+id/lblHiveConfiguration" />
 
     <Button
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnCancel"
-        android:layout_alignBaseline="@+id/btnBack"
-        android:layout_alignBottom="@+id/btnBack"
-        android:layout_toLeftOf="@+id/btnAddHive"
-        android:layout_toStartOf="@+id/btnAddHive" />
+        android:layout_alignTop="@+id/txtSplitType"
+        android:layout_toLeftOf="@+id/txtYearBeesWereSourced"
+        android:layout_toStartOf="@+id/txtYearBeesWereSourced"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp" />
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtDOB"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_alignBaseline="@+id/lblYearOfBirth"
-        android:layout_alignBottom="@+id/lblYearOfBirth"
-        android:layout_alignLeft="@+id/txtSupplier"
-        android:layout_alignStart="@+id/txtSupplier"
-        android:text="DOB" />
-
-    <TextView
-        android:text="Box"
+    <Button
+        android:text="Confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lblBox"
-        android:textSize="18sp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/background_dark"
-        android:layout_alignBottom="@+id/txtPostalCodeZipCode"
-        android:layout_alignLeft="@+id/lblBeeConfiguration"
-        android:layout_alignStart="@+id/lblBeeConfiguration" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtFrameMaterial"
-        style="@style/Widget.AppCompat.EditText"
-        android:text="Frame material"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/text"
-        android:layout_alignStart="@+id/text" />
+        android:id="@+id/btnConfirm"
+        android:layout_alignBaseline="@+id/btnCancel"
+        android:layout_alignBottom="@+id/btnCancel"
+        android:layout_toLeftOf="@+id/lblHiveConfiguration"
+        android:layout_toStartOf="@+id/lblHiveConfiguration" />
 
     <TextView
-        android:text="Hive Information"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblHiveInformation"
-        android:textSize="18sp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/background_dark"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_alignRight="@+id/lblBeeConfiguration"
-        android:layout_alignEnd="@+id/lblBeeConfiguration" />
-
-    <EditText
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtHiveName"
-        android:layout_width="200dp"
-        style="@style/Widget.AppCompat.EditText"
-        android:singleLine="true"
-        android:layout_alignBaseline="@+id/lblName"
-        android:layout_alignBottom="@+id/lblName"
-        android:layout_alignRight="@+id/txtPostalCodeZipCode"
-        android:layout_alignEnd="@+id/txtPostalCodeZipCode" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtHiveType"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_below="@+id/lblHiveInformation"
-        android:layout_alignLeft="@+id/txtSourceOfBees"
-        android:layout_alignStart="@+id/txtSourceOfBees"
-        android:text="hive type" />
-
-    <TextView
-        android:text="Number of Frames"
+        android:text="Year Bees Were Sourced"
         android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblNumberOfFrames"
+        android:layout_height="70dp"
+        android:id="@+id/lblYearBeesWereSourced"
         android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:layout_above="@+id/txtLandDescription"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="Frame Material"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblFrameMaterial"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:layout_alignBaseline="@+id/txtFrameMaterial"
-        android:layout_alignBottom="@+id/txtFrameMaterial"
-        android:layout_alignRight="@+id/textView4"
-        android:layout_alignEnd="@+id/textView4" />
-
-    <TextView
-        android:text="Installation Date"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblInstallationDate"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:layout_below="@+id/txtLandDescription"
-        android:layout_alignLeft="@+id/lblFrameMaterial"
-        android:layout_alignStart="@+id/lblFrameMaterial" />
-
-    <TextView
-        android:text="Supplier"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblSupplier"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:layout_alignLeft="@+id/lblHiveType"
-        android:layout_alignStart="@+id/lblHiveType"
-        android:layout_above="@+id/txtSupplier" />
-
-    <TextView
-        android:text="Breed"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblBreed"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:layout_alignBaseline="@+id/txtSupplier"
-        android:layout_alignBottom="@+id/txtSupplier"
-        android:layout_alignLeft="@+id/lblSupplier"
-        android:layout_alignStart="@+id/lblSupplier" />
-
-    <EditText
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtSourceOfBees"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_width="200dp"
-        android:text="srcofbees"
-        android:layout_below="@+id/txtHiveType"
-        android:layout_alignLeft="@+id/txtBeeConfiguration"
-        android:layout_alignStart="@+id/txtBeeConfiguration" />
-
-    <TextView
-        android:text="Year of Birth"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblYearOfBirth"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:layout_above="@+id/btnBack"
-        android:layout_alignLeft="@+id/lblBreed"
-        android:layout_alignStart="@+id/lblBreed" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtSuppliers"
-        android:layout_marginRight="14dp"
-        android:layout_marginEnd="14dp"
-        android:layout_above="@+id/txtSupplier"
-        android:layout_alignRight="@+id/txtSupplier"
-        android:layout_alignEnd="@+id/txtSupplier"
-        android:layout_alignLeft="@+id/txtSupplier"
-        android:layout_alignStart="@+id/txtSupplier" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtNumberOfFrames"
-        style="@style/Widget.AppCompat.EditText"
-        android:text="Number of frames"
-        android:layout_alignBottom="@+id/lblNumberOfFrames"
-        android:layout_alignRight="@+id/btnBack"
-        android:layout_alignEnd="@+id/btnBack"
-        android:layout_marginRight="24dp"
-        android:layout_marginEnd="24dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtYardListing3"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_below="@+id/lblYardListing"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="Queen Information"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lblQueenInformation"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_dark"
-        android:textStyle="normal|bold"
-        android:layout_alignBaseline="@+id/txtYardListing3"
-        android:layout_alignBottom="@+id/txtYardListing3"
-        android:layout_alignLeft="@+id/lblSupplier"
-        android:layout_alignStart="@+id/lblSupplier" />
+        android:layout_above="@+id/lblHiveConfiguration"
+        android:layout_toRightOf="@+id/lblAddHive"
+        android:layout_toEndOf="@+id/lblAddHive" />
 
 
 </RelativeLayout>

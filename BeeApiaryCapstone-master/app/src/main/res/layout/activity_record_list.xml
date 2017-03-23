@@ -85,13 +85,13 @@
         android:layout_toEndOf="@+id/lblHives"
         android:layout_marginLeft="14dp"
         android:layout_marginStart="14dp"
-        android:id="@+id/btnDelete" />
+        android:id="@+id/btnConfirm" />
 
     <Button
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnDelete"
+        android:layout_alignTop="@+id/btnConfirm"
         android:layout_centerHorizontal="true"
         android:id="@+id/btnCancel" />
 

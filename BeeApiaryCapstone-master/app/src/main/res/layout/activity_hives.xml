@@ -29,7 +29,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
-        android:id="@+id/editText7"
+        android:id="@+id/txtSplitType"
         android:layout_below="@+id/lblYearBeesWereSourced"
         android:layout_toLeftOf="@+id/lvHiveListOfBoxes"
         android:layout_toStartOf="@+id/lvHiveListOfBoxes" />
@@ -38,7 +38,7 @@
         android:text="Hive Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lblHiveDetails"
+        android:id="@+id/lblAddHive"
         android:textSize="36sp"
         android:textColor="@color/colorPrimaryDark"
         android:layout_alignParentTop="true"
@@ -80,9 +80,9 @@
         android:id="@+id/hivesListView"
         android:layout_height="200dp"
         android:layout_width="200dp"
-        android:layout_below="@+id/lblHiveDetails"
-        android:layout_toRightOf="@+id/editText7"
-        android:layout_toEndOf="@+id/editText7" />
+        android:layout_below="@+id/lblAddHive"
+        android:layout_toRightOf="@+id/txtSplitType"
+        android:layout_toEndOf="@+id/txtSplitType" />
 
     <TextView
         android:text="Box Type"
@@ -136,7 +136,7 @@
         android:layout_height="50dp"
         android:id="@+id/lblSplitType"
         android:textSize="18sp"
-        android:layout_below="@+id/editText7"
+        android:layout_below="@+id/txtSplitType"
         android:layout_alignLeft="@+id/lblBoxType"
         android:layout_alignStart="@+id/lblBoxType" />
 
@@ -157,8 +157,8 @@
         android:textSize="18sp"
         android:layout_height="50dp"
         android:layout_width="110dp"
-        android:layout_alignBaseline="@+id/editText7"
-        android:layout_alignBottom="@+id/editText7"
+        android:layout_alignBaseline="@+id/txtSplitType"
+        android:layout_alignBottom="@+id/txtSplitType"
         android:layout_toRightOf="@+id/txtHiveType"
         android:layout_toEndOf="@+id/txtHiveType"
         android:layout_marginLeft="14dp"
@@ -182,8 +182,8 @@
         android:textSize="24sp"
         android:layout_width="150dp"
         android:layout_below="@+id/btnAddHive"
-        android:layout_toRightOf="@+id/editText7"
-        android:layout_toEndOf="@+id/editText7"
+        android:layout_toRightOf="@+id/txtSplitType"
+        android:layout_toEndOf="@+id/txtSplitType"
         android:layout_marginTop="15dp" />
 
     <Button
@@ -216,8 +216,8 @@
         android:textColor="@android:color/background_light"
         android:layout_width="200dp"
         android:layout_below="@+id/lvHiveListOfBoxes"
-        android:layout_toRightOf="@+id/editText7"
-        android:layout_toEndOf="@+id/editText7"
+        android:layout_toRightOf="@+id/txtSplitType"
+        android:layout_toEndOf="@+id/txtSplitType"
         android:layout_marginTop="17dp" />
 
     <EditText
@@ -325,7 +325,7 @@
         android:text="Delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnDelete"
+        android:id="@+id/btnConfirm"
         android:layout_alignBaseline="@+id/btnCancel"
         android:layout_alignBottom="@+id/btnCancel"
         android:layout_alignRight="@+id/lblHiveListOfBoxes"

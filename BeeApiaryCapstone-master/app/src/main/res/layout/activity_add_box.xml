@@ -10,18 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.tanisha.busy_bees_capstone_project.AddBox">
 
-    <ListView
-        android:layout_marginLeft="46dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="160dp"
-        android:id="@+id/lvHive"
-        android:layout_height="150dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_width="200dp"
-        style="@style/Widget.AppCompat.ListView" />
-
     <TextView
         android:text="Add Box"
         android:layout_width="wrap_content"
@@ -36,28 +24,6 @@
         android:layout_toEndOf="@+id/lvHive" />
 
     <TextView
-        android:text="Honey weight"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="51dp"
-        android:id="@+id/lblHoneyWeight"
-        android:textSize="18sp"
-        android:layout_below="@+id/lblInstallationDate"
-        android:layout_alignLeft="@+id/lblInstallationDate"
-        android:layout_alignStart="@+id/lblInstallationDate" />
-
-    <TextView
-        android:text="Installation Date"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="62dp"
-        android:id="@+id/lblInstallationDate"
-        android:textSize="18sp"
-        android:layout_below="@+id/lblFrameMaterials"
-        android:layout_alignLeft="@+id/lblFrameMaterials"
-        android:layout_alignStart="@+id/lblFrameMaterials" />
-
-    <TextView
         android:text="Box Type"
         android:layout_width="150dp"
         android:layout_height="50dp"
@@ -67,16 +33,6 @@
         android:layout_alignLeft="@+id/lblAddBox"
         android:layout_alignStart="@+id/lblAddBox" />
 
-    <TextView
-        android:text="Number  of Materials"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:id="@+id/lblNumberOfMaterials"
-        android:textSize="18sp"
-        android:layout_above="@+id/lblFrameMaterials"
-        android:layout_alignRight="@+id/lblAddBox"
-        android:layout_alignEnd="@+id/lblAddBox" />
-
     <EditText
         android:layout_width="250dp"
         android:inputType="textPersonName"
@@ -84,8 +40,8 @@
         android:ems="10"
         android:id="@+id/txtNumberOfFrames"
         android:layout_height="50dp"
-        android:layout_alignBaseline="@+id/lblNumberOfMaterials"
-        android:layout_alignBottom="@+id/lblNumberOfMaterials"
+        android:layout_alignBaseline="@+id/lblNumberOfFrames"
+        android:layout_alignBottom="@+id/lblNumberOfFrames"
         android:layout_toRightOf="@+id/lblBoxType"
         android:layout_toEndOf="@+id/lblBoxType" />
 
@@ -101,28 +57,6 @@
         android:layout_toRightOf="@+id/lblBoxType"
         android:layout_toEndOf="@+id/lblBoxType" />
 
-    <TextView
-        android:text="Frame Materials"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:id="@+id/lblFrameMaterials"
-        android:textSize="18sp"
-        android:layout_marginTop="45dp"
-        android:layout_below="@+id/lvHive"
-        android:layout_alignLeft="@+id/lblNumberOfMaterials"
-        android:layout_alignStart="@+id/lblNumberOfMaterials" />
-
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/text"
-        android:layout_alignTop="@+id/lblInstallationDate"
-        android:layout_alignLeft="@+id/txtFrameMaterial"
-        android:layout_alignStart="@+id/txtFrameMaterial" />
-
     <EditText
         android:layout_width="250dp"
         android:layout_height="50dp"
@@ -135,39 +69,6 @@
         android:layout_marginBottom="19dp"
         android:id="@+id/txtHoneyWeight" />
 
-    <Button
-        android:text="Cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btnConfirm"
-        android:layout_toRightOf="@+id/btnConfirm"
-        android:layout_toEndOf="@+id/btnConfirm"
-        android:layout_marginLeft="47dp"
-        android:layout_marginStart="47dp"
-        android:id="@+id/btnCancel" />
-
-    <Button
-        android:text="Confirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:id="@+id/btnConfirm"
-        android:layout_below="@+id/lblHoneyWeight"
-        android:layout_toRightOf="@+id/lvHive"
-        android:layout_toEndOf="@+id/lvHive" />
-
-    <Button
-        android:text="Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:id="@+id/btnBack"
-        android:layout_alignBaseline="@+id/btnCancel"
-        android:layout_alignBottom="@+id/btnCancel"
-        android:layout_toRightOf="@+id/btnCancel"
-        android:layout_toEndOf="@+id/btnCancel" />
-
     <EditText
         android:layout_width="250dp"
         android:layout_height="50dp"
@@ -179,4 +80,100 @@
         android:layout_alignBottom="@+id/lblFrameMaterials"
         android:layout_alignLeft="@+id/txtNumberOfFrames"
         android:layout_alignStart="@+id/txtNumberOfFrames" />
+
+    <ListView
+        android:layout_marginTop="61dp"
+        android:id="@+id/lvHive"
+        android:layout_width="200dp"
+        style="@style/Widget.AppCompat.ListView"
+        android:layout_below="@+id/lblAddBox"
+        android:layout_height="200dp" />
+
+    <TextView
+        android:text="Installation Date"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:id="@+id/lblInstallationDate"
+        android:textSize="18sp"
+        android:layout_below="@+id/lblFrameMaterials"
+        android:layout_toLeftOf="@+id/text"
+        android:layout_toStartOf="@+id/text" />
+
+    <TextView
+        android:text="Number  of Materials"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblNumberOfFrames"
+        android:textSize="18sp"
+        android:layout_below="@+id/lblBoxType"
+        android:layout_toLeftOf="@+id/txtNumberOfFrames"
+        android:layout_toStartOf="@+id/txtNumberOfFrames" />
+
+    <TextView
+        android:text="Honey weight"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="26dp"
+        android:id="@+id/lblHoneyWeight"
+        android:textSize="18sp"
+        android:layout_below="@+id/text"
+        android:layout_toLeftOf="@+id/txtHoneyWeight"
+        android:layout_toStartOf="@+id/txtHoneyWeight" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/text"
+        android:layout_alignBaseline="@+id/lblInstallationDate"
+        android:layout_alignBottom="@+id/lblInstallationDate"
+        android:layout_toRightOf="@+id/lblFrameMaterials"
+        android:layout_toEndOf="@+id/lblFrameMaterials" />
+
+    <TextView
+        android:text="Frame Materials"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblFrameMaterials"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/lblNumberOfFrames"
+        android:layout_toLeftOf="@+id/txtFrameMaterial"
+        android:layout_toStartOf="@+id/txtFrameMaterial" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="53dp"
+        android:layout_marginStart="53dp"
+        android:id="@+id/btnCancel"
+        android:layout_below="@+id/txtHoneyWeight"
+        android:layout_toRightOf="@+id/btnConfirm"
+        android:layout_toEndOf="@+id/btnConfirm" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:id="@+id/btnBack"
+        android:layout_below="@+id/txtHoneyWeight"
+        android:layout_toRightOf="@+id/btnCancel"
+        android:layout_toEndOf="@+id/btnCancel" />
+
+    <Button
+        android:text="Confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnConfirm"
+        android:layout_below="@+id/lblHoneyWeight"
+        android:layout_toRightOf="@+id/lvHive"
+        android:layout_toEndOf="@+id/lvHive"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
 </RelativeLayout>

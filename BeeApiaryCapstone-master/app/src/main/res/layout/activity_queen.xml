@@ -44,7 +44,9 @@
         android:layout_marginTop="27dp"
         android:layout_below="@+id/lblQueenReplaced"
         android:layout_toRightOf="@+id/lvHives"
-        android:layout_toEndOf="@+id/lvHives" />
+        android:layout_toEndOf="@+id/lvHives"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
 
     <Button
         android:text="Edit "
@@ -54,7 +56,9 @@
         android:layout_alignBaseline="@+id/btnReplaceQueen"
         android:layout_alignBottom="@+id/btnReplaceQueen"
         android:layout_toRightOf="@+id/lblQueenBirth"
-        android:layout_toEndOf="@+id/lblQueenBirth" />
+        android:layout_toEndOf="@+id/lblQueenBirth"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
 
     <ListView
         android:layout_height="200dp"
@@ -72,7 +76,9 @@
         android:layout_alignBaseline="@+id/btnEditQueen"
         android:layout_alignBottom="@+id/btnEditQueen"
         android:layout_toRightOf="@+id/lvQueenHistory"
-        android:layout_toEndOf="@+id/lvQueenHistory" />
+        android:layout_toEndOf="@+id/lvQueenHistory"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:text="Queen History"
@@ -161,6 +167,8 @@
         android:layout_alignBaseline="@+id/btnCancel"
         android:layout_alignBottom="@+id/btnCancel"
         android:layout_toRightOf="@+id/btnCancel"
-        android:layout_toEndOf="@+id/btnCancel" />
+        android:layout_toEndOf="@+id/btnCancel"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
 
 </RelativeLayout>

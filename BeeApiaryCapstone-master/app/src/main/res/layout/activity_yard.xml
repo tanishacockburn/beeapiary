@@ -41,10 +41,10 @@
         android:layout_marginLeft="14dp"
         android:layout_marginStart="14dp"
         android:id="@+id/btnCancel"
-        android:layout_alignBaseline="@+id/btnDelete"
-        android:layout_alignBottom="@+id/btnDelete"
-        android:layout_toRightOf="@+id/btnDelete"
-        android:layout_toEndOf="@+id/btnDelete"
+        android:layout_alignBaseline="@+id/btnConfirm"
+        android:layout_alignBottom="@+id/btnConfirm"
+        android:layout_toRightOf="@+id/btnConfirm"
+        android:layout_toEndOf="@+id/btnConfirm"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark" />
 
@@ -87,7 +87,7 @@
         android:text="Delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnDelete"
+        android:id="@+id/btnConfirm"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
         android:layout_alignBaseline="@+id/btnEditYard"
