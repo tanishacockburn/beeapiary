@@ -1,93 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context="com.example.tanisha.busy_bees_capstone_project.MainActivity">
-
-    <Button
-        android:text="Inspections"
-        android:layout_width="500dp"
-        android:id="@+id/btnInspection"
-        android:layout_height="75dp"
-        android:textSize="36sp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@android:color/background_light"
-        android:layout_marginTop="47dp"
-        android:layout_below="@+id/btnMedia"
-        android:layout_alignLeft="@+id/btnMedia"
-        android:layout_alignStart="@+id/btnMedia" />
-
-    <Button
-        android:text="View Queen"
-        android:layout_width="500dp"
-        android:id="@+id/btnQueen"
-        android:layout_height="75dp"
-        android:textSize="30sp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@android:color/background_light"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/btnHive"
-        android:layout_alignStart="@+id/btnHive" />
-
-    <Button
-        android:text="View Media"
-        android:layout_width="500dp"
-        android:id="@+id/btnMedia"
-        android:layout_height="75dp"
-        android:textSize="30sp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@android:color/background_light"
-        android:layout_marginTop="57dp"
-        android:layout_below="@+id/btnQueen"
-        android:layout_alignLeft="@+id/btnQueen"
-        android:layout_alignStart="@+id/btnQueen" />
-
-    <Button
-        android:text="View Hive"
-        android:id="@+id/btnHive"
-        android:layout_width="500dp"
-        android:textSize="30sp"
-        android:layout_height="75dp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@android:color/background_light"
-        android:layout_above="@+id/btnQueen"
-        android:layout_alignLeft="@+id/btnYard"
-        android:layout_alignStart="@+id/btnYard"
-        android:layout_marginBottom="61dp" />
-
-    <Button
-        android:text="View Yard"
-        android:layout_width="500dp"
-        android:id="@+id/btnYard"
-        android:layout_height="75dp"
-        android:textSize="30sp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="?android:attr/fastScrollTextColor"
-        android:layout_marginRight="113dp"
-        android:layout_marginEnd="113dp"
-        android:layout_above="@+id/btnHive"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="50dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bee Apiary Application"
         android:id="@+id/lblBeeApiaryApplication"
-
-
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="48dp"
         android:textSize="36sp"
         android:textColor="@color/colorPrimaryDark"
-        android:textStyle="normal|bold"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:textStyle="normal|bold" />
 
-</RelativeLayout>
+
+    <Button
+        android:text="View Yard"
+        android:layout_width="match_parent"
+        android:id="@+id/btnYard"
+        android:layout_height="75dp"
+        android:textSize="30sp"
+        android:layout_marginTop="47dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="?android:attr/fastScrollTextColor"
+         />
+
+    <Button
+        android:text="View Hive"
+        android:id="@+id/btnHive"
+        android:layout_width="match_parent"
+        android:textSize="30sp"
+        android:layout_height="75dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="47dp" />
+
+    <Button
+        android:text="View Queen"
+        android:layout_width="match_parent"
+        android:id="@+id/btnQueen"
+        android:layout_height="75dp"
+        android:textSize="30sp"
+        android:layout_marginTop="47dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:text="View Media"
+        android:layout_width="match_parent"
+        android:id="@+id/btnMedia"
+        android:layout_height="75dp"
+        android:textSize="30sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="47dp" />
+
+    <Button
+        android:text="Inspections"
+        android:layout_width="match_parent"
+        android:id="@+id/btnInspection"
+        android:layout_height="75dp"
+        android:textSize="30sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:layout_marginTop="47dp" />
+
+
+</LinearLayout>
