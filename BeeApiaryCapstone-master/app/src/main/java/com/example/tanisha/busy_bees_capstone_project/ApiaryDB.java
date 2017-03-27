@@ -95,42 +95,42 @@ public class ApiaryDB {
 
 
 			//FlowerObj table
-			db.execSQL("CREATE TABLE " + FLOWER + " ( " + FLOWERID + "INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + YARDID + 
+			db.execSQL("CREATE TABLE " + FLOWER + " ( " + FLOWERID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + YARDID +
 					" INTEGER, " + COMMONNAME + " VARCHAR NOT NULL, " + SCIENTIFICNAME + " VARCHAR,  " + STARTOFSEASON + 
 					" VARCHAR, " + ENDOFSEASON + " VARCHAR, " +
 					" FOREIGN KEY (yardID) REFERENCES Yard(yardID) ON DELETE CASCADE)");
 
 			//Yard table
-			db.execSQL("CREATE TABLE "+ YARD +" ( " + YARDID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," + LOCATION +
+			db.execSQL("CREATE TABLE "+ YARD +" ( " + YARDID + " INTEGER PRIMARY KEY AUTOINCREMENT," + LOCATION +
 					" VARCHAR NOT NULL, " + LANDDESCRIPTION + " VARCHAR )");
 			//Hive
-			db.execSQL("CREATE TABLE " + HIVE + " ( " + HIVEID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + HIVENAME + " VARCHAR, " + SPLITTYPE + " VARCHAR, " + HIVETYPE + " VARCHAR " +
+			db.execSQL("CREATE TABLE " + HIVE + " ( " + HIVEID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + HIVENAME + " VARCHAR, " + SPLITTYPE + " VARCHAR, " + HIVETYPE + " VARCHAR, " +
 					   " " + YEARBEESWERESOURCED + " INTEGER, "+ HIVECONFIGURATION +" VARCHAR, " + YARDID + " INTEGER, " +
 					   " FOREIGN KEY (yardID) REFERENCES Yard(yardID) ON DELETE CASCADE )");
 
 			//Queen table
-			db.execSQL("CREATE TABLE " + QUEEN + " ( " + QUEENID +" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + QUEENBIRTH + " VARCHAR, " + QUEENREPLACED + " VARCHAR, " + HIVEID + " INTEGER NOT NULL, " +
+			db.execSQL("CREATE TABLE " + QUEEN + " ( " + QUEENID +" INTEGER PRIMARY KEY AUTOINCREMENT, " + QUEENBIRTH + " VARCHAR, " + QUEENREPLACED + " VARCHAR, " + HIVEID + " INTEGER NOT NULL, " +
 					   "FOREIGN KEY (hiveID) REFERENCES Hive(hiveID) ON DELETE CASCADE)");
 
 			//Box table
-			db.execSQL("CREATE TABLE "+ BOX +" ( " + BOXID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + BOXTYPE + " VARCHAR, " + NUMBEROFFRAMES + " INTEGER, " + FRAMEMATERIAL + " VARCHAR, " +
+			db.execSQL("CREATE TABLE "+ BOX +" ( " + BOXID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + BOXTYPE + " VARCHAR, " + NUMBEROFFRAMES + " INTEGER, " + FRAMEMATERIAL + " VARCHAR, " +
 					   " " + INSTALLATIONDATE + " VARCHAR, " + HARVESTDATE + " VARCHAR, " + HONEYWEIGHT + " DOUBLE, " + HIVEID + " INTEGER NOT NULL, " +
 					   " FOREIGN KEY (hiveID) REFERENCES Hive(hiveID) ON DELETE CASCADE )");
 
 			//Media Table
-			db.execSQL("CREATE TABLE " + MEDIA + " (" + MEDIAID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + HIVEID + " INTEGER NOT NULL, " + HIVEIMAGESTR + " VARCHAR, " + HIVEVIDEOSTR + " VARCHAR, " +
+			db.execSQL("CREATE TABLE " + MEDIA + " (" + MEDIAID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + HIVEID + " INTEGER NOT NULL, " + HIVEIMAGESTR + " VARCHAR, " + HIVEVIDEOSTR + " VARCHAR, " +
 					   " FOREIGN KEY (hiveID) REFERENCES Hive(hiveID) ON DELETE CASCADE )");
 
 			//Inspection Table
-			db.execSQL("CREATE TABLE " + INSPECTION + " ( " + INSPECTIONID + " INTEGER PRIMARY KEY NOT NULL, " + DATEOFINSPECTION + " VARCHAR, " + HIVEBEHAVIOUR + " VARCHAR, " + OBSERVATION + " VARCHAR, " +
+			db.execSQL("CREATE TABLE " + INSPECTION + " ( " + INSPECTIONID + " INTEGER PRIMARY KEY, " + DATEOFINSPECTION + " VARCHAR, " + HIVEBEHAVIOUR + " VARCHAR, " + OBSERVATION + " VARCHAR, " +
 					   " " + CONCERN + " VARCHAR, " + HIVEID + " INTEGER NOT NULL, FOREIGN KEY (hiveID) REFERENCES Hive(hiveID) ON DELETE CASCADE )");
 
 			//Treatment Table
-			db.execSQL("CREATE TABLE " + TREATMENT + " (" + TREATMENTID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + TREATMENTAPPLIED + " VARCHAR, " + CONCERNS + " VARCHAR, " + INSPECTIONID + " INTEGER NOT NULL, " +
+			db.execSQL("CREATE TABLE " + TREATMENT + " (" + TREATMENTID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + TREATMENTAPPLIED + " VARCHAR, " + CONCERNS + " VARCHAR, " + INSPECTIONID + " INTEGER NOT NULL, " +
 					   " FOREIGN KEY (inspectionID) REFERENCES Inspection(inspectionID) ON DELETE CASCADE )");
 
 			//Pest Table
-			db.execSQL("CREATE TABLE " + PEST + " (" + PESTID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + PESTSEEN + " VARCHAR, " + PESTMANAGEMENT + " VARCHAR, " + INSPECTIONID + " INTEGER NOT NULL, " +
+			db.execSQL("CREATE TABLE " + PEST + " (" + PESTID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + PESTSEEN + " VARCHAR, " + PESTMANAGEMENT + " VARCHAR, " + INSPECTIONID + " INTEGER NOT NULL, " +
 					   " FOREIGN KEY (inspectionID) REFERENCES Inspection(inspectionID) ON DELETE CASCADE )");
 
 
@@ -182,24 +182,22 @@ public class ApiaryDB {
 		contentvalues.put(ENDOFSEASON, flower.getEndofSeason());
 
 		openWriteableDB();
-		db.insert(FLOWER, FLOWERID, contentvalues);
+		db.insert(FLOWER, null, contentvalues);
 		closeDB();
 	}
 
 	public void addYard(YardObj yard) {
 		ContentValues contentvalues = new ContentValues();
-		contentvalues.put(YARDID, yard.getYardID());
 		contentvalues.put(LOCATION, yard.getLocation());
 		contentvalues.put(LANDDESCRIPTION, yard.getLandDescription());
 
 		openWriteableDB();
-		db.insert(YARD, YARDID, contentvalues);
+		db.insert(YARD, null, contentvalues);
 		closeDB();
 	}
 
 	public void addHive(HiveObj hive) {
 		ContentValues contentvalues = new ContentValues();
-		contentvalues.put(HIVEID, hive.getHiveID());
 		contentvalues.put(HIVENAME, hive.getHiveName());
 		contentvalues.put(SPLITTYPE, hive.getSplitType());
 		contentvalues.put(HIVETYPE, hive.getHiveType());
@@ -208,13 +206,12 @@ public class ApiaryDB {
 		contentvalues.put(YARDID, hive.getYardID());
 
 		openWriteableDB();
-		db.insert(HIVE, HIVEID, contentvalues);
+		db.insert(HIVE, null, contentvalues);
 		closeDB();
 	}
 
 	public void addHiveBox(BoxObj box) {
 		ContentValues contentValues = new ContentValues();
-		contentValues.put(BOXID, box.getBoxID());
 		contentValues.put(BOXTYPE, box.getBoxType());
 		contentValues.put(NUMBEROFFRAMES, box.getNumberofFrames());
 		contentValues.put(FRAMEMATERIAL, box.getFrameMaterial());
@@ -224,26 +221,24 @@ public class ApiaryDB {
 		contentValues.put(HIVEID, box.getHiveID());
 
 		openWriteableDB();
-		db.insert(BOX, BOXID, contentValues);
+		db.insert(BOX, null, contentValues);
 		closeDB();
 	}
 
 	public void snapMedia(MediaObj media) {
 		ContentValues contentValues = new ContentValues();
-		contentValues.put(MEDIAID, media.getMediaID());
 		contentValues.put(HIVEID, media.getHiveID());
 		contentValues.put(HIVEIMAGESTR,media.getHiveImageStr());
 		contentValues.put(HIVEVIDEOSTR, media.getHiveVideoStr());
 
 		openWriteableDB();
-		db.insert(MEDIA, MEDIAID, contentValues);
+		db.insert(MEDIA, null, contentValues);
 		closeDB();
 
 	}
 
 	public void addInspection(InspectionObj inspection) {
 		ContentValues contentValues = new ContentValues();
-		contentValues.put(INSPECTIONID, inspection.getInspectionID());
 		contentValues.put(DATEOFINSPECTION, inspection.getDateofInspection());
 		contentValues.put(HIVEBEHAVIOUR, inspection.getHiveBehaviour());
 		contentValues.put(OBSERVATION, inspection.getObservation());
@@ -251,31 +246,29 @@ public class ApiaryDB {
 		contentValues.put(HIVEID, inspection.getHiveID());
 
 		openWriteableDB();
-		db.insert(INSPECTION, INSPECTIONID, contentValues);
+		db.insert(INSPECTION, null, contentValues);
 		closeDB();
 	}
 
 	public void addTreatment(TreatmentObj treatment) {
 		ContentValues contentValues = new ContentValues();
-		contentValues.put(TREATMENTID, treatment.getTreatmentID());
 		contentValues.put(TREATMENTAPPLIED, treatment.getTreatmentapplied());
 		contentValues.put(CONCERNS, treatment.getConcerns());
 		contentValues.put(INSPECTIONID, treatment.getInspectionID());
 
 		openWriteableDB();
-		db.insert(TREATMENT, TREATMENTID, contentValues);
+		db.insert(TREATMENT, null, contentValues);
 		closeDB();
 	}
 
 	public void addPest(PestObj pest) {
 		ContentValues contentValues = new ContentValues();
-		contentValues.put(PESTID, pest.getPestID());
 		contentValues.put(PESTSEEN, pest.getPestSeen());
 		contentValues.put(PESTMANAGEMENT, pest.getPestManagement());
 		contentValues.put(INSPECTIONID, pest.getInspectionID());
 
 		openWriteableDB();
-		db.insert(PEST, PESTID, contentValues);
+		db.insert(PEST, null, contentValues);
 		closeDB();
 	}
 
