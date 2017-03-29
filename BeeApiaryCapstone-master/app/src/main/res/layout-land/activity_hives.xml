@@ -12,154 +12,6 @@
 
 
     <TextView
-        android:text="TextView"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:id="@+id/text"
-        android:textSize="18sp"
-        android:layout_marginLeft="163dp"
-        android:layout_marginStart="163dp"
-        android:layout_below="@+id/lblFrameMaterial"
-        android:layout_toRightOf="@+id/lblFrameMaterial"
-        android:layout_toEndOf="@+id/lblFrameMaterial"
-        android:visibility="invisible" />
-
-    <TextView
-        android:text="Hive Type"
-        android:layout_width="100dp"
-        android:id="@+id/lblHiveType"
-        android:textSize="18sp"
-        android:layout_below="@+id/txtHiveName"
-        android:layout_alignLeft="@+id/lblHiveName"
-        android:layout_alignStart="@+id/lblHiveName"
-        android:layout_height="30dp" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtYearBeesWereSourced"
-        android:layout_below="@+id/txtSplitType"
-        android:layout_alignLeft="@+id/txtSplitType"
-        android:layout_alignStart="@+id/txtSplitType"
-        android:layout_height="40dp" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtInstallationDate"
-        android:layout_alignTop="@+id/text"
-        android:layout_alignLeft="@+id/txtFrameMaterial"
-        android:layout_alignStart="@+id/txtFrameMaterial" />
-
-    <TextView
-        android:text="Installation Date"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:id="@+id/lblInstallationDate"
-        android:textSize="18sp"
-        android:layout_below="@+id/lblFrameMaterial"
-        android:layout_toLeftOf="@+id/text"
-        android:layout_toStartOf="@+id/text" />
-
-    <TextView
-        android:text="Honey Weight"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:id="@+id/lblHoneWeight"
-        android:textSize="18sp"
-        android:layout_below="@+id/lblInstallationDate"
-        android:layout_alignLeft="@+id/lblInstallationDate"
-        android:layout_alignStart="@+id/lblInstallationDate" />
-
-    <TextView
-        android:text="List of Boxes"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:id="@+id/lblHiveListOfBoxes"
-        android:textSize="24sp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_above="@+id/txtHiveName"
-        android:layout_toRightOf="@+id/txtHiveName"
-        android:layout_toEndOf="@+id/txtHiveName" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/editText9"
-        android:layout_below="@+id/txtBoxType"
-        android:layout_toRightOf="@+id/lblBoxType"
-        android:layout_toEndOf="@+id/lblBoxType" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtFrameMaterial"
-        android:layout_alignBaseline="@+id/lblFrameMaterial"
-        android:layout_alignBottom="@+id/lblFrameMaterial"
-        android:layout_toRightOf="@+id/lblHiveNumberOfFrames"
-        android:layout_toEndOf="@+id/lblHiveNumberOfFrames" />
-
-    <TextView
-        android:text="Frame Material"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:id="@+id/lblFrameMaterial"
-        android:textSize="18sp"
-        android:layout_below="@+id/lblHiveNumberOfFrames"
-        android:layout_toLeftOf="@+id/txtFrameMaterial"
-        android:layout_toStartOf="@+id/txtFrameMaterial" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtHoneyWeight"
-        android:layout_below="@+id/text"
-        android:layout_toRightOf="@+id/lblInstallationDate"
-        android:layout_toEndOf="@+id/lblInstallationDate"
-        android:layout_height="40dp" />
-
-    <ListView
-        style="@style/Widget.AppCompat.ListView"
-        android:id="@+id/lvHiveListOfBoxes"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:layout_alignTop="@+id/lblHiveName"
-        android:layout_toRightOf="@+id/txtHiveName"
-        android:layout_toEndOf="@+id/txtHiveName" />
-
-    <ListView
-        android:id="@+id/hivesListView"
-        android:layout_width="250dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/lblAddHive"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="Hive Configuration"
-        android:id="@+id/lblHiveConfiguration"
-        android:textSize="18sp"
-        android:layout_height="50dp"
-        android:layout_width="110dp"
-        android:layout_below="@+id/lblYearBeesWereSourced"
-        android:layout_alignLeft="@+id/lblYearBeesWereSourced"
-        android:layout_alignStart="@+id/lblYearBeesWereSourced" />
-
-    <TextView
         android:text="Hive Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -170,16 +22,86 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <TextView
+        android:text="Hive Name"
+        android:layout_width="100dp"
+        android:id="@+id/lblHiveName"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/hivesListView"
+        android:layout_alignStart="@+id/lblSplitType" />
+
+    <TextView
+        android:text="Hive Type"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblHiveType"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtYearBeesWereSourced"
+        android:layout_toEndOf="@+id/hivesListView" />
+
+    <TextView
+        android:text="Split Type"
+        android:layout_width="100dp"
+        android:id="@+id/lblSplitType"
+        android:textSize="18sp"
+        android:layout_below="@+id/lblHiveType"
+        android:layout_toEndOf="@+id/hivesListView"
+        android:layout_height="30dp" />
+
+    <Button
+        android:text="Add Box"
+        android:id="@+id/btnAddListBox"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:layout_below="@+id/lblHiveNumberOfFrames"
+        android:layout_toStartOf="@+id/lblFrameMaterial"
+        android:layout_width="150dp" />
+
+    <EditText
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtYearBeesWereSourced"
+        android:layout_width="150dp"
+        android:layout_alignTop="@+id/lblYearBeesWereSourced"
+        android:layout_toStartOf="@+id/lblHiveListOfBoxes" />
+
+    <EditText
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtHiveName"
+        android:layout_width="150dp"
+        android:layout_alignBaseline="@+id/lblBoxType"
+        android:layout_alignBottom="@+id/lblBoxType"
+        android:layout_toStartOf="@+id/lblHiveConfiguration"
+        android:layout_height="35dp" />
+
+    <EditText
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtSplitType"
+        android:layout_width="150dp"
+        android:layout_alignBaseline="@+id/lblHiveNumberOfFrames"
+        android:layout_alignBottom="@+id/lblHiveNumberOfFrames"
+        android:layout_toStartOf="@+id/lblHiveConfiguration" />
+
     <EditText
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
         android:id="@+id/txtBoxType"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/lblBoxType"
-        android:layout_toEndOf="@+id/lblBoxType" />
+        android:layout_height="50dp"
+        android:layout_width="150dp"
+        android:layout_alignBaseline="@+id/lblBoxType"
+        android:layout_alignBottom="@+id/lblBoxType"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:text="Box Type"
@@ -187,9 +109,30 @@
         android:layout_height="50dp"
         android:id="@+id/lblBoxType"
         android:textSize="18sp"
-        android:layout_below="@+id/lblHiveListOfBoxes"
-        android:layout_alignRight="@+id/lblHiveListOfBoxes"
-        android:layout_alignEnd="@+id/lblHiveListOfBoxes" />
+        android:layout_marginLeft="29dp"
+        android:layout_marginEnd="26dp"
+        android:layout_alignTop="@+id/lblHiveListOfBoxes"
+        android:layout_toStartOf="@+id/txtBoxType"
+        android:layout_marginTop="18dp" />
+
+    <EditText
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtHiveType"
+        android:layout_width="150dp"
+        android:layout_above="@+id/txtSplitType"
+        android:layout_alignStart="@+id/txtSplitType" />
+
+    <TextView
+        android:text="Frame Material"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblFrameMaterial"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtBoxType"
+        android:layout_alignStart="@+id/lblBoxType" />
 
     <TextView
         android:text="Number of Framrd"
@@ -197,92 +140,8 @@
         android:layout_height="50dp"
         android:id="@+id/lblHiveNumberOfFrames"
         android:textSize="18sp"
-        android:layout_below="@+id/txtBoxType"
-        android:layout_alignLeft="@+id/lblBoxType"
-        android:layout_alignStart="@+id/lblBoxType" />
-
-    <Button
-        android:text="Add Hive"
-        android:id="@+id/btnAddHive"
-        android:textSize="18sp"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:textColor="@android:color/background_light"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_alignBaseline="@+id/lblHiveConfiguration"
-        android:layout_alignBottom="@+id/lblHiveConfiguration"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Add Box"
-        android:id="@+id/btnAddListBox"
-        android:textSize="18sp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@android:color/background_light"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_above="@+id/btnAddHive"
-        android:layout_toRightOf="@+id/txtYearBeesWereSourced"
-        android:layout_toEndOf="@+id/txtYearBeesWereSourced" />
-
-    <EditText
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtHiveName"
-        android:layout_width="200dp"
-        android:layout_marginLeft="26dp"
-        android:layout_marginStart="26dp"
-        android:layout_above="@+id/hivesListView"
-        android:layout_toRightOf="@+id/lblHiveConfiguration"
-        android:layout_toEndOf="@+id/lblHiveConfiguration"
-        android:layout_height="40dp" />
-
-    <TextView
-        android:text="Hive Name"
-        android:layout_width="100dp"
-        android:id="@+id/lblHiveName"
-        android:textSize="18sp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginStart="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/hivesListView"
-        android:layout_toEndOf="@+id/hivesListView"
-        android:layout_height="30dp" />
-
-    <TextView
-        android:text="Split Type"
-        android:layout_width="100dp"
-        android:id="@+id/lblSplitType"
-        android:textSize="18sp"
-        android:layout_height="30dp"
-        android:layout_alignBaseline="@+id/txtSplitType"
-        android:layout_alignBottom="@+id/txtSplitType"
-        android:layout_alignLeft="@+id/lblHiveType"
-        android:layout_alignStart="@+id/lblHiveType" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtHiveType"
-        android:layout_height="40dp"
-        android:layout_below="@+id/txtHiveName"
-        android:layout_toLeftOf="@+id/lvHiveListOfBoxes"
-        android:layout_toStartOf="@+id/lvHiveListOfBoxes" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtSplitType"
-        android:layout_below="@+id/txtHiveType"
-        android:layout_alignLeft="@+id/txtHiveType"
-        android:layout_alignStart="@+id/txtHiveType"
-        android:layout_height="40dp" />
+        android:layout_below="@+id/txtFrameMaterial"
+        android:layout_alignStart="@+id/lblInstallationDate" />
 
     <TextView
         android:text="Year Bees Were Sourced"
@@ -290,9 +149,45 @@
         android:layout_height="70dp"
         android:id="@+id/lblYearBeesWereSourced"
         android:textSize="18sp"
-        android:layout_above="@+id/lblHoneWeight"
-        android:layout_alignLeft="@+id/lblSplitType"
-        android:layout_alignStart="@+id/lblSplitType" />
+        android:layout_alignTop="@+id/txtHiveName"
+        android:layout_alignStart="@+id/lblHiveConfiguration" />
+
+    <ListView
+        style="@style/Widget.AppCompat.ListView"
+        android:id="@+id/lvHiveListOfBoxes"
+        android:layout_height="150dp"
+        android:layout_width="150dp"
+        android:layout_below="@+id/lblHiveListOfBoxes"
+        android:layout_alignStart="@+id/btnAddListBox" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtFrameMaterial"
+        android:layout_below="@+id/txtBoxType"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Installation Date"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblInstallationDate"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/btnAddListBox"
+        android:layout_alignBottom="@+id/btnAddListBox"
+        android:layout_toEndOf="@+id/btnAddListBox" />
+
+    <TextView
+        android:text="Honey Weight"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblHoneWeight"
+        android:textSize="18sp"
+        android:layout_below="@+id/txtInstallationDate"
+        android:layout_alignStart="@+id/lblInstallationDate" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -300,46 +195,115 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
-        android:id="@+id/txtSplitType"
-        android:layout_alignTop="@+id/lblHiveConfiguration"
-        android:layout_alignLeft="@+id/txtYearBeesWereSourced"
-        android:layout_alignStart="@+id/txtYearBeesWereSourced" />
+        android:id="@+id/txtNumberOfFrames"
+        android:layout_alignBottom="@+id/lblHiveNumberOfFrames"
+        android:layout_alignStart="@+id/txtFrameMaterial" />
+
+    <EditText
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtInstallationDate"
+        android:layout_width="150dp"
+        android:layout_alignTop="@+id/lblInstallationDate"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtHoneyWeight"
+        android:layout_alignBottom="@+id/lblHoneWeight"
+        android:layout_alignStart="@+id/txtInstallationDate" />
 
     <Button
         android:text="Edit"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:id="@+id/btnEdit"
+        android:layout_marginLeft="14dp"
         android:layout_below="@+id/txtSplitType"
-        android:layout_alignLeft="@+id/lblHiveConfiguration"
-        android:layout_alignStart="@+id/lblHiveConfiguration" />
+        android:layout_alignEnd="@+id/lblSplitType" />
 
     <Button
         android:text="Delete"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:id="@+id/btnConfirm"
+        android:layout_marginStart="28dp"
         android:layout_below="@+id/txtSplitType"
-        android:layout_toRightOf="@+id/lblYearBeesWereSourced"
-        android:layout_toEndOf="@+id/lblYearBeesWereSourced" />
+        android:layout_toEndOf="@+id/btnEdit" />
 
     <Button
         android:text="Cancel"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:id="@+id/btnCancel"
+        android:layout_marginLeft="21dp"
         android:layout_below="@+id/txtSplitType"
-        android:layout_toRightOf="@+id/btnConfirm"
-        android:layout_toEndOf="@+id/btnConfirm" />
+        android:layout_toEndOf="@+id/btnConfirm"
+        android:layout_marginStart="35dp" />
 
     <Button
         android:text="Back"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:id="@+id/btnBack"
-        android:layout_below="@+id/txtSplitType"
-        android:layout_toRightOf="@+id/btnCancel"
+        android:layout_marginRight="14dp"
+        android:layout_marginStart="23dp"
+        android:layout_below="@+id/txtHiveConfiguration"
         android:layout_toEndOf="@+id/btnCancel" />
+
+    <TextView
+        android:text="List of Boxes"
+        android:layout_height="30dp"
+        android:id="@+id/lblHiveListOfBoxes"
+        android:textSize="24sp"
+        android:layout_width="150dp"
+        android:layout_above="@+id/lblHiveName"
+        android:layout_alignStart="@+id/lvHiveListOfBoxes" />
+
+    <ListView
+        android:id="@+id/hivesListView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/lblAddHive"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Add Hive"
+        android:id="@+id/btnAddHive"
+        android:layout_height="50dp"
+        android:textSize="18sp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:layout_width="150dp"
+        android:layout_below="@+id/btnEdit"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtHiveConfiguration"
+        android:layout_alignBaseline="@+id/lblHiveNumberOfFrames"
+        android:layout_alignBottom="@+id/lblHiveNumberOfFrames"
+        android:layout_toEndOf="@+id/lblHiveConfiguration" />
+
+    <TextView
+        android:text="Hive Configuration"
+        android:id="@+id/lblHiveConfiguration"
+        android:textSize="18sp"
+        android:layout_height="50dp"
+        android:layout_width="110dp"
+        android:layout_marginLeft="14dp"
+        android:layout_alignBottom="@+id/lblSplitType"
+        android:layout_toStartOf="@+id/txtYearBeesWereSourced" />
 
 
 </RelativeLayout>

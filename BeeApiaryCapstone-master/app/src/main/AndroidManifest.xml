@@ -23,7 +23,8 @@
         <activity android:name=".AddYard" />
         <activity android:name=".AddBox" />
         <activity android:name=".RecordList" />
-        <activity android:name=".Queen"></activity>
+        <activity android:name=".Queen" />
+        <activity android:name=".ReplaceQueen"></activity>
     </application>
 
 </manifest>

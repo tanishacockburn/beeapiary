@@ -11,44 +11,56 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class AddHive extends AppCompatActivity {
-    Button addHive;
-    EditText hiveName;
+     Button btn_confirm_add_hive;
+       EditText hiveName;
+       EditText hiveType;
+       EditText splitType;
+       EditText yearBeesWereSourced;
+       EditText hiveConfiguration;
 //Add hive
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_hive);
 
-        addHive= (Button)findViewById(R.id.btnAddHive);
         hiveName=(EditText)findViewById(R.id.txtHiveName);
+        hiveType=(EditText)findViewById(R.id.txtHiveType);
+        splitType=(EditText)findViewById(R.id.txtSplitType);
+        yearBeesWereSourced=(EditText)findViewById(R.id.txtYearBeesWereSourced);
+        hiveConfiguration=(EditText)findViewById(R.id.txtHiveConfiguration);
+        btn_confirm_add_hive = (Button)findViewById(R.id.btnConfirm);
         AddData();
-
-
-
-
-
     }
 
-    public void AddData()
-    {
-        addHive.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+   public void AddData() {
+       btn_confirm_add_hive.setOnClickListener(
+               new View.OnClickListener() {
+                   @Override
+                   public void onClick(View v) {
 
+                       if (hiveName.getText().length() == 0) {
+                           hiveName.setError("pleased enter a hive name ");
+                       }
+                       if (hiveType.getText().length() == 0) {
+                           hiveType.setError("pleased enter a hive type ");
+                       }
+                       if (splitType.getText().length() == 0) {
+                           splitType.setError("pleased enter split type ");
+                       }
+                       if (yearBeesWereSourced.getText().length() == 0) {
+                           yearBeesWereSourced.setError("please enter the year bees were sourced");
+                       }
+                       if (hiveConfiguration.getText().length() == 0) {
+                           hiveConfiguration.setError("please enter hive configuration");
+                       } else
 
-                        if (hiveName.getText().length()==0)
-                        {
-                            hiveName.setError("pleased enter a name ");
-                        }
-                        else
-                            Toast.makeText(AddHive.this,"Data name ok",Toast.LENGTH_LONG).show();
-                    }
-                }
-        );
+                           Toast.makeText(AddHive.this, "Data name ok", Toast.LENGTH_LONG).show();
+                   }
+               }
+       );
 
+   }
 
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);

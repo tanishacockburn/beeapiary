@@ -57,54 +57,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <EditText
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtAddYardYardLocation"
-        android:layout_height="50dp"
-        android:textSize="24sp"
-        android:layout_width="400dp"
-        android:layout_alignBottom="@+id/lblAddYardYardLocation"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/txtAddYardLandDescription"
-        android:layout_height="150dp"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_width="400dp"
-        android:layout_alignTop="@+id/lblAddYardLandDescription"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_height="200dp"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_width="400dp"
-        android:layout_marginTop="101dp"
-        android:layout_below="@+id/lblYardLocation"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:singleLine="false" />
-
-    <Button
-        android:text="Confirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnAddYardConfirm"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp"
-        android:layout_alignBaseline="@+id/btnAddYardCancel"
-        android:layout_alignBottom="@+id/btnAddYardCancel"
-        android:layout_alignLeft="@+id/txtAddYardLandDescription"
-        android:layout_alignStart="@+id/txtAddYardLandDescription" />
-
     <Button
         android:text="Cancel"
         android:layout_width="wrap_content"
@@ -116,5 +68,37 @@
         android:layout_alignBottom="@+id/btnAddYardBack"
         android:layout_toLeftOf="@+id/btnAddYardBack"
         android:layout_toStartOf="@+id/btnAddYardBack" />
+
+    <EditText
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtAddYardLandDescription"
+        android:layout_height="150dp"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="400dp"
+        android:layout_alignTop="@+id/lblAddYardLandDescription"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtAddYardYardLocation"
+        android:layout_height="50dp"
+        android:textSize="24sp"
+        android:layout_width="400dp"
+        android:layout_alignBottom="@+id/lblAddYardYardLocation"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAddYardConfirm"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_alignBaseline="@+id/btnAddYardCancel"
+        android:layout_alignBottom="@+id/btnAddYardCancel"
+        android:layout_alignStart="@+id/txtAddYardLandDescription" />
 
 </RelativeLayout>

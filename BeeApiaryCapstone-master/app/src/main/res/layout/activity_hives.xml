@@ -10,29 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.tanisha.busy_bees_capstone_project.Hives">
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:id="@+id/text"
-        android:textSize="18sp"
-        android:layout_marginLeft="163dp"
-        android:layout_marginStart="163dp"
-        android:layout_below="@+id/lblFrameMaterial"
-        android:layout_toRightOf="@+id/lblFrameMaterial"
-        android:layout_toEndOf="@+id/lblFrameMaterial"
-        android:visibility="invisible" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
-        android:id="@+id/txtSplitType"
-        android:layout_below="@+id/lblYearBeesWereSourced"
-        android:layout_toLeftOf="@+id/lvHiveListOfBoxes"
-        android:layout_toStartOf="@+id/lvHiveListOfBoxes" />
 
     <TextView
         android:text="Hive Details"
@@ -75,14 +53,6 @@
         android:layout_alignTop="@+id/txtHiveName"
         android:layout_alignLeft="@+id/lblHiveConfiguration"
         android:layout_alignStart="@+id/lblHiveConfiguration" />
-
-    <ListView
-        android:id="@+id/hivesListView"
-        android:layout_height="200dp"
-        android:layout_width="200dp"
-        android:layout_below="@+id/lblAddHive"
-        android:layout_toRightOf="@+id/txtSplitType"
-        android:layout_toEndOf="@+id/txtSplitType" />
 
     <TextView
         android:text="Box Type"
@@ -198,15 +168,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <ListView
-        style="@style/Widget.AppCompat.ListView"
-        android:id="@+id/lvHiveListOfBoxes"
-        android:layout_height="150dp"
-        android:layout_width="200dp"
-        android:layout_below="@+id/lblHiveListOfBoxes"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <Button
         android:text="Add Box"
         android:id="@+id/btnAddListBox"
@@ -269,29 +230,6 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
-        android:id="@+id/txtInstallationDate"
-        android:layout_below="@+id/txtNumberOfFrames"
-        android:layout_alignLeft="@+id/txtNumberOfFrames"
-        android:layout_alignStart="@+id/txtNumberOfFrames" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_height="50dp"
-        android:id="@+id/txtNumberOfFrames"
-        android:layout_width="200dp"
-        android:layout_alignBaseline="@+id/lblHiveNumberOfFrames"
-        android:layout_alignBottom="@+id/lblHiveNumberOfFrames"
-        android:layout_toLeftOf="@+id/txtHiveConfiguration"
-        android:layout_toStartOf="@+id/txtHiveConfiguration"
-        android:textSize="14sp"
-        android:textColor="@android:color/background_dark" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:ems="10"
         android:id="@+id/txtHoneyWeight"
         android:layout_alignTop="@+id/lblHoneWeight"
         android:layout_alignLeft="@+id/txtFrameMaterial"
@@ -338,8 +276,8 @@
         android:id="@+id/lblHoneWeight"
         android:textSize="18sp"
         android:layout_below="@+id/btnAddListBox"
-        android:layout_toLeftOf="@+id/text"
-        android:layout_toStartOf="@+id/text" />
+        android:layout_toLeftOf="@+id/txtInstallationDate"
+        android:layout_toStartOf="@+id/txtInstallationDate" />
 
     <TextView
         android:text="Frame Material"
@@ -362,6 +300,42 @@
         android:layout_toEndOf="@+id/btnCancel"
         android:layout_marginLeft="14dp"
         android:layout_marginStart="14dp" />
+
+    <ListView
+        android:id="@+id/hivesListView"
+        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:layout_below="@+id/lblAddHive"
+        android:layout_alignParentStart="true" />
+
+    <ListView
+        style="@style/Widget.AppCompat.ListView"
+        android:id="@+id/lvHiveListOfBoxes"
+        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_alignBottom="@+id/txtInstallationDate"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/txtInstallationDate"
+        android:layout_below="@+id/txtNumberOfFrames"
+        android:layout_alignStart="@+id/txtFrameMaterial" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_height="50dp"
+        android:id="@+id/txtNumberOfFrames"
+        android:layout_width="200dp"
+        android:textSize="14sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignBaseline="@+id/lblHiveNumberOfFrames"
+        android:layout_alignBottom="@+id/lblHiveNumberOfFrames"
+        android:layout_toStartOf="@+id/txtHiveConfiguration" />
 
 
 </RelativeLayout>

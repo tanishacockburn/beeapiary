@@ -35,7 +35,7 @@
 
     <EditText
         android:layout_width="250dp"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="Name"
         android:ems="10"
         android:id="@+id/txtNumberOfFrames"
@@ -60,14 +60,14 @@
     <EditText
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:text="9"
         android:ems="10"
         android:layout_alignBottom="@+id/lblHoneyWeight"
-        android:layout_alignRight="@+id/text"
-        android:layout_alignEnd="@+id/text"
+        android:layout_alignRight="@+id/txtInstallationDate"
+        android:layout_alignEnd="@+id/txtInstallationDate"
         android:layout_marginBottom="19dp"
-        android:id="@+id/txtHoneyWeight" />
+        android:id="@+id/txtHoneyWeight"
+        android:inputType="number" />
 
     <EditText
         android:layout_width="250dp"
@@ -97,8 +97,8 @@
         android:id="@+id/lblInstallationDate"
         android:textSize="18sp"
         android:layout_below="@+id/lblFrameMaterials"
-        android:layout_toLeftOf="@+id/text"
-        android:layout_toStartOf="@+id/text" />
+        android:layout_toLeftOf="@+id/txtInstallationDate"
+        android:layout_toStartOf="@+id/txtInstallationDate" />
 
     <TextView
         android:text="Number  of Materials"
@@ -117,7 +117,7 @@
         android:layout_marginTop="26dp"
         android:id="@+id/lblHoneyWeight"
         android:textSize="18sp"
-        android:layout_below="@+id/text"
+        android:layout_below="@+id/txtInstallationDate"
         android:layout_toLeftOf="@+id/txtHoneyWeight"
         android:layout_toStartOf="@+id/txtHoneyWeight" />
 
@@ -127,7 +127,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
-        android:id="@+id/text"
+        android:id="@+id/txtInstallationDate"
         android:layout_alignBaseline="@+id/lblInstallationDate"
         android:layout_alignBottom="@+id/lblInstallationDate"
         android:layout_toRightOf="@+id/lblFrameMaterials"
