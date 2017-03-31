@@ -9,6 +9,7 @@ import android.widget.Button;
 public class Yard extends AppCompatActivity {
     public Button btn_add_yard ;
     public Button btn_edit_yard;
+    public  Button btn_back_yard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +17,26 @@ public class Yard extends AppCompatActivity {
         setContentView(R.layout.activity_yard);
         AddYardPage();
         EditYardPage();
+        BackToMainPage();
+
+    }
+
+    private void BackToMainPage(){
+
+            btn_back_yard=(Button)findViewById(R.id.btnYardback);
+            btn_back_yard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent backtoMain = new Intent(Yard.this, MainActivity.class);
+                    startActivity(backtoMain);
+
+                }
+            });
 
     }
 
     private void AddYardPage() {
-        btn_add_yard=(Button)findViewById(R.id.btbAddYard);
+        btn_add_yard=(Button)findViewById(R.id.btnAddYard);
         btn_add_yard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

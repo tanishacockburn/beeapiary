@@ -232,7 +232,7 @@
         android:text="Delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnConfirm"
+        android:id="@+id/btnReplaceQueenConfirm"
         android:layout_marginStart="28dp"
         android:layout_below="@+id/txtSplitType"
         android:layout_toEndOf="@+id/btnEdit" />
@@ -241,21 +241,21 @@
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnCancel"
+        android:id="@+id/btnEditQueenConfirm"
         android:layout_marginLeft="21dp"
         android:layout_below="@+id/txtSplitType"
-        android:layout_toEndOf="@+id/btnConfirm"
+        android:layout_toEndOf="@+id/btnReplaceQueenConfirm"
         android:layout_marginStart="35dp" />
 
     <Button
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnBack"
+        android:id="@+id/btnYardback"
         android:layout_marginRight="14dp"
         android:layout_marginStart="23dp"
         android:layout_below="@+id/txtHiveConfiguration"
-        android:layout_toEndOf="@+id/btnCancel" />
+        android:layout_toEndOf="@+id/btnEditQueenConfirm" />
 
     <TextView
         android:text="List of Boxes"

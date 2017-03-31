@@ -28,7 +28,7 @@ public class AddHive extends AppCompatActivity {
         splitType=(EditText)findViewById(R.id.txtSplitType);
         yearBeesWereSourced=(EditText)findViewById(R.id.txtYearBeesWereSourced);
         hiveConfiguration=(EditText)findViewById(R.id.txtHiveConfiguration);
-        btn_confirm_add_hive = (Button)findViewById(R.id.btnConfirm);
+        btn_confirm_add_hive = (Button)findViewById(R.id.btnReplaceQueenConfirm);
         AddData();
     }
 

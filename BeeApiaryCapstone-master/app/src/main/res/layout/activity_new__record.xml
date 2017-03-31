@@ -229,7 +229,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="88dp"
-        android:id="@+id/btnConfirm"
+        android:id="@+id/btnReplaceQueenConfirm"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/txtHiveBehaviour"
         android:layout_alignEnd="@+id/txtHiveBehaviour" />
@@ -238,19 +238,19 @@
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnConfirm"
+        android:layout_alignTop="@+id/btnReplaceQueenConfirm"
         android:layout_alignRight="@+id/lblTreatmentConcerns"
         android:layout_alignEnd="@+id/lblTreatmentConcerns"
-        android:id="@+id/btnCancel" />
+        android:id="@+id/btnEditQueenConfirm" />
 
     <Button
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnCancel"
+        android:layout_alignTop="@+id/btnEditQueenConfirm"
         android:layout_alignLeft="@+id/txtStartSeason"
         android:layout_alignStart="@+id/txtStartSeason"
-        android:id="@+id/btnBack" />
+        android:id="@+id/btnYardback" />
 
     <TextView
         android:text="Pest Control"

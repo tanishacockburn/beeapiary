@@ -1,6 +1,5 @@
 package com.example.tanisha.busy_bees_capstone_project;
 
-import android.support.v4.widget.EdgeEffectCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +28,7 @@ public class AddBox extends AppCompatActivity {
         txt_frame_material=(EditText)findViewById(R.id.txtFrameMaterial);
         txt_honey_weight=(EditText)findViewById(R.id.txtHoneyWeight);
         txt_installation_date=(EditText)findViewById(R.id.txtInstallationDate);
-        btn_confirm=(Button)findViewById(R.id.btnConfirm);
+        btn_confirm=(Button)findViewById(R.id.btnReplaceQueenConfirm);
         SaveBox();
     }
 

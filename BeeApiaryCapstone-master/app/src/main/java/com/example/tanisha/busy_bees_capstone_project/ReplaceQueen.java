@@ -20,7 +20,7 @@ public class ReplaceQueen extends AppCompatActivity {
         setContentView(R.layout.activity_replace_queen);
         final EditText txt_queen_birth = (EditText) findViewById(R.id.txtQueenBirth);
         final EditText txt_date_queen_replaced = (EditText) findViewById(R.id.txtQueenReplaced);
-        btn_confirm = (Button) findViewById(R.id.btnConfirm);
+        btn_confirm = (Button) findViewById(R.id.btnReplaceQueenConfirm);
 
 
         btn_confirm.setOnClickListener(

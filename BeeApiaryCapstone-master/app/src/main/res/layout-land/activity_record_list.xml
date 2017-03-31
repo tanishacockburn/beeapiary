@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
-        android:id="@+id/btnConfirm"
+        android:id="@+id/btnReplaceQueenConfirm"
         android:layout_below="@+id/lvInspectionList"
         android:layout_toRightOf="@+id/btnEdit"
         android:layout_toEndOf="@+id/btnEdit" />
@@ -67,11 +67,11 @@
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnCancel"
-        android:layout_alignBaseline="@+id/btnBack"
-        android:layout_alignBottom="@+id/btnBack"
-        android:layout_toRightOf="@+id/btnConfirm"
-        android:layout_toEndOf="@+id/btnConfirm"
+        android:id="@+id/btnEditQueenConfirm"
+        android:layout_alignBaseline="@+id/btnYardback"
+        android:layout_alignBottom="@+id/btnYardback"
+        android:layout_toRightOf="@+id/btnReplaceQueenConfirm"
+        android:layout_toEndOf="@+id/btnReplaceQueenConfirm"
         android:layout_marginLeft="15dp"
         android:layout_marginStart="15dp" />
 
@@ -79,12 +79,12 @@
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnBack"
+        android:id="@+id/btnYardback"
         android:layout_marginLeft="18dp"
         android:layout_marginStart="18dp"
         android:layout_below="@+id/lvInspectionList"
-        android:layout_toRightOf="@+id/btnCancel"
-        android:layout_toEndOf="@+id/btnCancel" />
+        android:layout_toRightOf="@+id/btnEditQueenConfirm"
+        android:layout_toEndOf="@+id/btnEditQueenConfirm" />
 
     <ListView
         android:layout_height="200dp"

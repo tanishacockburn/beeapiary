@@ -61,7 +61,7 @@
 
     <Button
         android:text="Add Yard"
-        android:id="@+id/btbAddYard"
+        android:id="@+id/btnAddYard"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
         android:layout_height="40dp"
@@ -114,12 +114,12 @@
         android:text="Back"
         android:layout_width="70dp"
         android:layout_height="30dp"
-        android:id="@+id/btnBack"
+        android:id="@+id/btnYardback"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
         android:layout_marginRight="73dp"
         android:layout_below="@+id/lblLandDescription"
-        android:layout_toEndOf="@+id/btnCancel" />
+        android:layout_toEndOf="@+id/btnEditQueenConfirm" />
 
     <Button
         android:text="Edit"
@@ -131,13 +131,13 @@
         android:layout_marginRight="14dp"
         android:layout_marginEnd="15dp"
         android:layout_below="@+id/txtYardLandDescription"
-        android:layout_toStartOf="@+id/btnConfirm" />
+        android:layout_toStartOf="@+id/btnReplaceQueenConfirm" />
 
     <Button
         android:text="Delete"
         android:layout_width="70dp"
         android:layout_height="30dp"
-        android:id="@+id/btnConfirm"
+        android:id="@+id/btnReplaceQueenConfirm"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
         android:layout_marginRight="18dp"
@@ -149,7 +149,7 @@
         android:text="Cancel"
         android:layout_width="70dp"
         android:layout_height="30dp"
-        android:id="@+id/btnCancel"
+        android:id="@+id/btnEditQueenConfirm"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
         android:layout_marginRight="18dp"

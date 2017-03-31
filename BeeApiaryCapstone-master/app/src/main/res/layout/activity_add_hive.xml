@@ -75,18 +75,18 @@
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnCancel"
-        android:layout_alignBaseline="@+id/btnConfirm"
-        android:layout_alignBottom="@+id/btnConfirm"
+        android:id="@+id/btnEditQueenConfirm"
+        android:layout_alignBaseline="@+id/btnReplaceQueenConfirm"
+        android:layout_alignBottom="@+id/btnReplaceQueenConfirm"
         android:layout_toEndOf="@+id/lblAddHive" />
 
     <Button
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnBack"
-        android:layout_alignBaseline="@+id/btnCancel"
-        android:layout_alignBottom="@+id/btnCancel"
+        android:id="@+id/btnYardback"
+        android:layout_alignBaseline="@+id/btnEditQueenConfirm"
+        android:layout_alignBottom="@+id/btnEditQueenConfirm"
         android:layout_alignEnd="@+id/txtSplitType"
         android:layout_marginEnd="23dp" />
 
@@ -142,13 +142,13 @@
         android:layout_marginLeft="125dp"
         android:layout_marginStart="31dp"
         android:layout_alignTop="@+id/lblHiveConfiguration"
-        android:layout_alignStart="@+id/btnCancel" />
+        android:layout_alignStart="@+id/btnEditQueenConfirm" />
 
     <Button
         android:text="Confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnConfirm"
+        android:id="@+id/btnReplaceQueenConfirm"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/lblHiveConfiguration"
         android:layout_alignStart="@+id/lblHiveConfiguration" />

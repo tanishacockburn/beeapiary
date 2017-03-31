@@ -9,7 +9,6 @@ import android.widget.Toast;
 
 public class AddYard extends AppCompatActivity {
     EditText txt_yard_location;
-    EditText  txt_land_description;
     Button btn_confirm;
 
     @Override
@@ -35,7 +34,7 @@ public class AddYard extends AppCompatActivity {
 
                         if (txt_yard_location.getText().length()==0)
                         {
-                            txt_yard_location.setError("pleased enter a name ");
+                            txt_yard_location.setError("pleased enter location ");
                         }
 
                         else

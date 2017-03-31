@@ -25,7 +25,8 @@
         <activity android:name=".RecordList" />
         <activity android:name=".Queen" />
         <activity android:name=".ReplaceQueen" />
-        <activity android:name=".EditYard"></activity>
+        <activity android:name=".EditYard" />
+        <activity android:name=".EditQueen"></activity>
     </application>
 
 </manifest>

@@ -40,11 +40,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="14dp"
         android:layout_marginStart="14dp"
-        android:id="@+id/btnCancel"
-        android:layout_alignBaseline="@+id/btnConfirm"
-        android:layout_alignBottom="@+id/btnConfirm"
-        android:layout_toRightOf="@+id/btnConfirm"
-        android:layout_toEndOf="@+id/btnConfirm"
+        android:id="@+id/btnEditQueenConfirm"
+        android:layout_alignBaseline="@+id/btnReplaceQueenConfirm"
+        android:layout_alignBottom="@+id/btnReplaceQueenConfirm"
+        android:layout_toRightOf="@+id/btnReplaceQueenConfirm"
+        android:layout_toEndOf="@+id/btnReplaceQueenConfirm"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark" />
 
@@ -61,7 +61,7 @@
     <Button
         android:text="Add Yard"
         android:layout_height="wrap_content"
-        android:id="@+id/btbAddYard"
+        android:id="@+id/btnAddYard"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
         android:layout_width="200dp"
@@ -78,22 +78,10 @@
         android:background="@color/colorPrimaryDark"
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
-        android:layout_below="@+id/btbAddYard"
+        android:layout_below="@+id/btnAddYard"
         android:layout_alignLeft="@+id/txtYardLandDescription"
         android:layout_alignStart="@+id/txtYardLandDescription"
         android:layout_marginTop="175dp" />
-
-    <Button
-        android:text="Delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnConfirm"
-        android:textColor="@android:color/background_light"
-        android:background="@color/colorPrimaryDark"
-        android:layout_alignBaseline="@+id/btnEditYard"
-        android:layout_alignBottom="@+id/btnEditYard"
-        android:layout_alignRight="@+id/lblYardLocation"
-        android:layout_alignEnd="@+id/lblYardLocation" />
 
     <TextView
         android:text="Land Description"
@@ -113,13 +101,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="29dp"
         android:layout_marginStart="29dp"
-        android:id="@+id/btnBack"
+        android:id="@+id/btnYardback"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
-        android:layout_alignBaseline="@+id/btnCancel"
-        android:layout_alignBottom="@+id/btnCancel"
-        android:layout_toRightOf="@+id/btnCancel"
-        android:layout_toEndOf="@+id/btnCancel" />
+        android:layout_alignBaseline="@+id/btnEditQueenConfirm"
+        android:layout_alignBottom="@+id/btnEditQueenConfirm"
+        android:layout_toRightOf="@+id/btnEditQueenConfirm"
+        android:layout_toEndOf="@+id/btnEditQueenConfirm" />
 
     <TextView
         android:text="Yard Location"
@@ -158,5 +146,17 @@
         android:layout_alignBottom="@+id/lblYardLocation"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReplaceQueenConfirm"
+        android:textColor="@android:color/background_light"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignBaseline="@+id/btnEditYard"
+        android:layout_alignBottom="@+id/btnEditYard"
+        android:layout_toEndOf="@+id/btnAddYard"
+        android:layout_marginStart="14dp" />
 
 </RelativeLayout>

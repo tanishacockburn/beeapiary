@@ -11,28 +11,6 @@
     tools:context="com.example.tanisha.busy_bees_capstone_project.ReplaceQueen">
 
     <TextView
-        android:text="Replace Queen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="106dp"
-        android:id="@+id/lblReplaceQueen"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="345dp"
-        android:textSize="24sp" />
-
-    <TextView
-        android:text="Queen Birth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lblReplaceQueen"
-        android:layout_toStartOf="@+id/lblReplaceQueen"
-        android:layout_marginEnd="75dp"
-        android:layout_marginTop="86dp"
-        android:id="@+id/lblQueenBirth"
-        android:textSize="18sp" />
-
-    <TextView
         android:text="Queen Replaced"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +18,8 @@
         android:layout_alignStart="@+id/lblQueenBirth"
         android:layout_marginTop="56dp"
         android:id="@+id/lblQueenReplaced"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark" />
 
     <EditText
         android:layout_height="50dp"
@@ -54,13 +33,45 @@
         android:textSize="18sp"
         android:layout_width="400dp" />
 
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnReplaceQueenConfirm"
+        android:layout_toEndOf="@+id/btnReplaceQueenConfirm"
+        android:layout_marginStart="22dp"
+        android:id="@+id/btnEditQueenConfirm"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnEditQueenConfirm"
+        android:layout_toEndOf="@+id/btnEditQueenConfirm"
+        android:layout_marginStart="20dp"
+        android:id="@+id/btnYardback"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Queen Birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:id="@+id/lblQueenBirth"
+        android:textSize="18sp"
+        android:layout_below="@+id/lblReplaceQueen"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorPrimaryDark" />
+
     <EditText
         android:layout_width="400dp"
         android:layout_height="50dp"
         android:inputType="date"
         android:ems="10"
         android:id="@+id/txtQueenReplaced"
-        android:layout_alignBaseline="@+id/lblQueenReplaced"
         android:layout_alignBottom="@+id/lblQueenReplaced"
         android:layout_alignStart="@+id/txtQueenBirth" />
 
@@ -68,26 +79,22 @@
         android:text="Confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:id="@+id/btnReplaceQueenConfirm"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
         android:layout_below="@+id/txtQueenReplaced"
-        android:layout_alignStart="@+id/txtQueenReplaced"
-        android:layout_marginTop="13dp"
-        android:id="@+id/btnConfirm" />
+        android:layout_alignStart="@+id/txtQueenReplaced" />
 
-    <Button
-        android:text="Cancel"
+    <TextView
+        android:text="Replace Queen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnConfirm"
-        android:layout_toEndOf="@+id/btnConfirm"
-        android:layout_marginStart="22dp"
-        android:id="@+id/btnCancel" />
-
-    <Button
-        android:text="Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btnCancel"
-        android:layout_toEndOf="@+id/btnCancel"
-        android:layout_marginStart="20dp"
-        android:id="@+id/btnBack" />
+        android:id="@+id/lblReplaceQueen"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/btnReplaceQueenConfirm"
+        android:layout_marginTop="17dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="normal|bold" />
 </RelativeLayout>

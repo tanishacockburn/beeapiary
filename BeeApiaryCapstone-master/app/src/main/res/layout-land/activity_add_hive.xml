@@ -97,7 +97,7 @@
         android:id="@+id/txtHiveName"
         android:layout_width="150dp"
         android:layout_alignTop="@+id/lblHiveName"
-        android:layout_alignStart="@+id/btnCancel" />
+        android:layout_alignStart="@+id/btnEditQueenConfirm" />
 
     <TextView
         android:text="Year Bees Were Sourced"
@@ -147,16 +147,16 @@
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnBack"
+        android:id="@+id/btnYardback"
         android:layout_marginStart="18dp"
         android:layout_below="@+id/txtSplitType"
-        android:layout_toEndOf="@+id/btnCancel" />
+        android:layout_toEndOf="@+id/btnEditQueenConfirm" />
 
     <Button
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnCancel"
+        android:id="@+id/btnEditQueenConfirm"
         android:layout_below="@+id/txtSplitType"
         android:layout_toEndOf="@+id/lblHiveName" />
 
@@ -164,7 +164,7 @@
         android:text="Confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnConfirm"
+        android:id="@+id/btnReplaceQueenConfirm"
         android:layout_below="@+id/lblSplitType"
         android:layout_alignStart="@+id/lblSplitType" />
 </RelativeLayout>

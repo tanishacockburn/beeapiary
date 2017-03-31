@@ -150,10 +150,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="53dp"
         android:layout_marginStart="53dp"
-        android:id="@+id/btnCancel"
+        android:id="@+id/btnEditQueenConfirm"
         android:layout_below="@+id/txtHoneyWeight"
-        android:layout_toRightOf="@+id/btnConfirm"
-        android:layout_toEndOf="@+id/btnConfirm" />
+        android:layout_toRightOf="@+id/btnReplaceQueenConfirm"
+        android:layout_toEndOf="@+id/btnReplaceQueenConfirm" />
 
     <Button
         android:text="Back"
@@ -161,16 +161,16 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="35dp"
         android:layout_marginStart="35dp"
-        android:id="@+id/btnBack"
+        android:id="@+id/btnYardback"
         android:layout_below="@+id/txtHoneyWeight"
-        android:layout_toRightOf="@+id/btnCancel"
-        android:layout_toEndOf="@+id/btnCancel" />
+        android:layout_toRightOf="@+id/btnEditQueenConfirm"
+        android:layout_toEndOf="@+id/btnEditQueenConfirm" />
 
     <Button
         android:text="Confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnConfirm"
+        android:id="@+id/btnReplaceQueenConfirm"
         android:layout_below="@+id/lblHoneyWeight"
         android:layout_toRightOf="@+id/lvHive"
         android:layout_toEndOf="@+id/lvHive"
