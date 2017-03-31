@@ -8,12 +8,15 @@ import android.widget.Button;
 
 public class Yard extends AppCompatActivity {
     public Button btn_add_yard ;
+    public Button btn_edit_yard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yard);
         AddYardPage();
+        EditYardPage();
+
     }
 
     private void AddYardPage() {
@@ -23,6 +26,18 @@ public class Yard extends AppCompatActivity {
             public void onClick(View view) {
                 Intent addYard = new Intent(Yard.this, AddYard.class);
                 startActivity(addYard);
+
+            }
+        });
+    }
+    private void EditYardPage()
+    {
+        btn_edit_yard=(Button)findViewById(R.id.btnEditYard);
+        btn_edit_yard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent editYard = new Intent(Yard.this, EditYard.class);
+                startActivity(editYard);
 
             }
         });
