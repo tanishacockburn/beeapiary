@@ -6,12 +6,16 @@ import android.database.Cursor;
 import io.github.steve_bulgin.models.*;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Environment;
 import android.util.Log;
+
+import java.io.File;
 
 public class ApiaryDB {
 
 	public static final String DB_NAME = "apiary.db";
 	public static final int DB_VERSION = 1;
+	public static final String DATABASE_FILE_PATH  = Environment.getExternalStorageDirectory().toString();
 
 	//FlowerObj CONSTS
 	public static final String FLOWER = "Flower";
@@ -83,12 +87,15 @@ public class ApiaryDB {
 
 		public DBHelper(Context context, String name,
 						SQLiteDatabase.CursorFactory factory, int version) {
-			super(context, name, factory, version);
+			super(context, DATABASE_FILE_PATH + File.separator + "BeeApiaryData" + File.separator + DB_NAME, factory, version);
 		}
+
 
 		@Override
 		public void onCreate(SQLiteDatabase db) {
 			// create tables
+
+			Log.d("DBPath", DATABASE_FILE_PATH);
 
 			//Set fk constraints
 			db.execSQL("PRAGMA foreign_keys = ON");
@@ -153,7 +160,7 @@ public class ApiaryDB {
 
 	// constructor
 	public ApiaryDB(Context context) {
-		dbHelper = new DBHelper(context, DB_NAME, null, DB_VERSION);
+		dbHelper = new DBHelper(context, DATABASE_FILE_PATH + File.separator + "BeeApiaryData" + File.separator + DB_NAME, null, DB_VERSION);
 		openWriteableDB();
 		closeDB();
 	}
@@ -193,6 +200,17 @@ public class ApiaryDB {
 
 		openWriteableDB();
 		db.insert(YARD, null, contentvalues);
+		closeDB();
+	}
+
+	public void addQueen(QueenObj queen) {
+		ContentValues contentvalues = new ContentValues();
+		contentvalues.put(QUEENBIRTH, queen.getQueenBirth());
+		contentvalues.put(QUEENREPLACED, queen.getQueenReplaced());
+		contentvalues.put(HIVEID, queen.getHiveID());
+
+		openWriteableDB();
+		db.insert(QUEEN, null, contentvalues);
 		closeDB();
 	}
 
