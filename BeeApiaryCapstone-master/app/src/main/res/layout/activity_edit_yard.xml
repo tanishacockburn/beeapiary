@@ -35,7 +35,7 @@
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnAddYardBack"
+        android:id="@+id/btnEditYardBack"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/txtAddYardLandDescription"
         android:layout_alignParentRight="true"
@@ -83,10 +83,10 @@
         android:id="@+id/btnAddYardCancel"
         android:layout_marginRight="56dp"
         android:layout_marginEnd="56dp"
-        android:layout_alignBaseline="@+id/btnAddYardBack"
-        android:layout_alignBottom="@+id/btnAddYardBack"
-        android:layout_toLeftOf="@+id/btnAddYardBack"
-        android:layout_toStartOf="@+id/btnAddYardBack" />
+        android:layout_alignBaseline="@+id/btnEditYardBack"
+        android:layout_alignBottom="@+id/btnEditYardBack"
+        android:layout_toLeftOf="@+id/btnEditYardBack"
+        android:layout_toStartOf="@+id/btnEditYardBack" />
 
     <TextView
         android:text="Edit Yard"

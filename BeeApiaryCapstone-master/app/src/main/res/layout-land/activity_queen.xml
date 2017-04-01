@@ -154,7 +154,7 @@
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnQueenBack"
+        android:id="@+id/btnRecordListBack"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
         android:layout_alignBaseline="@+id/btnEditQueenConfirm"
@@ -168,8 +168,8 @@
         android:id="@+id/btnEditQueenCancel"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
-        android:layout_alignBaseline="@+id/btnQueenBack"
-        android:layout_alignBottom="@+id/btnQueenBack"
+        android:layout_alignBaseline="@+id/btnRecordListBack"
+        android:layout_alignBottom="@+id/btnRecordListBack"
         android:layout_toEndOf="@+id/lblQueenReplaced" />
 
 </RelativeLayout>

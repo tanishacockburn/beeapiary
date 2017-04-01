@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="43dp"
         android:layout_marginStart="43dp"
-        android:id="@+id/btnAddYardBack"
+        android:id="@+id/btnEditYardBack"
         android:layout_alignBaseline="@+id/btnAddYardCancel"
         android:layout_alignBottom="@+id/btnAddYardCancel"
         android:layout_toRightOf="@+id/btnAddYardCancel"

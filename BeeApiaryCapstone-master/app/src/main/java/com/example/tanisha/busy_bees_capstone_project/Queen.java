@@ -9,22 +9,33 @@ import android.widget.Button;
 public class Queen extends AppCompatActivity {
     Button btn_replace_queen;
     Button btn_edit_queen;
+    Button btn_queen_back;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_queen);
-        btn_replace_queen=(Button)findViewById(R.id.btnEditQueenCancel);
-        btn_edit_queen=(Button)findViewById(R.id.btnEditQueen);
+        btn_replace_queen = (Button) findViewById(R.id.btnEditQueenCancel);
+        btn_edit_queen = (Button) findViewById(R.id.btnEditQueen);
         ReplaceQueenPage();
         EditQueenPage();
+        BackToMainPage();
+    }
+
+    private void BackToMainPage() {
+        btn_queen_back = (Button) findViewById(R.id.btnRecordListBack);
+        btn_queen_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent backtoMain = new Intent(Queen.this, MainActivity.class);
+                startActivity(backtoMain);
+            }
+        });
     }
 
     private void EditQueenPage() {
-
         {
-
             btn_edit_queen.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

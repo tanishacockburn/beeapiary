@@ -96,7 +96,7 @@
     <Button
         android:text="Back"
         android:layout_height="50dp"
-        android:id="@+id/btnYardback"
+        android:id="@+id/btnRecordListBack"
         android:layout_marginLeft="14dp"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
@@ -141,8 +141,8 @@
         android:id="@+id/btnEditQueenConfirm"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
-        android:layout_alignBottom="@+id/btnYardback"
-        android:layout_toStartOf="@+id/btnYardback" />
+        android:layout_alignBottom="@+id/btnRecordListBack"
+        android:layout_toStartOf="@+id/btnRecordListBack" />
 
     <TextView
         android:text="Queen Birth"

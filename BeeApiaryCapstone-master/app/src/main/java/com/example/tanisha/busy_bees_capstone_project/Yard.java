@@ -23,7 +23,7 @@ public class Yard extends AppCompatActivity {
 
     private void BackToMainPage(){
 
-            btn_back_yard=(Button)findViewById(R.id.btnYardback);
+            btn_back_yard=(Button)findViewById(R.id.btnRecordListBack);
             btn_back_yard.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

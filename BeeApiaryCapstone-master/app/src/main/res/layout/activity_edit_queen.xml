@@ -74,7 +74,7 @@
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnYardback"
+        android:id="@+id/btnRecordListBack"
         android:layout_marginLeft="14dp"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"

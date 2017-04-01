@@ -24,7 +24,7 @@ public class AddHive extends AppCompatActivity {
         setContentView(R.layout.activity_add_hive);
 
         hiveName=(EditText)findViewById(R.id.txtHiveName);
-        hiveType=(EditText)findViewById(R.id.txtHiveType);
+        hiveType=(EditText)findViewById(R.id.txtSplitType);
         splitType=(EditText)findViewById(R.id.txtSplitType);
         yearBeesWereSourced=(EditText)findViewById(R.id.txtYearBeesWereSourced);
         hiveConfiguration=(EditText)findViewById(R.id.txtHiveConfiguration);

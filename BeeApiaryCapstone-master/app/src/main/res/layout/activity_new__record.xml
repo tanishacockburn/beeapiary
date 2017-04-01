@@ -250,7 +250,7 @@
         android:layout_alignTop="@+id/btnEditQueenConfirm"
         android:layout_alignLeft="@+id/txtStartSeason"
         android:layout_alignStart="@+id/txtStartSeason"
-        android:id="@+id/btnYardback" />
+        android:id="@+id/btnRecordListBack" />
 
     <TextView
         android:text="Pest Control"

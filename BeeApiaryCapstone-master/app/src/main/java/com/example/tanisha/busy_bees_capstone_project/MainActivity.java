@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     public Button btn_hives;
     public Button btn_yard;
     public Button btn_queen;
+    public Button btn_inspection;
 
 
     @Override
@@ -22,9 +23,22 @@ public class MainActivity extends AppCompatActivity {
         HivesPage();
         YardPage();
         QueenPage();
+        InspectionPage();
 
     }
 
+    private void InspectionPage() {
+
+        btn_inspection=(Button)findViewById(R.id.btnInspection);
+        btn_inspection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent recordList = new Intent(MainActivity.this, RecordList.class);
+                startActivity(recordList);
+
+            }
+        });
+    }
 
 
     public  void HivesPage()

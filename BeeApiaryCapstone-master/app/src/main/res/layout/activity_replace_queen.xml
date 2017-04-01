@@ -51,7 +51,7 @@
         android:layout_alignBottom="@+id/btnEditQueenConfirm"
         android:layout_toEndOf="@+id/btnEditQueenConfirm"
         android:layout_marginStart="20dp"
-        android:id="@+id/btnYardback"
+        android:id="@+id/btnRecordListBack"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light" />
 

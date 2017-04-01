@@ -101,7 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="29dp"
         android:layout_marginStart="29dp"
-        android:id="@+id/btnYardback"
+        android:id="@+id/btnRecordListBack"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
         android:layout_alignBaseline="@+id/btnEditQueenConfirm"
