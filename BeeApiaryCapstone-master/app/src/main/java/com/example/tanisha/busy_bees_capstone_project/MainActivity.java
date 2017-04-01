@@ -1,19 +1,30 @@
 package com.example.tanisha.busy_bees_capstone_project;
 
+import android.Manifest;
 import android.content.Intent;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import io.github.steve_bulgin.models.HiveObj;
+import io.github.steve_bulgin.models.QueenObj;
+import io.github.steve_bulgin.models.YardObj;
+
+public class MainActivity extends RuntimePermission {
     public Button btn_hives;
     public Button btn_yard;
     public Button btn_queen;
     public Button btn_inspection;
+
+	private ApiaryDB db;
+	//public RuntimePermission permissions;
+	private static final int REQUEST_PERMISSION = 10;
 
 
     @Override
@@ -24,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
         YardPage();
         QueenPage();
         InspectionPage();
+
+		requestAppPermissions(new String[]{
+				Manifest.permission.WRITE_EXTERNAL_STORAGE,
+				Manifest.permission.READ_EXTERNAL_STORAGE,
+				Manifest.permission.CAMERA}, R.string.msg, REQUEST_PERMISSION);
+
+
+
 
     }
 
@@ -40,8 +59,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+	@Override
+	public void onPermissionsGranted(int requestCode) {
+		Toast.makeText(getApplicationContext(), "Permissions Granted", Toast.LENGTH_LONG).show();
+		db = new ApiaryDB(this);
+	}
 
-    public  void HivesPage()
+
+	public  void HivesPage()
     {
         btn_hives=(Button)findViewById(R.id.btnHive);
         btn_hives.setOnClickListener(new View.OnClickListener() {

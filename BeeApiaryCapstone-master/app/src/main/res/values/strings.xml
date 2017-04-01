@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Bee Tracking Application</string>
+    <string name="msg">Application needs all permissions to function</string>
 </resources>
