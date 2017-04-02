@@ -290,4 +290,30 @@ public class ApiaryDB {
 		closeDB();
 	}
 
+	//Updaters
+
+	public void editHive(HiveObj hive) {
+		ContentValues contentvalues = new ContentValues();
+		contentvalues.put(HIVENAME, hive.getHiveName());
+		contentvalues.put(SPLITTYPE, hive.getSplitType());
+		contentvalues.put(HIVETYPE, hive.getHiveType());
+		contentvalues.put(YEARBEESWERESOURCED, hive.getYearbeeswereSourced());
+		contentvalues.put(HIVECONFIGURATION, hive.getHiveConfiguration());
+		contentvalues.put(YARDID, hive.getYardID());
+
+		openWriteableDB();
+		db.update(HIVE, contentvalues, "hiveID = " + hive.getHiveID(), null);
+		closeDB();
+
+	}
+
+
+	public void rowDeleter(String table, String id_col, int id) {
+		openWriteableDB();
+		db.delete(table, id_col + " = " + Integer.toString(id), null);
+		closeDB();
+	}
+
+
+
 }
