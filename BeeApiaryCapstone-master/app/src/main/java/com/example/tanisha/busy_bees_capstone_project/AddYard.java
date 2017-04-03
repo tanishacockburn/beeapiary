@@ -7,8 +7,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import io.github.steve_bulgin.models.HiveObj;
+import io.github.steve_bulgin.models.YardObj;
+
 public class AddYard extends AppCompatActivity {
-    EditText txt_yard_location;
+    EditText txt_yard_location, txt_land_description;
+	private ApiaryDB db;
     Button btn_confirm;
 
     @Override
@@ -16,12 +20,11 @@ public class AddYard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_yard);
 
+		db = new ApiaryDB(this);
         txt_yard_location=(EditText)findViewById(R.id.txtAddYardYardLocation);
-        btn_confirm=(Button)findViewById(R.id.btnAddYardConfirm);
+		txt_land_description = (EditText) findViewById(R.id.txtAddYardLandDescription);
+		btn_confirm=(Button)findViewById(R.id.btnAddYardConfirm);
         SaveYard();
-
-
-
     }
 
     public void SaveYard() {
@@ -34,11 +37,18 @@ public class AddYard extends AppCompatActivity {
 
                         if (txt_yard_location.getText().length()==0)
                         {
-                            txt_yard_location.setError("pleased enter location ");
+                            txt_yard_location.setError("Pleased enter location ");
                         }
 
-                        else
-                            Toast.makeText(AddYard.this,"Yard added",Toast.LENGTH_LONG).show();
+                        else {
+							YardObj yard = new YardObj();
+
+							yard.setLocation(txt_yard_location.getText().toString());
+							yard.setLandDescription(txt_land_description.getText().toString());
+							db.addYard(yard);
+
+							Toast.makeText(AddYard.this, "Yard Added", Toast.LENGTH_LONG).show();
+						}
                     }
                 }
         );

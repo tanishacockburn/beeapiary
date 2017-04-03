@@ -10,18 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.tanisha.busy_bees_capstone_project.Yard">
 
-    <!--  <Button
-          android:text="Add Yard"
-          android:layout_height="wrap_content"
-          android:id="@+id/btnAddYard"
-          android:textSize="14sp"
-          android:textColor="@android:color/background_light"
-          android:background="@color/colorPrimaryDark"
-          android:layout_below="@+id/lVHiveList"
-          android:layout_width="300dp"
-          android:layout_alignParentLeft="true"
-          android:layout_alignParentStart="true" />
-  -->
+
 
     <TextView
         android:text="Yard Location"
@@ -30,7 +19,7 @@
         android:layout_height="30dp"
         android:textSize="24sp"
         android:layout_width="200dp"
-        android:layout_alignTop="@+id/lVHiveList"
+        android:layout_alignTop="@+id/lvHiveList"
         android:layout_centerHorizontal="true" />
 
 
@@ -40,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="14dp"
         android:layout_marginStart="14dp"
-        android:id="@+id/btnEditQueenConfirm"
+        android:id="@+id/btnYardCancel"
         android:layout_alignBaseline="@+id/btnReplaceQueenConfirm"
         android:layout_alignBottom="@+id/btnReplaceQueenConfirm"
         android:layout_toRightOf="@+id/btnReplaceQueenConfirm"
@@ -50,7 +39,7 @@
 
     <ListView
         android:layout_marginTop="27dp"
-        android:id="@+id/lVHiveList"
+        android:id="@+id/lvHiveList"
         android:layout_height="200dp"
         style="@style/Widget.AppCompat.ListView"
         android:layout_width="200dp"
@@ -91,7 +80,7 @@
 
         android:textSize="24sp"
         android:layout_marginBottom="59dp"
-        android:layout_alignBottom="@+id/lVHiveList"
+        android:layout_alignBottom="@+id/lvHiveList"
         android:layout_alignLeft="@+id/lblYardLocation"
         android:layout_alignStart="@+id/lblYardLocation" />
 
@@ -135,7 +124,6 @@
 
     <EditText
         android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
         android:id="@+id/txtYardLocation"
         style="@style/Widget.AppCompat.EditText"
@@ -145,13 +133,14 @@
         android:layout_alignBaseline="@+id/lblYardLocation"
         android:layout_alignBottom="@+id/lblYardLocation"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:hint="Location"/>
 
     <Button
         android:text="Delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnReplaceQueenConfirm"
+        android:id="@+id/btnDeleteYard"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
         android:layout_alignBaseline="@+id/btnEditYard"

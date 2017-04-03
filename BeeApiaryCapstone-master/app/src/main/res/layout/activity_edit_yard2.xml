@@ -17,8 +17,8 @@
         android:textSize="12sp"
         android:layout_alignBaseline="@+id/txtYardLocation"
         android:layout_alignBottom="@+id/txtYardLocation"
-        android:layout_toRightOf="@+id/lVHiveList"
-        android:layout_toEndOf="@+id/lVHiveList"
+        android:layout_toRightOf="@+id/lvHiveList"
+        android:layout_toEndOf="@+id/lvHiveList"
         android:layout_width="120dp"
 
         />
@@ -30,8 +30,8 @@
         android:textSize="14sp"
         android:textColor="@color/colorPrimaryDark"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/lVHiveList"
-        android:layout_toEndOf="@+id/lVHiveList"
+        android:layout_toRightOf="@+id/lvHiveList"
+        android:layout_toEndOf="@+id/lvHiveList"
         android:layout_width="400dp"
 
         />
@@ -60,7 +60,7 @@
         android:textSize="12sp"
         android:layout_width="120dp"
         android:layout_below="@+id/lblYardLocation"
-        android:layout_toEndOf="@+id/lVHiveList" />
+        android:layout_toEndOf="@+id/lvHiveList" />
 
     <EditText
         android:inputType="textMultiLine"

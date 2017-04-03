@@ -10,6 +10,8 @@ import android.os.Environment;
 import android.util.Log;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ApiaryDB {
 
@@ -109,7 +111,7 @@ public class ApiaryDB {
 
 			//Yard table
 			db.execSQL("CREATE TABLE "+ YARD +" ( " + YARDID + " INTEGER PRIMARY KEY AUTOINCREMENT," + LOCATION +
-					" VARCHAR NOT NULL, " + LANDDESCRIPTION + " VARCHAR )");
+					" VARCHAR NOT NULL UNIQUE, " + LANDDESCRIPTION + " VARCHAR )");
 			//Hive
 			db.execSQL("CREATE TABLE " + HIVE + " ( " + HIVEID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + HIVENAME + " VARCHAR, " + SPLITTYPE + " VARCHAR, " + HIVETYPE + " VARCHAR, " +
 					   " " + YEARBEESWERESOURCED + " INTEGER, "+ HIVECONFIGURATION +" VARCHAR, " + YARDID + " INTEGER, " +
@@ -307,6 +309,15 @@ public class ApiaryDB {
 
 	}
 
+	public void editYard(YardObj yard) {
+		ContentValues contentvalues = new ContentValues();
+		contentvalues.put(LOCATION, yard.getLocation());
+		contentvalues.put(LANDDESCRIPTION, yard.getLandDescription());
+
+		openWriteableDB();
+		db.update(YARD, contentvalues,"yardID = " + yard.getYardID(), null);
+	}
+
 
 	public void rowDeleter(String table, String id_col, int id) {
 		openWriteableDB();
@@ -316,4 +327,27 @@ public class ApiaryDB {
 
 
 
+
+	public ArrayList<HashMap<String, String>> getAllHives() {
+		Log.d("Shit", "jkgjg");
+		ArrayList<HashMap<String, String>> data = new ArrayList<HashMap<String, String>>();
+		openReadableDB();
+		Cursor cursor = db.rawQuery("SELECT (\"  \" || IFNULL(hiveID, \" \") || \"        \" || \"location\") AS hivelv, hiveID, location, landDescription, Yard.yardID FROM Yard LEFT OUTER JOIN Hive ON Hive.yardID = Yard.yardID",null );
+		while (cursor.moveToNext()) {
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("hivelv", cursor.getString(0));
+			map.put("hivID", cursor.getString(1));
+			map.put("location", cursor.getString(2));
+			map.put("landDescription", cursor.getString(3));
+			map.put("yardID", cursor.getString(4));
+
+			Log.d("DBCheck","|" + cursor.getString(0) + ", " + cursor.getString(1) + ", " + cursor.getString(2) + ", " + cursor.getString(4));
+			data.add(map);
+		}
+		if (cursor != null)
+			cursor.close();
+		closeDB();
+
+		return data;
+	}
 }
