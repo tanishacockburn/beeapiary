@@ -185,7 +185,7 @@ public class Yard extends AppCompatActivity {
 	}
 
 	private void createList() {
-		resultset = db.getAllHives();
+		resultset = db.getAllHivesandYards();
 		int resource = R.layout.hive_list;
 		String[] from = {"hivelv"};
 		int[] to = {R.id.hive_list_tv};

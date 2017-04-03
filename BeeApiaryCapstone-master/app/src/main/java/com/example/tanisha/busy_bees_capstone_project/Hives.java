@@ -10,31 +10,40 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Hives extends AppCompatActivity {
-    Button btn_add_hive ;
+    Button btn_add_hive;
     ListView listView;
-    ArrayAdapter<String>adapter;
-    String hives[]={"Hive 1","Hive 2","Hive 3","Hive 4"};
     Button btn_add_box;
 
-
+    private ApiaryDB db;
+    private ArrayList<HashMap<String, String>> resultset;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hives);
+
+        db = new ApiaryDB(this);
+
+        listView = (ListView) findViewById(R.id.hivesListView);
+
+        createList();
+
         AddHivesPage();
-        ListOfHives();
         AddBoxPage();
 
     }
 
     public void AddBoxPage() {
 
-        btn_add_box=(Button)findViewById(R.id.btnAddListBox);
+        btn_add_box = (Button) findViewById(R.id.btnAddListBox);
         btn_add_box.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,17 +54,8 @@ public class Hives extends AppCompatActivity {
         });
     }
 
-    public void ListOfHives() {
-        listView=(ListView)findViewById(R.id.hivesListView) ;
-        adapter= new ArrayAdapter(this, R.layout.hive_list, hives);
-        listView.setAdapter(adapter);
-
-
-
-    }
-    public  void AddHivesPage()
-    {
-        btn_add_hive=(Button)findViewById(R.id.btnAddHive);
+    public void AddHivesPage() {
+        btn_add_hive = (Button) findViewById(R.id.btnAddHive);
         btn_add_hive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,39 +77,44 @@ public class Hives extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
 
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.activityHome:
-                Toast.makeText(getApplicationContext(),item.toString(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), item.toString(), Toast.LENGTH_SHORT).show();
                 Intent homePage = new Intent(Hives.this, MainActivity.class);
                 startActivity(homePage);
 
                 break;
             case R.id.activity_hives:
-                Toast.makeText(getApplicationContext(),item.toString(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), item.toString(), Toast.LENGTH_SHORT).show();
                 Intent hivesPage = new Intent(Hives.this, Hives.class);
                 startActivity(hivesPage);
 
                 break;
             case R.id.activity_records:
-                Toast.makeText(getApplicationContext(),item.toString(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), item.toString(), Toast.LENGTH_SHORT).show();
                 Intent recordPage = new Intent(Hives.this, Records.class);
                 startActivity(recordPage);
 
                 break;
             case R.id.activity_new_record:
-                Toast.makeText(getApplicationContext(),item.toString(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), item.toString(), Toast.LENGTH_SHORT).show();
                 Intent newRecordPage = new Intent(Hives.this, NewRecord.class);
                 startActivity(newRecordPage);
 
                 break;
 
 
-
-
         }
-
-
-
         return super.onOptionsItemSelected(item);
+    }
+
+    private void createList() {
+        resultset = db.getAllHives();
+        int resource = R.layout.hive_list;
+        String[] from = {"hiveview"};
+        int[] to = {R.id.hive_list_tv};
+
+        SimpleAdapter ad = new SimpleAdapter(this, resultset, resource, from, to);
+        listView.setAdapter(ad);
     }
 }
