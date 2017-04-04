@@ -362,7 +362,8 @@ public class ApiaryDB {
 			map.put("splitType", cursor.getString(2));
 			map.put("hiveType", cursor.getString(3));
 			map.put("yearbeeswereSourced", cursor.getString(4));
-			map.put("yardID", cursor.getString(5));
+			map.put("hiveConfiguration", cursor.getString(5));
+			map.put("yardID", cursor.getString(6));
 			;
 
 			Log.d("DBCheck","|" + cursor.getString(0) + ", " + cursor.getString(1) + ", " + cursor.getString(2) + ", " + cursor.getString(5));

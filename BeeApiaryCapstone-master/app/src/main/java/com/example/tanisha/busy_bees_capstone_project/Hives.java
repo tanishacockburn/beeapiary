@@ -4,11 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -21,8 +24,11 @@ public class Hives extends AppCompatActivity {
     ListView listView;
     Button btn_add_box;
 
+	private EditText txtHiveName, txtSplitType, txtBoxType, txtNumberFrames, txtFrameMaterial, txtHiveConfiguration,
+			txtInstallationDate, txtHoneyWeight, txtHiveType, txtYearBeesWereSourced;
     private ApiaryDB db;
     private ArrayList<HashMap<String, String>> resultset;
+	private HashMap items;
 
 
     @Override
@@ -34,10 +40,31 @@ public class Hives extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.hivesListView);
 
+		txtHiveName = (EditText) findViewById(R.id.txtHiveName);
+		txtSplitType = (EditText) findViewById(R.id.txtSplitType);
+
         createList();
 
         AddHivesPage();
         AddBoxPage();
+
+
+		listView.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				items = (HashMap) listView.getItemAtPosition(position);
+				String temphiveid = items.get("hiveview").toString();
+				String[] split = temphiveid.split("^Hive: ");
+				Integer hiveid = Integer.parseInt(split[1]);
+				Log.d("HiveFunc", String.valueOf(hiveid));
+				getHiveById(hiveid);
+
+				//items = getHiveById(hiveid);
+				//Integer.parseInt.setText(items.get("location").toString());
+				//txtHiveName.setText(items.get("hiveName").toString());
+			}
+		});
 
     }
 
@@ -117,4 +144,30 @@ public class Hives extends AppCompatActivity {
         SimpleAdapter ad = new SimpleAdapter(this, resultset, resource, from, to);
         listView.setAdapter(ad);
     }
+
+//	private HashMap<String, String> getHiveById(Integer hiveId) {
+//		Log.d("HiveFunc", "Fired");
+//		HashMap<String, String> map = new HashMap<String, String>();
+//		for (int i = 0; i < resultset.size(); ++i) {
+//			map = (HashMap)resultset.get(i);
+//			if (hiveId == Integer.parseInt(map.get("hiveId"))) {
+//				Log.d("Hive", map.get("hiveName"));
+//				return map;
+//			}
+//		}
+//		return null;
+//	}
+
+	private void getHiveById(Integer hiveId) {
+		Log.d("HiveFunc", "Fired");
+		//HashMap<String, String> map = new HashMap<String, String>();
+		for (int i = 0; i < resultset.size(); ++i) {
+			map = (HashMap)resultset.get(i);
+			if (hiveId == 1) {
+				Log.d("Hive", "If Fired");
+				//return map;
+			}
+		}
+		//return null;
+	}
 }

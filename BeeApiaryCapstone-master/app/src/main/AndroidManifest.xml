@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Hives"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait" />
         <activity android:name=".Records" />
         <activity android:name=".NewRecord" />
         <activity android:name=".AddHive" />
