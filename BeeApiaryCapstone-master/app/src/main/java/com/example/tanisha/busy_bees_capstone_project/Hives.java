@@ -42,6 +42,10 @@ public class Hives extends AppCompatActivity {
 
 		txtHiveName = (EditText) findViewById(R.id.txtHiveName);
 		txtSplitType = (EditText) findViewById(R.id.txtSplitType);
+        txtBoxType = (EditText) findViewById(R.id.txtBoxType);
+        txtYearBeesWereSourced = (EditText) findViewById(R.id.txtYearBeesWereSourced);
+        txtHiveType = (EditText) findViewById(R.id.txtHiveType);
+        txtHiveConfiguration = (EditText) findViewById(R.id.txtHiveConfiguration);
 
         createList();
 
@@ -60,9 +64,11 @@ public class Hives extends AppCompatActivity {
 				Log.d("HiveFunc", String.valueOf(hiveid));
 				getHiveById(hiveid);
 
-				//items = getHiveById(hiveid);
-				//Integer.parseInt.setText(items.get("location").toString());
-				//txtHiveName.setText(items.get("hiveName").toString());
+                txtHiveName.setText(items.get("hiveview").toString());
+                txtSplitType.setText(items.get("splitType").toString());
+                txtHiveType.setText(items.get("hiveType").toString());
+                txtHiveConfiguration.setText(items.get("hiveConfiguration").toString());
+				txtYearBeesWereSourced.setText(items.get("yearbeeswereSourced").toString());
 			}
 		});
 
@@ -145,29 +151,16 @@ public class Hives extends AppCompatActivity {
         listView.setAdapter(ad);
     }
 
-//	private HashMap<String, String> getHiveById(Integer hiveId) {
-//		Log.d("HiveFunc", "Fired");
-//		HashMap<String, String> map = new HashMap<String, String>();
-//		for (int i = 0; i < resultset.size(); ++i) {
-//			map = (HashMap)resultset.get(i);
-//			if (hiveId == Integer.parseInt(map.get("hiveId"))) {
-//				Log.d("Hive", map.get("hiveName"));
-//				return map;
-//			}
-//		}
-//		return null;
-//	}
-
 	private void getHiveById(Integer hiveId) {
 		Log.d("HiveFunc", "Fired");
 		//HashMap<String, String> map = new HashMap<String, String>();
-		for (int i = 0; i < resultset.size(); ++i) {
-			map = (HashMap)resultset.get(i);
-			if (hiveId == 1) {
-				Log.d("Hive", "If Fired");
-				//return map;
+		//for (int i = 0; i < resultset.size(); ++i) {
+		//	map = (HashMap)resultset.get(i);
+			if (hiveId == 3) {
+				Log.d("Hive", "If fired");
+		//		return map;
 			}
-		}
+
 		//return null;
 	}
 }

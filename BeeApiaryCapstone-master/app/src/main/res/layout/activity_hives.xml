@@ -48,25 +48,6 @@
         android:layout_alignStart="@+id/txtHives"
         android:id="@+id/editText3" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/txtHiveName"
-        android:layout_alignBaseline="@+id/lblHiveName"
-        android:layout_alignBottom="@+id/lblHiveName"
-        android:layout_toEndOf="@+id/lblHiveConfig" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:layout_alignBottom="@+id/editText3"
-        android:layout_alignEnd="@+id/txtHiveName"
-        android:id="@+id/txtSplitType" />
-
     <TextView
         android:text="Split Type"
         android:layout_width="wrap_content"
@@ -184,15 +165,6 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/txtBoxType"
-        android:layout_above="@+id/lblNumberOfFrames"
-        android:layout_alignStart="@+id/txtHiveConfiguration" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
         android:layout_below="@+id/txtBoxType"
         android:layout_alignStart="@+id/txtBoxType"
         android:layout_marginTop="20dp"
@@ -287,6 +259,34 @@
         android:layout_alignBaseline="@+id/btnEditQueenConfirm"
         android:layout_alignBottom="@+id/btnEditQueenConfirm"
         android:layout_toStartOf="@+id/btnEditQueenConfirm" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtBoxType"
+        android:layout_above="@+id/lblNumberOfFrames"
+        android:layout_alignStart="@+id/txtHiveConfiguration" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtHiveType"
+        android:layout_alignBaseline="@+id/editText3"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_alignStart="@+id/editText3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtHiveName"
+        android:layout_above="@+id/editText3"
+        android:layout_alignStart="@+id/txtHives" />
 
 
 </RelativeLayout>
