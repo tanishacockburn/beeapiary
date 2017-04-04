@@ -25,7 +25,8 @@
         <activity android:name=".Records" />
         <activity android:name=".NewRecord" />
         <activity android:name=".AddHive" />
-        <activity android:name=".Yard" />
+        <activity android:name=".Yard"
+            android:screenOrientation="portrait" />
         <activity android:name=".AddYard" />
         <activity android:name=".AddBox" />
         <activity android:name=".RecordList" />
