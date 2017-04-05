@@ -3,13 +3,11 @@ package com.example.tanisha.busy_bees_capstone_project;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -46,6 +44,8 @@ public class Hives extends AppCompatActivity {
         txtYearBeesWereSourced = (EditText) findViewById(R.id.txtYearBeesWereSourced);
         txtHiveType = (EditText) findViewById(R.id.txtHiveType);
         txtHiveConfiguration = (EditText) findViewById(R.id.txtHiveConfiguration);
+		txtBoxType =(EditText)findViewById(R.id.txtBoxType);
+
 
         createList();
 
@@ -62,7 +62,7 @@ public class Hives extends AppCompatActivity {
 				String[] split = temphiveid.split("^Hive: ");
 				Integer hiveid = Integer.parseInt(split[1]);
 				Log.d("HiveFunc", String.valueOf(hiveid));
-				getHiveById(hiveid);
+
 
                 txtHiveName.setText(items.get("hiveview").toString());
                 txtSplitType.setText(items.get("splitType").toString());
@@ -151,16 +151,4 @@ public class Hives extends AppCompatActivity {
         listView.setAdapter(ad);
     }
 
-	private void getHiveById(Integer hiveId) {
-		Log.d("HiveFunc", "Fired");
-		//HashMap<String, String> map = new HashMap<String, String>();
-		//for (int i = 0; i < resultset.size(); ++i) {
-		//	map = (HashMap)resultset.get(i);
-			if (hiveId == 3) {
-				Log.d("Hive", "If fired");
-		//		return map;
-			}
-
-		//return null;
-	}
 }

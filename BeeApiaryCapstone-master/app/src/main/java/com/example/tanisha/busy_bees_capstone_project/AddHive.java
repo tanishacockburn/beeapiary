@@ -10,26 +10,36 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import io.github.steve_bulgin.models.HiveObj;
+
 public class AddHive extends AppCompatActivity {
-     Button btn_confirm_add_hive;
+     Button btn_confirm_add_hive, btn_add_hive_cancel, btn_add_hive_back;
        EditText hiveName;
        EditText hiveType;
        EditText splitType;
        EditText yearBeesWereSourced;
        EditText hiveConfiguration;
+
+	private ApiaryDB db;
+
 //Add hive
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_hive);
 
+		db = new ApiaryDB(this);
         hiveName=(EditText)findViewById(R.id.txtHiveName);
-        hiveType=(EditText)findViewById(R.id.txtSplitType);
+        hiveType=(EditText)findViewById(R.id.txtHiveType);
         splitType=(EditText)findViewById(R.id.txtSplitType);
         yearBeesWereSourced=(EditText)findViewById(R.id.txtYearBeesWereSourced);
         hiveConfiguration=(EditText)findViewById(R.id.txtHiveConfiguration);
-        btn_confirm_add_hive = (Button)findViewById(R.id.btnReplaceQueenConfirm);
+        btn_confirm_add_hive = (Button)findViewById(R.id.btnAddHiveConfirm);
+		btn_add_hive_cancel = (Button)findViewById(R.id.btnAddHiveCancel);
+		btn_add_hive_back = (Button)findViewById(R.id.btnAddHiveBack);
         AddData();
+		Cancel();
+		btnBack();
     }
 
    public void AddData() {
@@ -52,14 +62,44 @@ public class AddHive extends AppCompatActivity {
                        }
                        if (hiveConfiguration.getText().length() == 0) {
                            hiveConfiguration.setError("please enter hive configuration");
-                       } else
-
-                           Toast.makeText(AddHive.this, "Data name ok", Toast.LENGTH_LONG).show();
+                       } else {
+						   HiveObj hive = new HiveObj();
+						   hive.setHiveName(hiveName.getText().toString());
+						   hive.setHiveType(hiveType.getText().toString());
+						   hive.setSplitType(splitType.getText().toString());
+						   hive.setYearbeeswereSourced(Integer.parseInt(yearBeesWereSourced.getText().toString()));
+						   hive.setHiveConfiguration(hiveConfiguration.getText().toString());
+						   db.addHive(hive);
+						   Toast.makeText(AddHive.this, "Hive added", Toast.LENGTH_LONG).show();
+					   }
                    }
                }
        );
 
    }
+
+	public void Cancel() {
+		btn_add_hive_cancel.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				hiveName.setText("");
+				hiveType.setText("");
+				splitType.setText("");
+				yearBeesWereSourced.setText("");
+				hiveConfiguration.setText("");
+			}
+		});
+	}
+
+	public void btnBack() {
+		btn_add_hive_back.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(AddHive.this, Hives.class);
+				startActivity(i);
+			}
+		});
+	}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
