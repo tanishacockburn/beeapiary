@@ -79,7 +79,7 @@
         android:ems="10"
         android:layout_alignBottom="@+id/editText3"
         android:layout_alignEnd="@+id/txtHiveName"
-        android:id="@+id/txtSplitType"
+        android:id="@+id/txtHiveType"
         android:focusable="false"
         android:enabled="false"
         />
@@ -102,7 +102,7 @@
         android:ems="10"
         android:layout_alignTop="@+id/lblSplitType"
         android:layout_alignEnd="@+id/editText3"
-        android:id="@+id/txtSplitType"
+        android:id="@+id/txtHiveType"
         android:focusable="false"
         android:enabled="false"
         />
@@ -326,7 +326,7 @@
         android:id="@+id/lblHiveConfig"
 
         android:layout_below="@+id/lblYearBeesWereSourced"
-        android:layout_toStartOf="@+id/txtSplitType" />
+        android:layout_toStartOf="@+id/txtHiveType" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -348,8 +348,8 @@
         android:ems="10"
         android:id="@+id/txtYearBeesWereSourced"
         android:layout_marginStart="19dp"
-        android:layout_below="@+id/txtSplitType"
-        android:layout_alignStart="@+id/txtSplitType"
+        android:layout_below="@+id/txtHiveType"
+        android:layout_alignStart="@+id/txtHiveType"
         android:focusable="false"
         android:enabled="false"
         />

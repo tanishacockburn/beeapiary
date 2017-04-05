@@ -328,7 +328,7 @@ public class ApiaryDB {
 
 
 
-	public ArrayList<HashMap<String, String>> getAllHives() {
+	public ArrayList<HashMap<String, String>> getAllHivesandYards() {
 		Log.d("Shit", "jkgjg");
 		ArrayList<HashMap<String, String>> data = new ArrayList<HashMap<String, String>>();
 		openReadableDB();
@@ -342,6 +342,31 @@ public class ApiaryDB {
 			map.put("yardID", cursor.getString(4));
 
 			Log.d("DBCheck","|" + cursor.getString(0) + ", " + cursor.getString(1) + ", " + cursor.getString(2) + ", " + cursor.getString(4));
+			data.add(map);
+		}
+		if (cursor != null)
+			cursor.close();
+		closeDB();
+
+		return data;
+	}
+
+	public ArrayList<HashMap<String, String>> getAllHives() {
+		ArrayList<HashMap<String, String>> data = new ArrayList<HashMap<String, String>>();
+		openReadableDB();
+		Cursor cursor = db.rawQuery("SELECT ('Hive: ' || hiveID) as hiveview, hiveID, splitType, hiveType, yearbeeswereSourced, hiveConfiguration, yardID FROM Hive",null );
+		while (cursor.moveToNext()) {
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("hiveview", cursor.getString(0));
+			map.put("hiveID", cursor.getString(1));
+			map.put("splitType", cursor.getString(2));
+			map.put("hiveType", cursor.getString(3));
+			map.put("yearbeeswereSourced", cursor.getString(4));
+			map.put("hiveConfiguration", cursor.getString(5));
+			map.put("yardID", cursor.getString(6));
+			;
+
+			Log.d("DBCheck","|" + cursor.getString(0) + ", " + cursor.getString(1) + ", " + cursor.getString(2) + ", " + cursor.getString(5));
 			data.add(map);
 		}
 		if (cursor != null)

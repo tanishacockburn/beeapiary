@@ -10,7 +10,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,11 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Hives" />
+        <activity android:name=".Hives"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait" />
         <activity android:name=".Records" />
         <activity android:name=".NewRecord" />
         <activity android:name=".AddHive" />
-        <activity android:name=".Yard" />
+        <activity android:name=".Yard"
+            android:screenOrientation="portrait" />
         <activity android:name=".AddYard" />
         <activity android:name=".AddBox" />
         <activity android:name=".RecordList" />
