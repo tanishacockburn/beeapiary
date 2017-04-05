@@ -26,7 +26,8 @@
         <activity android:name=".NewRecord" />
         <activity android:name=".AddHive" />
         <activity android:name=".Yard"
-            android:screenOrientation="portrait" />
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape" />
         <activity android:name=".AddYard" />
         <activity android:name=".AddBox" />
         <activity android:name=".RecordList" />

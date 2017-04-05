@@ -28,10 +28,9 @@
         style="@style/Widget.AppCompat.ListView"
         android:background="@drawable/edittextstyle"
         android:layout_marginRight="19dp"
-        android:layout_width="150dp"
+        android:layout_width="250dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/lblYardLocation"/>
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Add Yard"
@@ -43,14 +42,14 @@
         android:layout_width="150dp"
         android:layout_below="@+id/lvHiveList"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/lvHiveList"/>
+        android:layout_alignEnd="@+id/lvHiveList" />
 
     <EditText
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/txtYardLocation"
         style="@style/Widget.AppCompat.EditText"
-        android:textSize="15dp"
+        android:textSize="22sp"
         android:layout_marginRight="10dp"
         android:layout_height="30dp"
         android:background="@drawable/edittextstyle"
@@ -94,26 +93,14 @@
         android:layout_alignEnd="@+id/btnYardBack"/>
 
     <Button
-        android:text="Back"
-        android:layout_width="90dp"
-        android:layout_height="45dp"
-        android:id="@+id/btnYardBack"
-        android:textColor="@android:color/background_light"
-        android:background="@color/colorPrimaryDark"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
-        android:layout_below="@+id/txtYardLandDescription"
-        android:layout_alignParentEnd="true"/>
-
-    <Button
         android:text="Edit"
         android:layout_width="90dp"
         android:layout_height="45dp"
         android:id="@+id/btnEditYard"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
-        android:layout_alignTop="@+id/btnDeleteYard"
-        android:layout_toStartOf="@+id/btnDeleteYard"/>
+        android:layout_below="@+id/txtYardLandDescription"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Delete"
@@ -123,17 +110,19 @@
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
         android:layout_marginLeft="20dp"
-        android:layout_alignTop="@+id/btnYardCancel"
-        android:layout_toStartOf="@+id/btnYardCancel"/>
+        android:layout_below="@+id/txtYardLandDescription"
+        android:layout_toStartOf="@+id/btnYardBack"
+        android:layout_marginEnd="73dp" />
 
     <Button
-        android:text="Cancel"
+        android:text="Back"
         android:layout_width="90dp"
         android:layout_height="45dp"
-        android:id="@+id/btnYardCancel"
+        android:id="@+id/btnYardBack"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
         android:layout_marginLeft="20dp"
-        android:layout_alignTop="@+id/btnYardBack"
-        android:layout_toStartOf="@+id/btnYardBack"/>
+        android:layout_below="@+id/txtYardLandDescription"
+        android:layout_alignEnd="@+id/txtYardLocation" />
+
 </RelativeLayout>
