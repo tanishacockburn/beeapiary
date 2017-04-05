@@ -37,7 +37,7 @@ public class AddYard extends AppCompatActivity {
 
                         if (txt_yard_location.getText().length()==0)
                         {
-                            txt_yard_location.setError("Pleased enter location ");
+                            txt_yard_location.setError("Please enter Yard location ");
                         }
 
                         else {

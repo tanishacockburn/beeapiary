@@ -39,13 +39,13 @@ public class AddHive extends AppCompatActivity {
                    public void onClick(View v) {
 
                        if (hiveName.getText().length() == 0) {
-                           hiveName.setError("pleased enter a hive name ");
+                           hiveName.setError("please enter a hive name ");
                        }
                        if (hiveType.getText().length() == 0) {
-                           hiveType.setError("pleased enter a hive type ");
+                           hiveType.setError("please enter a hive type ");
                        }
                        if (splitType.getText().length() == 0) {
-                           splitType.setError("pleased enter split type ");
+                           splitType.setError("please enter split type ");
                        }
                        if (yearBeesWereSourced.getText().length() == 0) {
                            yearBeesWereSourced.setError("please enter the year bees were sourced");

@@ -40,19 +40,17 @@ public class AddBox extends AppCompatActivity {
 
 
                         if (txt_box_type.getText().length() == 0) {
-                            txt_box_type.setError("pleased enter box type ");
+                            txt_box_type.setError("please enter box type ");
                         }
                         if ( txt_number_of_frames.getText().length() == 0) {
-                            txt_number_of_frames.setError("pleased enter number of frames ");
+                            txt_number_of_frames.setError("please enter number of frames ");
                         }
                         if (txt_frame_material.getText().length() == 0) {
-                            txt_frame_material.setError("pleased enter frame material ");
+                            txt_frame_material.setError("please enter frame material ");
                         }
-                        if (txt_honey_weight.getText().length() == 0) {
-                            txt_honey_weight.setError("please enter the year bees were sourced");
-                        }
+
                         if (txt_installation_date.getText().length() == 0) {
-                            txt_installation_date.setError("please enter hive configuration");
+                            txt_installation_date.setError("please enter installation date");
                         }
                         if (txt_installation_date.getText().length() > 0) {
                             if (!validDate(txt_installation_date.getText().toString())) {
@@ -63,7 +61,7 @@ public class AddBox extends AppCompatActivity {
 
                         else
 
-                            Toast.makeText(AddBox.this, "Box is saved on the database", Toast.LENGTH_LONG).show();
+                            Toast.makeText(AddBox.this, "Box is saved ", Toast.LENGTH_LONG).show();
                     }
                     private boolean validDate(String date) {
                         String date_pattern = "^(19|20)\\d\\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$";
