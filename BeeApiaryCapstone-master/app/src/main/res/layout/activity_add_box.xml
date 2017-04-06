@@ -31,12 +31,13 @@
         android:textSize="18sp"
         android:layout_alignTop="@+id/lvHive"
         android:layout_alignLeft="@+id/lblAddBox"
-        android:layout_alignStart="@+id/lblAddBox" />
+        android:layout_alignStart="@+id/lblAddBox"
+        android:layout_marginTop="10dp"/>
 
     <EditText
         android:layout_width="250dp"
         android:inputType="number"
-        android:text="Name"
+        android:text=""
         android:ems="10"
         android:id="@+id/txtNumberOfFrames"
         android:layout_height="50dp"
@@ -48,7 +49,7 @@
     <EditText
         android:layout_height="50dp"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text=""
         android:ems="10"
         android:id="@+id/txtBoxType"
         android:layout_width="250dp"
@@ -60,20 +61,8 @@
     <EditText
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:text="9"
-        android:ems="10"
-        android:layout_alignBottom="@+id/lblHoneyWeight"
-        android:layout_alignRight="@+id/txtInstallationDate"
-        android:layout_alignEnd="@+id/txtInstallationDate"
-        android:layout_marginBottom="19dp"
-        android:id="@+id/txtHoneyWeight"
-        android:inputType="number" />
-
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="50dp"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text=""
         android:ems="10"
         android:id="@+id/txtFrameMaterial"
         android:layout_alignBaseline="@+id/lblFrameMaterials"
@@ -110,22 +99,11 @@
         android:layout_toLeftOf="@+id/txtNumberOfFrames"
         android:layout_toStartOf="@+id/txtNumberOfFrames" />
 
-    <TextView
-        android:text="Honey weight"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="26dp"
-        android:id="@+id/lblHoneyWeight"
-        android:textSize="18sp"
-        android:layout_below="@+id/txtInstallationDate"
-        android:layout_toLeftOf="@+id/txtHoneyWeight"
-        android:layout_toStartOf="@+id/txtHoneyWeight" />
-
     <EditText
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text=""
         android:ems="10"
         android:id="@+id/txtInstallationDate"
         android:layout_alignBaseline="@+id/lblInstallationDate"
@@ -149,31 +127,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="53dp"
-        android:layout_marginStart="53dp"
-        android:id="@+id/btnEditQueenConfirm"
-        android:layout_below="@+id/txtHoneyWeight"
-        android:layout_toRightOf="@+id/btnReplaceQueenConfirm"
-        android:layout_toEndOf="@+id/btnReplaceQueenConfirm" />
+        android:id="@+id/btnAddBoxCancel"
+        android:layout_below="@+id/lblInstallationDate"
+        android:layout_centerHorizontal="true"/>
 
     <Button
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="35dp"
-        android:layout_marginStart="35dp"
-        android:id="@+id/btnRecordListBack"
-        android:layout_below="@+id/txtHoneyWeight"
-        android:layout_toRightOf="@+id/btnEditQueenConfirm"
-        android:layout_toEndOf="@+id/btnEditQueenConfirm" />
+        android:layout_marginStart="47dp"
+        android:id="@+id/btnAddBoxBack"
+        android:layout_alignTop="@+id/btnAddBoxCancel"
+        android:layout_toEndOf="@+id/btnAddBoxCancel"/>
 
     <Button
         android:text="Confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnReplaceQueenConfirm"
-        android:layout_below="@+id/lblHoneyWeight"
-        android:layout_toRightOf="@+id/lvHive"
-        android:layout_toEndOf="@+id/lvHive"
         android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp" />
+        android:layout_alignTop="@+id/btnAddBoxCancel"
+        android:layout_toStartOf="@+id/btnAddBoxCancel"/>
+
+    <TextView
+        android:text="Hive"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/lblHiveId"
+        android:textSize="18sp"
+        android:layout_above="@+id/lblBoxType"
+        android:layout_toStartOf="@+id/txtBoxType"/>
+
+    <EditText
+        android:layout_height="50dp"
+        android:inputType="textPersonName"
+        android:text=""
+        android:ems="10"
+        android:id="@+id/txtAddBoxId"
+        android:layout_width="250dp"
+        android:layout_above="@+id/lblBoxType"
+        android:layout_alignStart="@+id/txtBoxType"/>
 </RelativeLayout>
