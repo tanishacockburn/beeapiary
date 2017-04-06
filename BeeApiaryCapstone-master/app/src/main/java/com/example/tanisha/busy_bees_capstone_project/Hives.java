@@ -19,14 +19,16 @@ import java.util.HashMap;
 
 public class Hives extends AppCompatActivity {
     Button btn_add_hive;
-    ListView listView;
+    private ListView listView, boxlv;
     Button btn_add_box;
 
 	private EditText txtHiveName, txtSplitType, txtBoxType, txtNumberFrames, txtFrameMaterial, txtHiveConfiguration,
 			txtInstallationDate, txtHoneyWeight, txtHiveType, txtYearBeesWereSourced;
     private ApiaryDB db;
     private ArrayList<HashMap<String, String>> resultset;
-	private HashMap items;
+	private ArrayList<HashMap<String, String>> boxresultset;
+	private HashMap items, boxitems;
+
 
 
     @Override
@@ -37,6 +39,7 @@ public class Hives extends AppCompatActivity {
         db = new ApiaryDB(this);
 
         listView = (ListView) findViewById(R.id.hivesListView);
+		boxlv = (ListView) findViewById(R.id.lvHiveListOfBoxes);
 
 		txtHiveName = (EditText) findViewById(R.id.txtHiveName);
 		txtSplitType = (EditText) findViewById(R.id.txtSplitType);
@@ -45,6 +48,10 @@ public class Hives extends AppCompatActivity {
         txtHiveType = (EditText) findViewById(R.id.txtHiveType);
         txtHiveConfiguration = (EditText) findViewById(R.id.txtHiveConfiguration);
 		txtBoxType =(EditText)findViewById(R.id.txtBoxType);
+		txtFrameMaterial = (EditText) findViewById(R.id.txtFrameMaterial);
+		txtInstallationDate = (EditText) findViewById(R.id.txtInstallationDate);
+		txtHoneyWeight = (EditText) findViewById(R.id.txtHoneyWeight);
+		txtNumberFrames = (EditText) findViewById(R.id.txtNumberFrames);
 
 
         createList();
@@ -62,6 +69,7 @@ public class Hives extends AppCompatActivity {
 				String[] split = temphiveid.split("^Hive: ");
 				Integer hiveid = Integer.parseInt(split[1]);
 				Log.d("HiveFunc", String.valueOf(hiveid));
+				createBoxList(hiveid);
 
 
                 txtHiveName.setText(items.get("hiveview").toString());
@@ -69,6 +77,19 @@ public class Hives extends AppCompatActivity {
                 txtHiveType.setText(items.get("hiveType").toString());
                 txtHiveConfiguration.setText(items.get("hiveConfiguration").toString());
 				txtYearBeesWereSourced.setText(items.get("yearbeeswereSourced").toString());
+			}
+		});
+
+		boxlv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+				boxitems = (HashMap) boxlv.getItemAtPosition(position);
+				txtBoxType.setText(boxitems.get("boxType").toString());
+				txtFrameMaterial.setText(boxitems.get("frameMaterial").toString());
+				txtInstallationDate.setText(boxitems.get("installationDate").toString());
+				txtHoneyWeight.setText(boxitems.get("honeyWeight").toString());
+				txtNumberFrames.setText(boxitems.get("numberofFrames").toString());
 			}
 		});
 
@@ -150,5 +171,15 @@ public class Hives extends AppCompatActivity {
         SimpleAdapter ad = new SimpleAdapter(this, resultset, resource, from, to);
         listView.setAdapter(ad);
     }
+
+	private void createBoxList(int hiveid) {
+		boxresultset = db.getHiveBoxesByHiveId(hiveid);
+		int resource = R.layout.box_item;
+		String[] from = {"boxlv"};
+		int[] to = {R.id.box_list_tv};
+
+		SimpleAdapter ad = new SimpleAdapter(this, boxresultset, resource, from, to);
+		boxlv.setAdapter(ad);
+	}
 
 }

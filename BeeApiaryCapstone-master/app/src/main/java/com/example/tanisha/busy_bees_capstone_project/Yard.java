@@ -61,13 +61,13 @@ public class Yard extends AppCompatActivity {
 		DeleteYard();
         AddYardPage();
         EditYardPage();
-        //BackToMainPage();
+        BackToMainPage();
 
     }
 
     private void BackToMainPage(){
 
-            btn_back_yard=(Button)findViewById(R.id.btnEditYardBack);
+            btn_back_yard=(Button)findViewById(R.id.btnYardBack);
             btn_back_yard.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

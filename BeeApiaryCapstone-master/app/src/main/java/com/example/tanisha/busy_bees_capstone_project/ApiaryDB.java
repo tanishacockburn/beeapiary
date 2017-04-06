@@ -364,7 +364,33 @@ public class ApiaryDB {
 			map.put("yearbeeswereSourced", cursor.getString(4));
 			map.put("hiveConfiguration", cursor.getString(5));
 			map.put("yardID", cursor.getString(6));
-			;
+
+
+			Log.d("DBCheck","|" + cursor.getString(0) + ", " + cursor.getString(1) + ", " + cursor.getString(2) + ", " + cursor.getString(5));
+			data.add(map);
+		}
+		if (cursor != null)
+			cursor.close();
+		closeDB();
+
+		return data;
+	}
+
+	public ArrayList<HashMap<String, String>> getHiveBoxesByHiveId(int hiveid) {
+		ArrayList<HashMap<String, String>> data = new ArrayList<HashMap<String, String>>();
+		openReadableDB();
+		Cursor cursor = db.rawQuery("SELECT ('Box ID: ' || boxID) as boxlv, boxID, boxType, numberofFrames, frameMaterial, installationDate, harvestDate, honeyWeight, hiveID FROM Box WHERE hiveID=" + hiveid,null );
+		while (cursor.moveToNext()) {
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("boxlv", cursor.getString(0));
+			map.put("boxID", cursor.getString(1));
+			map.put("boxType", cursor.getString(2));
+			map.put("numberofFrames", cursor.getString(3));
+			map.put("frameMaterial", cursor.getString(4));
+			map.put("installationDate", cursor.getString(5));
+			map.put("harvestDate", cursor.getString(6));
+			map.put("honeyWeight", cursor.getString(7));
+			map.put("hiveID", cursor.getString(8));
 
 			Log.d("DBCheck","|" + cursor.getString(0) + ", " + cursor.getString(1) + ", " + cursor.getString(2) + ", " + cursor.getString(5));
 			data.add(map);
