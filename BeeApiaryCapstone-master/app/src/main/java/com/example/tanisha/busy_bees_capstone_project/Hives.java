@@ -1,5 +1,7 @@
 package com.example.tanisha.busy_bees_capstone_project;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,23 +13,29 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import io.github.steve_bulgin.models.BoxObj;
+import io.github.steve_bulgin.models.HiveObj;
+
 public class Hives extends AppCompatActivity {
     Button btn_add_hive;
     private ListView listView, boxlv;
-    Button btn_add_box;
+    private Button btn_add_box, btn_edit_hive, btnHiveViewCancel, btnHiveViewConfirm, btnDeleteHive, btnDeleteBox, btnEditBox, btnHiveViewBack;
 
 	private EditText txtHiveName, txtSplitType, txtBoxType, txtNumberFrames, txtFrameMaterial, txtHiveConfiguration,
-			txtInstallationDate, txtHoneyWeight, txtHiveType, txtYearBeesWereSourced;
+			txtInstallationDate, txtHoneyWeight, txtHiveType, txtYearBeesWereSourced, txtHarvestDate;
     private ApiaryDB db;
     private ArrayList<HashMap<String, String>> resultset;
 	private ArrayList<HashMap<String, String>> boxresultset;
 	private HashMap items, boxitems;
+	private RelativeLayout editOptionsLayout;
+	private Integer hiveid, boxid;
 
 
 
@@ -50,14 +58,26 @@ public class Hives extends AppCompatActivity {
 		txtBoxType =(EditText)findViewById(R.id.txtBoxType);
 		txtFrameMaterial = (EditText) findViewById(R.id.txtFrameMaterial);
 		txtInstallationDate = (EditText) findViewById(R.id.txtInstallationDate);
+		txtHarvestDate = (EditText) findViewById(R.id.txtHarvestDate);
 		txtHoneyWeight = (EditText) findViewById(R.id.txtHoneyWeight);
 		txtNumberFrames = (EditText) findViewById(R.id.txtNumberFrames);
+		editOptionsLayout = (RelativeLayout) findViewById(R.id.editLayout);
+
+		//Buttons
+		btn_edit_hive = (Button) findViewById(R.id.btnEditHive);
 
 
-        createList();
+
+
+		createList();
 
         AddHivesPage();
         AddBoxPage();
+		EditHive();
+		EditBox();
+		DeleteHive();
+		DeleteBox();
+		BackToMainPage();
 
 
 		listView.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
@@ -67,7 +87,7 @@ public class Hives extends AppCompatActivity {
 				items = (HashMap) listView.getItemAtPosition(position);
 				String temphiveid = items.get("hiveview").toString();
 				String[] split = temphiveid.split("^Hive: ");
-				Integer hiveid = Integer.parseInt(split[1]);
+				hiveid = Integer.parseInt(split[1]);
 				Log.d("HiveFunc", String.valueOf(hiveid));
 				createBoxList(hiveid);
 
@@ -85,15 +105,179 @@ public class Hives extends AppCompatActivity {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 				boxitems = (HashMap) boxlv.getItemAtPosition(position);
+				boxid = Integer.parseInt(boxitems.get("boxID").toString());
 				txtBoxType.setText(boxitems.get("boxType").toString());
 				txtFrameMaterial.setText(boxitems.get("frameMaterial").toString());
 				txtInstallationDate.setText(boxitems.get("installationDate").toString());
+				txtHarvestDate.setText(boxitems.get("harvestDate").toString());
 				txtHoneyWeight.setText(boxitems.get("honeyWeight").toString());
 				txtNumberFrames.setText(boxitems.get("numberofFrames").toString());
 			}
 		});
 
     }
+
+	private void BackToMainPage(){
+
+		btnHiveViewBack=(Button)findViewById(R.id.btnHiveViewBack);
+		btnHiveViewBack.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent backtoMain = new Intent(Hives.this, MainActivity.class);
+				startActivity(backtoMain);
+
+			}
+		});
+
+	}
+
+	public void EditBox() {
+		btnEditBox = (Button) findViewById(R.id.btnEditHiveBox);
+
+		btnEditBox.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				int tempboxid = 0;
+
+				try {
+
+					tempboxid = boxid;
+
+				} catch (NullPointerException e) {
+
+
+				}
+
+				if (tempboxid != 0) {
+					editOptionsLayout.setVisibility(RelativeLayout.VISIBLE);
+					btnHiveViewCancel = (Button) findViewById(R.id.btnHiveViewCancel);
+					btnHiveViewConfirm = (Button) findViewById(R.id.btnHiveViewConfirm);
+					btnHiveViewCancel.setOnClickListener(new View.OnClickListener() {
+						@Override
+						public void onClick(View v) {
+							editOptionsLayout.setVisibility(RelativeLayout.GONE);
+						}
+					});
+
+					btnHiveViewConfirm.setOnClickListener(new View.OnClickListener() {
+						@Override
+						public void onClick(View v) {
+							BoxObj box = new BoxObj();
+							box.setBoxID(boxid);
+							box.setBoxType(txtBoxType.getText().toString());
+							box.setNumberofFrames(Integer.parseInt(txtNumberFrames.getText().toString()));
+							box.setFrameMaterial(txtFrameMaterial.getText().toString());
+							box.setInstallationDate(txtInstallationDate.getText().toString());
+							box.setHarvestDate(txtHarvestDate.getText().toString());
+							box.setHoneyWeight(Double.parseDouble(txtHoneyWeight.getText().toString()));
+							db.editBox(box);
+							editOptionsLayout.setVisibility(RelativeLayout.GONE);
+							createBoxList(hiveid);
+						}
+					});
+				}
+
+			}
+		});
+
+	}
+
+	public void DeleteBox() {
+		btnDeleteBox = (Button) findViewById(R.id.btnDeleteBox);
+
+		btnDeleteBox.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				int tempboxid = 0;
+
+				try {
+
+					tempboxid = boxid;
+
+				} catch (NullPointerException e) {
+
+
+				}
+
+				if (tempboxid != 0) {
+					AlertDialog.Builder alertone = new AlertDialog.Builder(Hives.this);
+					alertone.setMessage("Do you really want to delete this hive box?").setCancelable(false)
+							.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+								@Override
+								public void onClick(DialogInterface dialog, int which) {
+									db.rowDeleter("Box", "boxID", boxid);
+									txtBoxType.setText("");
+									txtFrameMaterial.setText("");
+									txtInstallationDate.setText("");
+									txtHoneyWeight.setText("");
+									txtNumberFrames.setText("");
+									createBoxList(hiveid);
+									boxid = 0;
+								}
+							})
+							.setNegativeButton("No", new DialogInterface.OnClickListener() {
+								@Override
+								public void onClick(DialogInterface dialog, int which) {
+									dialog.cancel();
+								}
+							});
+
+					AlertDialog alert = alertone.create();
+					alert.setTitle("Delete Hive Box");
+					alert.show();
+				}
+			}
+		});
+	}
+
+	public void DeleteHive() {
+		btnDeleteHive = (Button) findViewById(R.id.btnDeleteHive);
+
+		btnDeleteHive.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				int temphiveid = 0;
+				try {
+
+					temphiveid = hiveid;
+
+				} catch (NullPointerException e) {
+					Toast.makeText(getApplicationContext(), String.valueOf(temphiveid), Toast.LENGTH_SHORT).show();
+
+				}
+
+				if (hiveid != 0) {
+					AlertDialog.Builder alertone = new AlertDialog.Builder(Hives.this);
+					alertone.setMessage("Do you really want to delete this hive and all boxexes associated to it?").setCancelable(false)
+							.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+								@Override
+								public void onClick(DialogInterface dialog, int which) {
+									db.rowDeleter("Hive", "hiveID", hiveid);
+									txtHiveName.setText("");
+									txtSplitType.setText("");
+									txtHiveType.setText("");
+									txtHiveConfiguration.setText("");
+									txtYearBeesWereSourced.setText("");
+									createList();
+									hiveid = 0;
+
+								}
+							})
+							.setNegativeButton("No", new DialogInterface.OnClickListener() {
+								@Override
+								public void onClick(DialogInterface dialog, int which) {
+									dialog.cancel();
+								}
+							});
+
+					AlertDialog alert = alertone.create();
+					alert.setTitle("Delete Hive");
+					alert.show();
+				}
+			}
+		});
+
+	}
 
     public void AddBoxPage() {
 
@@ -119,6 +303,51 @@ public class Hives extends AppCompatActivity {
             }
         });
     }
+
+	public void EditHive() {
+
+		btn_edit_hive.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				int temphiveid = 0;
+				try {
+
+					temphiveid = hiveid;
+
+				} catch (NullPointerException e) {
+
+
+				}
+
+				if (hiveid != 0) {
+					editOptionsLayout.setVisibility(RelativeLayout.VISIBLE);
+					btnHiveViewCancel = (Button) findViewById(R.id.btnHiveViewCancel);
+					btnHiveViewConfirm = (Button) findViewById(R.id.btnHiveViewConfirm);
+					btnHiveViewCancel.setOnClickListener(new View.OnClickListener() {
+						@Override
+						public void onClick(View v) {
+							editOptionsLayout.setVisibility(RelativeLayout.GONE);
+						}
+					});
+
+					btnHiveViewConfirm.setOnClickListener(new View.OnClickListener() {
+						@Override
+						public void onClick(View v) {
+							HiveObj hive = new HiveObj();
+							hive.setHiveID(hiveid);
+							hive.setHiveType(txtHiveType.getText().toString());
+							hive.setSplitType(txtSplitType.getText().toString());
+							hive.setHiveConfiguration(txtHiveConfiguration.getText().toString());
+							hive.setYearbeeswereSourced(Integer.parseInt(txtYearBeesWereSourced.getText().toString()));
+							db.editHive(hive);
+							editOptionsLayout.setVisibility(RelativeLayout.GONE);
+							createList();
+						}
+					});
+				}
+			}
+		});
+	}
 
 
     @Override

@@ -316,6 +316,21 @@ public class ApiaryDB {
 
 		openWriteableDB();
 		db.update(YARD, contentvalues,"yardID = " + yard.getYardID(), null);
+		closeDB();
+	}
+
+	public void editBox(BoxObj box) {
+		ContentValues contentvalues = new ContentValues();
+		contentvalues.put(BOXTYPE, box.getBoxType());
+		contentvalues.put(NUMBEROFFRAMES, box.getNumberofFrames());
+		contentvalues.put(FRAMEMATERIAL, box.getFrameMaterial());
+		contentvalues.put(INSTALLATIONDATE, box.getInstallationDate());
+		contentvalues.put(HARVESTDATE, box.getHarvestDate());
+		contentvalues.put(HONEYWEIGHT, box.getHoneyWeight());
+
+		openWriteableDB();
+		db.update(BOX, contentvalues, "boxID = " + box.getBoxID(), null);
+		closeDB();
 	}
 
 

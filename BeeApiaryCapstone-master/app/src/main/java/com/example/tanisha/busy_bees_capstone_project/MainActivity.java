@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import io.github.steve_bulgin.models.BoxObj;
 import io.github.steve_bulgin.models.HiveObj;
 import io.github.steve_bulgin.models.QueenObj;
 import io.github.steve_bulgin.models.YardObj;
@@ -64,74 +65,7 @@ public class MainActivity extends RuntimePermission {
 
 		db = new ApiaryDB(this);
 
-//		YardObj y1 = new YardObj();
-//		y1.setLocation("Permission and Test");
-//		y1.setLandDescription("Good place for some bees");
-//		db.addYard(y1);
-//
-//        YardObj y2 = new YardObj();
-//        y2.setLocation("Westmount & Ottawa");
-//        y2.setLandDescription("Good spot. Small creek near by");
-//        db.addYard(y2);
-//
-//        YardObj y3 = new YardObj();
-//        y3.setLocation("Nachos & Victoria");
-//        y3.setLandDescription("Little limited");
-//        db.addYard(y3);
-//
-//        HiveObj h1 = new HiveObj();
-//        h1.setHiveName("Hive 1");
-//		h1.setSplitType("Not Available");
-//		h1.setHiveType("Langstrof");
-//		h1.setYearbeeswereSourced(2016);
-//		h1.setHiveConfiguration("Standard");
-//		h1.setYardID(1);
-//		db.addHive(h1);
-//
-//        HiveObj h2 = new HiveObj();
-//        h2.setHiveName("Hive 2");
-//        h2.setSplitType("Not Available");
-//        h2.setHiveType("Langstrof");
-//        h2.setYearbeeswereSourced(2016);
-//        h2.setHiveConfiguration("Non Standard");
-//        h2.setYardID(1);
-//        db.addHive(h2);
-//
-//        HiveObj h3 = new HiveObj();
-//        h3.setHiveName("Hive 3");
-//        h3.setSplitType("Not Available");
-//        h3.setHiveType("Langstrof");
-//        h3.setYearbeeswereSourced(2016);
-//        h3.setHiveConfiguration("Non Standard");
-//        h3.setYardID(2);
-//        db.addHive(h3);
-//
-//        HiveObj h4 = new HiveObj();
-//        h4.setHiveName("Hive 4");
-//        h4.setSplitType("Not Available");
-//        h4.setHiveType("Langstrof");
-//        h4.setYearbeeswereSourced(2016);
-//        h4.setHiveConfiguration("Non Standard");
-//        h4.setYardID(2);
-//        db.addHive(h4);
-//
-//        HiveObj h5 = new HiveObj();
-//        h5.setHiveName("Hive 5");
-//        h5.setSplitType("Not Available");
-//        h5.setHiveType("Langstrof");
-//        h5.setYearbeeswereSourced(2016);
-//        h5.setHiveConfiguration("Non Standard");
-//        h5.setYardID(3);
-//        db.addHive(h5);
-//
-//        HiveObj h6 = new HiveObj();
-//        h6.setHiveName("Hive 6");
-//        h6.setSplitType("Not Available");
-//        h6.setHiveType("Langstrof");
-//        h6.setYearbeeswereSourced(2016);
-//        h6.setHiveConfiguration("Non Standard");
-//        h6.setYardID(3);
-//        db.addHive(h6);
+
 	}
 
 

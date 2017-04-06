@@ -13,7 +13,7 @@
 
 
     <TextView
-        android:text="Hives"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txtHives"
@@ -148,17 +148,18 @@
         android:text="Installation Date "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/lblInstallationDate"
         android:layout_below="@+id/lvHiveListOfBoxes"
         android:layout_alignStart="@+id/lblHiveConfig"
-        android:id="@+id/lblInstallationDate" />
+        android:layout_marginTop="38dp"/>
 
     <TextView
         android:text="Honey Weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/lblHoneyWeight"
         android:layout_below="@+id/btnAddListBox"
-        android:layout_alignStart="@+id/lblInstallationDate"
-        android:id="@+id/lblHoneyWeight" />
+        android:layout_alignEnd="@+id/lblYearBeesWereSourced"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -184,7 +185,7 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:layout_alignTop="@+id/lblInstallationDate"
+        android:layout_alignBottom="@+id/lblInstallationDate"
         android:layout_alignStart="@+id/txtFrameMaterial"
         android:id="@+id/txtInstallationDate" />
 
@@ -193,40 +194,42 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
+        android:id="@+id/txtHoneyWeight"
         android:layout_alignTop="@+id/lblHoneyWeight"
-        android:layout_alignStart="@+id/txtInstallationDate"
-        android:id="@+id/txtHoneyWeight" />
+        android:layout_alignStart="@+id/txtHarvestDate"/>
 
     <Button
-        android:text="Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnRecordListBack"
-        android:layout_marginRight="14dp"
+        android:text="Edit Box"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:id="@+id/btnEditHiveBox"
+        android:layout_marginTop="76dp"
         android:layout_below="@+id/txtHoneyWeight"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="48dp" />
+        android:layout_centerHorizontal="true"/>
 
     <Button
-        android:text="Edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnEdit"
+        android:text="Edit Hive"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:id="@+id/btnEditHive"
         android:layout_marginLeft="14dp"
-        android:layout_alignBaseline="@+id/btnRecordListBack"
-        android:layout_alignBottom="@+id/btnRecordListBack"
-        android:layout_toStartOf="@+id/btnRecordListBack"
-        android:layout_marginEnd="21dp" />
+        android:layout_alignTop="@+id/btnEditHiveBox"
+        android:layout_toEndOf="@+id/btnEditHiveBox"/>
 
     <Button
-        android:text="Cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnEditQueenConfirm"
+        android:text="Delete Box"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:id="@+id/btnDeleteBox"
         android:layout_marginLeft="21dp"
-        android:layout_alignBaseline="@+id/btnEdit"
-        android:layout_alignBottom="@+id/btnEdit"
-        android:layout_toEndOf="@+id/lblHiveName" />
+        android:layout_alignTop="@+id/btnDeleteHive"
+        android:layout_alignEnd="@+id/lblNumberOfFrames"/>
 
     <Button
         android:text="Add Hive"
@@ -249,16 +252,19 @@
         android:layout_width="150dp"
         android:layout_height="42dp"
         android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp"/>
 
     <Button
-        android:text="Delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnReplaceQueenConfirm"
-        android:layout_alignBaseline="@+id/btnEditQueenConfirm"
-        android:layout_alignBottom="@+id/btnEditQueenConfirm"
-        android:layout_toStartOf="@+id/btnEditQueenConfirm" />
+        android:text="Delete Hive"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:id="@+id/btnDeleteHive"
+        android:layout_marginLeft="60dp"
+        android:layout_alignTop="@+id/btnEditHiveBox"
+        android:layout_toStartOf="@+id/btnDeleteBox"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -287,6 +293,64 @@
         android:id="@+id/txtHiveName"
         android:layout_above="@+id/editText3"
         android:layout_alignStart="@+id/txtHives" />
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignTop="@+id/txtYearBeesWereSourced"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:id="@+id/editLayout">
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="55dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@android:color/background_light"
+            android:text="Confirm"
+            android:id="@+id/btnHiveViewConfirm"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/btnHiveViewCancel"/>
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="55dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@android:color/background_light"
+            android:text="Cancel"
+            android:id="@+id/btnHiveViewCancel"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:text="Back"
+        android:id="@+id/btnHiveViewBack"
+        android:layout_alignTop="@+id/btnEditHiveBox"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="57dp"/>
+
+    <TextView
+        android:text="Harvest Date "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblHarvestDate"
+        android:layout_alignTop="@+id/btnAddListBox"
+        android:layout_alignStart="@+id/btnDeleteBox"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtHarvestDate"
+        android:layout_alignBottom="@+id/lblHarvestDate"
+        android:layout_toEndOf="@+id/txtHives"/>
 
 
 </RelativeLayout>
