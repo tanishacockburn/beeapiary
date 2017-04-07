@@ -37,6 +37,7 @@ public class EditYard extends AppCompatActivity {
 
 		UpdateYard();
         BackToYardPage();
+        BtnEditYardCancel();
     }
 
     private void BackToYardPage() {
@@ -57,8 +58,8 @@ public class EditYard extends AppCompatActivity {
 		btn_edit_yard_cancel.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				txt_edit_yard_location.setText(intent.getExtras().getString("location"));
-				txt_edit_yard_description.setText(intent.getExtras().getString("landDescription"));
+				txt_edit_yard_location.setText("");
+				txt_edit_yard_description.setText("");
 			}
 		});
 	}
