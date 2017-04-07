@@ -416,4 +416,31 @@ public class ApiaryDB {
 
 		return data;
 	}
+
+	public ArrayList<HashMap<String, String>> getInspectionsByHiveId(int hiveid) {
+		ArrayList<HashMap<String, String>> data = new ArrayList<HashMap<String, String>>();
+		openReadableDB();
+		Cursor cursor = db.rawQuery("SELECT Inspection.inspectionID, dateofInspection, hiveBehaviour, observation, concern, hiveID, pestSeen, pestManagement, treatmentapplied, concerns FROM Inspection LEFT OUTER JOIN Pest ON Inspection.inspectionID = Pest.inspectionID LEFT OUTER JOIN Treatment ON Inspection.inspectionID = Treatment.inspectionID WHERE hiveID = " + hiveid,null );
+		while (cursor.moveToNext()) {
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("inspectionID", cursor.getString(0));
+			map.put("dateofInspection", cursor.getString(1));
+			map.put("hiveBehaviour", cursor.getString(2));
+			map.put("observation", cursor.getString(3));
+			map.put("concern", cursor.getString(4));
+			map.put("hiveID", cursor.getString(5));
+			map.put("pestSeen", cursor.getString(6));
+			map.put("pestManagement", cursor.getString(7));
+			map.put("treatmentapplied", cursor.getString(8));
+			map.put("concerns", cursor.getString(9));
+
+			Log.d("DBCheck","|" + cursor.getString(0) + ", " + cursor.getString(1) + ", " + cursor.getString(2));
+			data.add(map);
+		}
+		if (cursor != null)
+			cursor.close();
+		closeDB();
+
+		return data;
+	}
 }
