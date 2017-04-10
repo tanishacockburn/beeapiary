@@ -58,7 +58,7 @@
         <ListView
             android:layout_width="218dp"
             android:layout_height="327dp"
-            android:id="@+id/listView"
+            android:id="@+id/mediahivelist"
             android:layout_marginTop="10dp"/>
 
         <Button
@@ -66,6 +66,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
             android:textColor="@android:color/background_light"
+            android:textSize="20sp"
             android:text="Add Media"
             android:id="@+id/btnAddMedia"
             android:layout_marginTop="10dp"/>
