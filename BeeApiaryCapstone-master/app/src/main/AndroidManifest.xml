@@ -36,7 +36,10 @@
         <activity android:name=".Queen" />
         <activity android:name=".ReplaceQueen" />
         <activity android:name=".EditYard" />
-        <activity android:name=".EditQueen"></activity>
+        <activity android:name=".EditQueen" />
+        <activity android:name=".MediaActivity"
+                  android:windowSoftInputMode="adjustPan"
+                  android:screenOrientation="landscape" />
     </application>
 
 </manifest>
