@@ -145,17 +145,7 @@
         android:layout_toEndOf="@+id/txtBoxType"
         android:layout_height="50dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
-        android:layout_above="@+id/txtHoneyWeight"
-        android:layout_toRightOf="@+id/lblInstallationDate"
-        android:layout_toEndOf="@+id/lblInstallationDate"
-        android:layout_marginLeft="19dp"
-        android:layout_marginStart="19dp"
-        android:id="@+id/txtInstallationDate" />
+
 
     <EditText
         android:layout_width="wrap_content"

@@ -22,6 +22,7 @@ public class MainActivity extends RuntimePermission {
     public Button btn_yard;
     public Button btn_queen;
     public Button btn_inspection;
+	public Button btn_media;
 
 	private ApiaryDB db;
 	//public RuntimePermission permissions;
@@ -36,6 +37,7 @@ public class MainActivity extends RuntimePermission {
         YardPage();
         QueenPage();
         InspectionPage();
+		MediaPage();
 
 		requestAppPermissions(new String[]{
 				Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -46,6 +48,17 @@ public class MainActivity extends RuntimePermission {
 
 
     }
+
+	private void MediaPage() {
+		btn_media = (Button) findViewById(R.id.btnMedia);
+		btn_media.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this, MediaActivity.class);
+				startActivity(i);
+			}
+		});
+	}
 
     private void InspectionPage() {
 

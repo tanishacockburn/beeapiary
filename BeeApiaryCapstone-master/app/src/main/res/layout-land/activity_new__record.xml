@@ -16,10 +16,7 @@
         android:layout_height="40dp"
         android:id="@+id/lblSeason"
         android:textSize="18sp"
-        android:layout_alignBaseline="@+id/txtSeason"
-        android:layout_alignBottom="@+id/txtSeason"
-        android:layout_alignLeft="@+id/lblFlowerName"
-        android:layout_alignStart="@+id/lblFlowerName" />
+        />
 
     <EditText
         android:layout_width="wrap_content"
