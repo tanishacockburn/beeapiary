@@ -14,7 +14,7 @@ import io.github.steve_bulgin.models.HiveObj;
 
 public class AddHive extends AppCompatActivity {
      Button btn_confirm_add_hive, btn_add_hive_cancel, btn_add_hive_back;
-       EditText hiveName;
+       EditText txtYard;
        EditText hiveType;
        EditText splitType;
        EditText yearBeesWereSourced;
@@ -29,7 +29,7 @@ public class AddHive extends AppCompatActivity {
         setContentView(R.layout.activity_add_hive);
 
 		db = new ApiaryDB(this);
-        hiveName=(EditText)findViewById(R.id.txtHiveName);
+        txtYard=(EditText)findViewById(R.id.txtYardID);
         hiveType=(EditText)findViewById(R.id.txtHiveType);
         splitType=(EditText)findViewById(R.id.txtSplitType);
         yearBeesWereSourced=(EditText)findViewById(R.id.txtYearBeesWereSourced);
@@ -48,8 +48,8 @@ public class AddHive extends AppCompatActivity {
                    @Override
                    public void onClick(View v) {
 
-                       if (hiveName.getText().length() == 0) {
-                           hiveName.setError("please enter a hive name ");
+                       if (txtYard.getText().length() == 0) {
+                           txtYard.setError("please enter a yard id(number)");
                        }
                        if (hiveType.getText().length() == 0) {
                            hiveType.setError("please enter a hive type ");
@@ -64,7 +64,7 @@ public class AddHive extends AppCompatActivity {
                            hiveConfiguration.setError("please enter hive configuration");
                        } else {
 						   HiveObj hive = new HiveObj();
-						   hive.setHiveName(hiveName.getText().toString());
+						   hive.setYardID(Integer.parseInt(txtYard.getText().toString()));
 						   hive.setHiveType(hiveType.getText().toString());
 						   hive.setSplitType(splitType.getText().toString());
 						   hive.setYearbeeswereSourced(Integer.parseInt(yearBeesWereSourced.getText().toString()));
@@ -82,7 +82,7 @@ public class AddHive extends AppCompatActivity {
 		btn_add_hive_cancel.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				hiveName.setText("");
+                txtYard.setText("");
 				hiveType.setText("");
 				splitType.setText("");
 				yearBeesWereSourced.setText("");
