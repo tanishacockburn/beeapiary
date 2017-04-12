@@ -17,7 +17,7 @@
         android:layout_alignTop="@+id/btnReplaceQueenConfirm"
         android:layout_toEndOf="@+id/btnReplaceQueenConfirm"
         android:layout_marginStart="22dp"
-        android:id="@+id/btnEditQueenConfirm"
+        android:id="@+id/btnReplaceQueenCancel"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light" />
 
@@ -25,10 +25,10 @@
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btnEditQueenConfirm"
-        android:layout_toEndOf="@+id/btnEditQueenConfirm"
+        android:layout_alignBottom="@+id/btnReplaceQueenCancel"
+        android:layout_toEndOf="@+id/btnReplaceQueenCancel"
         android:layout_marginStart="20dp"
-        android:id="@+id/btnRecordListBack"
+        android:id="@+id/btnReplaceQueenBack"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light" />
 

@@ -1,5 +1,6 @@
 package com.example.tanisha.busy_bees_capstone_project;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ import java.util.regex.Pattern;
 public class ReplaceQueen extends AppCompatActivity {
 
     Button btn_confirm;
+    Button btn_replace_queen_cancel;
+    Button btn_replace_queen_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +24,8 @@ public class ReplaceQueen extends AppCompatActivity {
         final EditText txt_queen_birth = (EditText) findViewById(R.id.txtQueenBirth);
         final EditText txt_date_queen_replaced = (EditText) findViewById(R.id.txtQueenReplaced);
         btn_confirm = (Button) findViewById(R.id.btnReplaceQueenConfirm);
-
-
+        btn_replace_queen_cancel = (Button) findViewById(R.id.btnReplaceQueenCancel);
+        btn_replace_queen_back=(Button)findViewById(R.id.btnReplaceQueenBack);
         btn_confirm.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -38,7 +41,7 @@ public class ReplaceQueen extends AppCompatActivity {
                                 txt_date_queen_replaced.requestFocus();
                             }
                         }
-                        if(validDate(txt_queen_birth.getText().toString()) && (validDate(txt_date_queen_replaced.getText().toString())|| txt_date_queen_replaced.getText().length()==0)) {
+                        if (validDate(txt_queen_birth.getText().toString()) && (validDate(txt_date_queen_replaced.getText().toString()) || txt_date_queen_replaced.getText().length() == 0)) {
                             Toast.makeText(ReplaceQueen.this, "Queen added", Toast.LENGTH_LONG).show();
                         }
 
@@ -51,6 +54,23 @@ public class ReplaceQueen extends AppCompatActivity {
                         return matcher.matches();
                     }
                 });
+        btn_replace_queen_cancel.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        txt_queen_birth.setText("");
+                        txt_date_queen_replaced.setText("");
+                        Intent ReplaceCancel = new Intent(ReplaceQueen.this, Queen.class);
+                        startActivity(ReplaceCancel);
+                    }
+                });
+    btn_replace_queen_back.setOnClickListener(
+               new View.OnClickListener() {
+                   @Override
+                  public void onClick(View v) {
+                      Intent ReplaceBack = new Intent(ReplaceQueen.this, Queen.class);
+                      startActivity(ReplaceBack);
+                   }
+              });
     }
-
 }

@@ -18,7 +18,7 @@ public class RecordList extends AppCompatActivity {
 
     private void BackToMainPage() {
 
-        btn_record_list_back=(Button)findViewById(R.id.btnRecordListBack);
+        btn_record_list_back=(Button)findViewById(R.id.btnReplaceQueenBack);
         btn_record_list_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

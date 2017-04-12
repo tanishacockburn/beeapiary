@@ -135,31 +135,9 @@
         android:id="@+id/btnEditQueen"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
-        android:layout_marginEnd="16dp"
-        android:layout_alignBottom="@+id/lvHives"
-        android:layout_toStartOf="@+id/btnEditQueenCancel" />
-
-    <Button
-        android:text="Cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnEditQueenConfirm"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@android:color/background_light"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/lvQueenHistory"
-        android:layout_marginEnd="13dp" />
-
-    <Button
-        android:text="Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnRecordListBack"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@android:color/background_light"
-        android:layout_alignBaseline="@+id/btnEditQueenConfirm"
-        android:layout_alignBottom="@+id/btnEditQueenConfirm"
-        android:layout_alignEnd="@+id/lblQueenInformation" />
+        android:layout_below="@+id/lvHives"
+        android:layout_alignStart="@+id/lblQueenReplaced"
+        android:layout_marginTop="10dp" />
 
     <Button
         android:text="Replace"
@@ -168,8 +146,21 @@
         android:id="@+id/btnEditQueenCancel"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
-        android:layout_alignBaseline="@+id/btnRecordListBack"
-        android:layout_alignBottom="@+id/btnRecordListBack"
-        android:layout_toEndOf="@+id/lblQueenReplaced" />
+        android:layout_alignBaseline="@+id/btnEditQueen"
+        android:layout_alignBottom="@+id/btnEditQueen"
+        android:layout_toEndOf="@+id/lblQueenReplaced"
+        android:layout_marginStart="12dp" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnReplaceQueenBack"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBaseline="@+id/btnEditQueenCancel"
+        android:layout_alignBottom="@+id/btnEditQueenCancel"
+        android:layout_toEndOf="@+id/btnEditQueenCancel"
+        android:layout_marginStart="24dp" />
 
 </RelativeLayout>

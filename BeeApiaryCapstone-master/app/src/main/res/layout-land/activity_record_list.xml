@@ -67,9 +67,9 @@
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnEditQueenConfirm"
-        android:layout_alignBaseline="@+id/btnRecordListBack"
-        android:layout_alignBottom="@+id/btnRecordListBack"
+        android:id="@+id/btnReplaceQueenCancel"
+        android:layout_alignBaseline="@+id/btnReplaceQueenBack"
+        android:layout_alignBottom="@+id/btnReplaceQueenBack"
         android:layout_toRightOf="@+id/btnReplaceQueenConfirm"
         android:layout_toEndOf="@+id/btnReplaceQueenConfirm"
         android:layout_marginLeft="15dp"
@@ -79,12 +79,12 @@
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnRecordListBack"
+        android:id="@+id/btnReplaceQueenBack"
         android:layout_marginLeft="18dp"
         android:layout_marginStart="18dp"
         android:layout_below="@+id/lvInspectionList"
-        android:layout_toRightOf="@+id/btnEditQueenConfirm"
-        android:layout_toEndOf="@+id/btnEditQueenConfirm" />
+        android:layout_toRightOf="@+id/btnReplaceQueenCancel"
+        android:layout_toEndOf="@+id/btnReplaceQueenCancel" />
 
     <ListView
         android:layout_height="200dp"

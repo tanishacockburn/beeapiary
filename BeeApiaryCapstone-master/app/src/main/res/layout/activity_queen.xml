@@ -11,18 +11,6 @@
     tools:context="com.example.tanisha.busy_bees_capstone_project.Queen">
 
     <TextView
-        android:text="Queen Information"
-        android:id="@+id/lblQueenInformation"
-        android:textSize="18sp"
-        android:layout_height="70dp"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/lblHives"
-        android:layout_width="300dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="normal|bold"
-        android:layout_alignStart="@+id/lblQueenDetails" />
-
-    <TextView
         android:text="Queen History"
         android:id="@+id/lblQeenHistory"
         android:layout_height="30dp"
@@ -61,17 +49,6 @@
         android:enabled="false"
         />
 
-    <TextView
-        android:text="Current Queen Details"
-        android:id="@+id/lblQueenDetails"
-        android:textSize="24sp"
-        android:layout_width="250dp"
-        android:layout_below="@+id/lblQueenInformation"
-        android:layout_toRightOf="@+id/lvHives"
-        android:layout_toEndOf="@+id/lvHives"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_height="30dp" />
-
     <ListView
         android:id="@+id/lvQueenHistory"
         android:layout_height="200dp"
@@ -94,17 +71,6 @@
         android:layout_width="300dp" />
 
     <Button
-        android:text="Back"
-        android:layout_height="50dp"
-        android:id="@+id/btnRecordListBack"
-        android:layout_marginLeft="14dp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@android:color/background_light"
-        android:layout_width="100dp"
-        android:layout_alignTop="@+id/btnEditQueen"
-        android:layout_alignParentEnd="true" />
-
-    <Button
         android:text="Edit "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -122,27 +88,6 @@
         android:layout_marginStart="25dp"
         android:layout_alignTop="@+id/lblQueenBirth"
         android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Replace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnEditQueenCancel"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@android:color/background_light"
-        android:layout_marginBottom="13dp"
-        android:layout_alignBottom="@+id/lvHives"
-        android:layout_toEndOf="@+id/lblQueenReplaced" />
-
-    <Button
-        android:text="Cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnEditQueenConfirm"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@android:color/background_light"
-        android:layout_alignBottom="@+id/btnRecordListBack"
-        android:layout_toStartOf="@+id/btnRecordListBack" />
 
     <TextView
         android:text="Queen Birth"
@@ -165,5 +110,50 @@
         android:layout_alignBaseline="@+id/lblQueenDetails"
         android:layout_alignBottom="@+id/lblQueenDetails"
         android:layout_alignStart="@+id/lvHives" />
+
+    <Button
+        android:text="Replace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnEditQueenCancel"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:layout_marginBottom="13dp"
+        android:layout_alignBottom="@+id/lvHives"
+        android:layout_toEndOf="@+id/lblQueenReplaced"
+        android:layout_marginStart="14dp" />
+
+    <Button
+        android:text="Back"
+        android:layout_height="50dp"
+        android:id="@+id/btnReplaceQueenBack"
+        android:layout_marginLeft="14dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/background_light"
+        android:layout_width="100dp"
+        android:layout_marginStart="21dp"
+        android:layout_alignTop="@+id/btnEditQueenCancel"
+        android:layout_toEndOf="@+id/btnEditQueenCancel" />
+
+    <TextView
+        android:text="Current Queen Details"
+        android:id="@+id/lblQueenDetails"
+        android:textSize="24sp"
+        android:layout_width="250dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_height="30dp"
+        android:layout_below="@+id/lblQueenInformation"
+        android:layout_toEndOf="@+id/lvHives" />
+
+    <TextView
+        android:text="Queen Information"
+        android:id="@+id/lblQueenInformation"
+        android:textSize="18sp"
+        android:layout_height="70dp"
+        android:layout_width="300dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/lblQueenDetails" />
 
 </RelativeLayout>

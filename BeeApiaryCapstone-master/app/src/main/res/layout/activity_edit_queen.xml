@@ -74,12 +74,12 @@
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnRecordListBack"
+        android:id="@+id/btnReplaceQueenBack"
         android:layout_marginLeft="14dp"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
-        android:layout_alignBaseline="@+id/btnEditQueenConfirm"
-        android:layout_alignBottom="@+id/btnEditQueenConfirm"
+        android:layout_alignBaseline="@+id/btnReplaceQueenCancel"
+        android:layout_alignBottom="@+id/btnReplaceQueenCancel"
         android:layout_alignEnd="@+id/lblQueenInformation" />
 
     <Button
@@ -89,15 +89,15 @@
         android:id="@+id/btnEditQueenCancel"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
-        android:layout_alignBaseline="@+id/btnEditQueenConfirm"
-        android:layout_alignBottom="@+id/btnEditQueenConfirm"
+        android:layout_alignBaseline="@+id/btnReplaceQueenCancel"
+        android:layout_alignBottom="@+id/btnReplaceQueenCancel"
         android:layout_toEndOf="@+id/lblQueenReplaced" />
 
     <Button
         android:text="Confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnEditQueenConfirm"
+        android:id="@+id/btnReplaceQueenCancel"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
         android:layout_marginTop="29dp"

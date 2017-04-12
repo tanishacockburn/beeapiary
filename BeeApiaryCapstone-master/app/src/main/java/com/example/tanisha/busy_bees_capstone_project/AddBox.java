@@ -85,6 +85,8 @@ public class AddBox extends AppCompatActivity {
 				txt_frame_material.setText("");
 				txt_number_of_frames.setText("");
 				txt_installation_date.setText("");
+				Intent backToHive= new Intent(AddBox.this, Hives.class);
+				startActivity(backToHive);
 			}
 		});
 	}

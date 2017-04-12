@@ -87,7 +87,10 @@ public class AddHive extends AppCompatActivity {
 				splitType.setText("");
 				yearBeesWereSourced.setText("");
 				hiveConfiguration.setText("");
-			}
+                Intent backToHive= new Intent(AddHive.this, Hives.class);
+                startActivity(backToHive);
+
+            }
 		});
 	}
 

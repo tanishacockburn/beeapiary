@@ -48,6 +48,8 @@ public class AddYard extends AppCompatActivity {
 			public void onClick(View v) {
 				txt_land_description.setText("");
 				txt_yard_location.setText("");
+				Intent backToMain = new Intent(AddYard.this, Yard.class);
+				startActivity(backToMain);
 
 			}
 		});
@@ -74,7 +76,7 @@ public class AddYard extends AppCompatActivity {
 							db.addYard(yard);
 
 							Toast.makeText(AddYard.this, "Yard Added", Toast.LENGTH_LONG).show();
-							Intent i = new Intent(AddYard.this, MainActivity.class);
+							Intent i = new Intent(AddYard.this, Yard.class);
 							startActivity(i);
 						}
                     }

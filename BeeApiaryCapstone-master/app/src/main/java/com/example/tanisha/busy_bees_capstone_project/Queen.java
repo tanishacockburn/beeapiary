@@ -24,7 +24,7 @@ public class Queen extends AppCompatActivity {
     }
 
     private void BackToMainPage() {
-        btn_queen_back = (Button) findViewById(R.id.btnRecordListBack);
+        btn_queen_back = (Button) findViewById(R.id.btnReplaceQueenBack);
         btn_queen_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
