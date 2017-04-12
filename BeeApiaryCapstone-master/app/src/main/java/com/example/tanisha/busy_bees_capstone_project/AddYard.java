@@ -74,6 +74,8 @@ public class AddYard extends AppCompatActivity {
 							db.addYard(yard);
 
 							Toast.makeText(AddYard.this, "Yard Added", Toast.LENGTH_LONG).show();
+							Intent i = new Intent(AddYard.this, MainActivity.class);
+							startActivity(i);
 						}
                     }
                 }

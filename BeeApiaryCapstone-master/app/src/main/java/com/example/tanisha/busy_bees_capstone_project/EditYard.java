@@ -60,6 +60,8 @@ public class EditYard extends AppCompatActivity {
 			public void onClick(View v) {
 				txt_edit_yard_location.setText("");
 				txt_edit_yard_description.setText("");
+				Intent cancel = new Intent(EditYard.this, Yard.class);
+				startActivity(cancel);
 			}
 		});
 	}
