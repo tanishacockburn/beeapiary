@@ -101,7 +101,7 @@
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnReplaceQueenCancel"
+        android:id="@+id/btnEditQueenEdit"
         android:layout_alignBaseline="@+id/btnReplaceQueenConfirm"
         android:layout_alignBottom="@+id/btnReplaceQueenConfirm"
         android:layout_toEndOf="@+id/btnReplaceQueenConfirm"
@@ -112,9 +112,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:id="@+id/btnReplaceQueenBack"
-        android:layout_alignBaseline="@+id/btnReplaceQueenCancel"
-        android:layout_alignBottom="@+id/btnReplaceQueenCancel"
-        android:layout_toEndOf="@+id/btnReplaceQueenCancel"
+        android:id="@+id/btnEditQueenBack"
+        android:layout_alignBaseline="@+id/btnEditQueenEdit"
+        android:layout_alignBottom="@+id/btnEditQueenEdit"
+        android:layout_toEndOf="@+id/btnEditQueenEdit"
         android:layout_marginStart="26dp" />
 </RelativeLayout>

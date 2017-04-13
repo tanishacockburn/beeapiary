@@ -90,13 +90,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="29dp"
         android:layout_marginStart="29dp"
-        android:id="@+id/btnReplaceQueenBack"
+        android:id="@+id/btnEditQueenBack"
         android:textColor="@android:color/background_light"
         android:background="@color/colorPrimaryDark"
-        android:layout_alignBaseline="@+id/btnReplaceQueenCancel"
-        android:layout_alignBottom="@+id/btnReplaceQueenCancel"
-        android:layout_toRightOf="@+id/btnReplaceQueenCancel"
-        android:layout_toEndOf="@+id/btnReplaceQueenCancel" />
+        android:layout_alignBaseline="@+id/btnEditQueenEdit"
+        android:layout_alignBottom="@+id/btnEditQueenEdit"
+        android:layout_toRightOf="@+id/btnEditQueenEdit"
+        android:layout_toEndOf="@+id/btnEditQueenEdit" />
 
     <TextView
         android:text="Yard Location"

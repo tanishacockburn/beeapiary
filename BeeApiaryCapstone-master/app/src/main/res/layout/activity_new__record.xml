@@ -241,16 +241,16 @@
         android:layout_alignTop="@+id/btnReplaceQueenConfirm"
         android:layout_alignRight="@+id/lblTreatmentConcerns"
         android:layout_alignEnd="@+id/lblTreatmentConcerns"
-        android:id="@+id/btnReplaceQueenCancel" />
+        android:id="@+id/btnEditQueenEdit" />
 
     <Button
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnReplaceQueenCancel"
+        android:layout_alignTop="@+id/btnEditQueenEdit"
         android:layout_alignLeft="@+id/txtStartSeason"
         android:layout_alignStart="@+id/txtStartSeason"
-        android:id="@+id/btnReplaceQueenBack" />
+        android:id="@+id/btnEditQueenBack" />
 
     <TextView
         android:text="Pest Control"

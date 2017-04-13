@@ -24,8 +24,8 @@ public class ReplaceQueen extends AppCompatActivity {
         final EditText txt_queen_birth = (EditText) findViewById(R.id.txtQueenBirth);
         final EditText txt_date_queen_replaced = (EditText) findViewById(R.id.txtQueenReplaced);
         btn_confirm = (Button) findViewById(R.id.btnReplaceQueenConfirm);
-        btn_replace_queen_cancel = (Button) findViewById(R.id.btnReplaceQueenCancel);
-        btn_replace_queen_back=(Button)findViewById(R.id.btnReplaceQueenBack);
+        btn_replace_queen_cancel = (Button) findViewById(R.id.btnEditQueenEdit);
+        btn_replace_queen_back=(Button)findViewById(R.id.btnEditQueenBack);
         btn_confirm.setOnClickListener(
                 new View.OnClickListener() {
                     @Override

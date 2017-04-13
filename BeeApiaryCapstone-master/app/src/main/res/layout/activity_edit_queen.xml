@@ -74,30 +74,30 @@
         android:text="Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnReplaceQueenBack"
+        android:id="@+id/btnEditQueenBack"
         android:layout_marginLeft="14dp"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
-        android:layout_alignBaseline="@+id/btnReplaceQueenCancel"
-        android:layout_alignBottom="@+id/btnReplaceQueenCancel"
+        android:layout_alignBaseline="@+id/btnEditQueenEdit"
+        android:layout_alignBottom="@+id/btnEditQueenEdit"
         android:layout_alignEnd="@+id/lblQueenInformation" />
 
     <Button
         android:text="Cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnEditQueenCancel"
+        android:id="@+id/btnEditQueenEdit"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
-        android:layout_alignBaseline="@+id/btnReplaceQueenCancel"
-        android:layout_alignBottom="@+id/btnReplaceQueenCancel"
+        android:layout_alignBaseline="@+id/btnEditQueenEdit"
+        android:layout_alignBottom="@+id/btnEditQueenEdit"
         android:layout_toEndOf="@+id/lblQueenReplaced" />
 
     <Button
         android:text="Confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnReplaceQueenCancel"
+        android:id="@+id/btnEditQueenEdit"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
         android:layout_marginTop="29dp"

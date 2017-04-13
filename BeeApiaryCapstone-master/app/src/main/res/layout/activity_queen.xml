@@ -17,7 +17,7 @@
         android:textSize="24sp"
         android:layout_width="200dp"
         android:layout_marginTop="13dp"
-        android:layout_below="@+id/btnEditQueenCancel"
+        android:layout_below="@+id/btnEditQueenEdit"
         android:layout_alignLeft="@+id/lblHives"
         android:layout_alignStart="@+id/lblHives"
         android:textColor="@color/colorPrimaryDark" />
@@ -74,7 +74,7 @@
         android:text="Edit "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnEditQueen"
+        android:id="@+id/btnEditQueenEdit"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
         android:layout_above="@+id/lblQeenHistory"
@@ -115,7 +115,7 @@
         android:text="Replace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnEditQueenCancel"
+        android:id="@+id/btnEditQueenEdit"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
         android:layout_marginBottom="13dp"
@@ -126,14 +126,14 @@
     <Button
         android:text="Back"
         android:layout_height="50dp"
-        android:id="@+id/btnReplaceQueenBack"
+        android:id="@+id/btnEditQueenBack"
         android:layout_marginLeft="14dp"
         android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/background_light"
         android:layout_width="100dp"
         android:layout_marginStart="21dp"
-        android:layout_alignTop="@+id/btnEditQueenCancel"
-        android:layout_toEndOf="@+id/btnEditQueenCancel" />
+        android:layout_alignTop="@+id/btnEditQueenEdit"
+        android:layout_toEndOf="@+id/btnEditQueenEdit" />
 
     <TextView
         android:text="Current Queen Details"

@@ -16,15 +16,15 @@ public class Queen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_queen);
-        btn_replace_queen = (Button) findViewById(R.id.btnEditQueenCancel);
-        btn_edit_queen = (Button) findViewById(R.id.btnEditQueen);
+        btn_replace_queen = (Button) findViewById(R.id.btnEditQueenEdit);
+        btn_edit_queen = (Button) findViewById(R.id.btnEditQueenEdit);
         ReplaceQueenPage();
         EditQueenPage();
         BackToMainPage();
     }
 
     private void BackToMainPage() {
-        btn_queen_back = (Button) findViewById(R.id.btnReplaceQueenBack);
+        btn_queen_back = (Button) findViewById(R.id.btnEditQueenBack);
         btn_queen_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
